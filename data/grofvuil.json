@@ -1,0 +1,28 @@
+[
+  {
+    "id": 0,
+    "title": "Wat ze ophalen",
+    "items": [
+      "Banken",
+      "Bedden en matrassen",
+      "Koelkast of wasmachine",
+      "Kasten",
+      "Planken",
+      "Stoelen",
+      "Tapijten en vloerbedekking"
+    ]
+  },
+  {
+    "id": 1,
+    "title": "Wat ze niet ophalen",
+    "items": [
+      "Bouw en sloopafval",
+      "Karton",
+      "Klein chemisch afval, zoals verf en accu's",
+      "Kleine elektrische apparaten",
+      "Glasplaten en spiegels",
+      "Tuintegels",
+      "Autobanden"
+    ]
+  }
+]

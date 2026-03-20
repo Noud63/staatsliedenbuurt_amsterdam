@@ -1,0 +1,314 @@
+[
+  {
+    "id": 0,
+    "title": "Café's",
+    "items": [
+      {
+        "naam": "Café Kosmos",
+        "adres": "De Wittenkade 190",
+        "postcode": "1051 AP Amsterdam",
+        "telefoon": "0204003341",
+        "website": "https://www.kosmosamsterdam.nl",
+        "email": "info@kosmosamsterdam.nl"
+      },
+      {
+        "naam": "Café Brel",
+        "adres": "Van Hallstraat 37",
+        "postcode": "1051GX Amsterdam",
+        "telefoon": "0203415341",
+        "website": "https://cafe-brel.nl",
+        "email": "info@cafe-brel.nl"
+      },
+      {
+        "naam": "Café De Pianist",
+        "adres": "Groen van Prinstererstraat 41",
+        "postcode": "1051EH Amsterdam",
+        "telefoon": "0207371943",
+        "website": "https://www.cafedepianist.nl",
+        "email": "info@cafedepianist.nl"
+      },
+      {
+        "naam": "The Shamrock Inn",
+        "adres": "Fannius Scholtenstraat 54",
+        "postcode": "1051GA Amsterdam",
+        "telefoon": "0207654321",
+        "website": "https://www.facebook.com/cafeshamrock1/?locale=nl_NL",
+        "email": ""
+      },
+      {
+        "naam": "Café Nassau",
+        "adres": "De Wittenkade 105 A",
+        "postcode": "1051AG Amsterdam",
+        "telefoon": "0206843562",
+        "website": "https://cafenassau.com",
+        "email": "info@cafenassau.com"
+      },
+      {
+        "naam": "Café Beurre",
+        "adres": "van Limburgstirumstraat 115",
+        "postcode": "1051BA Amsterdam",
+        "telefoon": "0208460510",
+        "website": "https://www.cafebeurreamsterdam.nl",
+        "email": "info@cafebeurreamsterdam.nl"
+      },
+      {
+        "naam": "Café-Restaurant Amsterdam",
+        "adres": "Watertorenplein 6",
+        "postcode": "1051PA Amsterdam",
+        "telefoon": "0206822666",
+        "website": "https://cradam.nl",
+        "email": "info@cradam.nl"
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "title": "Restaurants",
+    "items": [
+      {
+        "naam": "Bella Storia",
+        "adres": "Bentinckstraat 26",
+        "postcode": "1051GL Amsterdam",
+        "telefoon": "0204880599",
+        "website": "https://www.bellastoria.nl/bella-storia",
+        "email": "bsreservering@gmail.com"
+      },
+      {
+        "naam": "Pendergast",
+        "adres": "Groen v Prinstererstraat 14",
+        "postcode": "1051EE Amsterdam",
+        "telefoon": "0208458507",
+        "website": "https://pendergast.nl",
+        "email": "info@pendergast.nl"
+      },
+      {
+        "naam": "Café Nassau",
+        "adres": "De Wittenkade 105 A",
+        "postcode": "1051AG Amsterdam",
+        "telefoon": "0206843562",
+        "website": "https://cafenassau.com",
+        "email": "info@cafenassau.com"
+      },
+      {
+        "naam": "Bacco Ristorante & Vineria",
+        "adres": "Fannius Scholtenstr. 26",
+        "postcode": "1051EX Amsterdam",
+        "telefoon": "0207373171",
+        "website": "https://www.bacco-ristorante.com",
+        "email": "contact@bacco-ristorante.com"
+      },
+      {
+        "naam": "Piet de Gruyter",
+        "adres": "Van Limburg Stirumplein 4",
+        "postcode": "1051BE Amsterdam",
+        "telefoon": "0206823597",
+        "website": "https://pietdegruyter.com",
+        "email": "piet@pietdegruyter.com"
+      },
+      {
+        "naam": "Piccola Storia",
+        "adres": "Bentinckstraat 30 H",
+        "postcode": "1051GL Amsterdam",
+        "telefoon": "0207864947",
+        "website": "https://www.piccolastoriaamsterdam.nl",
+        "email": ""
+      },
+      {
+        "naam": "La Tarantella",
+        "adres": "Bentinckstraat 32",
+        "postcode": "1051GL Amsterdam",
+        "telefoon": "0203585517",
+        "website": "https://latarantella.nl",
+        "email": "nicolaressa@hotmail.com"
+      },
+      {
+        "naam": "De Buurman",
+        "adres": "Van Hallstraat 65",
+        "postcode": "1051GZ Amsterdam",
+        "telefoon": "",
+        "website": "https://debuurman-amsterdam.nl",
+        "email": "Info@debuurman-amsterdam.nl"
+      },
+      {
+        "naam": "Chez Nina",
+        "adres": "Van Limburg Stirumplein 10 A",
+        "postcode": "1051BE Amsterdam",
+        "telefoon": "0628836136",
+        "website": "https://www.cheznina.nl",
+        "email": "hello@cheznina.com"
+      },
+      {
+        "naam": "Pazzia",
+        "adres": "Van Limburg Stirumplein 20",
+        "postcode": "1051BE Amsterdam",
+        "telefoon": "0207232265",
+        "website": "https://www.pazziamsterdam.nl",
+        "email": "andrea@pazziamsterdam.nl"
+      },
+      {
+        "naam": "Braai",
+        "adres": "Van Limburg Stirumstraat 14A",
+        "postcode": "1051BB Amsterdam",
+        "telefoon": "0202236020",
+        "website": "https://braaiamsterdam.nl",
+        "email": "info@braaiamsterdam.nl"
+      },
+      {
+        "naam": "Café Beurre",
+        "adres": "van Limburgstirumstraat 115",
+        "postcode": "1051BA Amsterdam",
+        "telefoon": "0208460510",
+        "website": "https://www.cafebeurreamsterdam.nl",
+        "email": "info@cafebeurreamsterdam.nl"
+      },
+      {
+        "naam": "Ristorante Giordano",
+        "adres": "De Wittenkade 91",
+        "postcode": "1051AE Amsterdam",
+        "telefoon": "0206861804",
+        "website": "https://www.ristorantegiordano.nl",
+        "email": ""
+      },
+      {
+        "naam": "Café-Restaurant Amsterdam",
+        "adres": "Watertorenplein 6",
+        "postcode": "1051PA Amsterdam",
+        "telefoon": "0206822666",
+        "website": "https://cradam.nl",
+        "email": "info@cradam.nl"
+      },
+      {
+        "naam": "Queen of Sheba",
+        "adres": "Eerste Nassaustraat 32",
+        "postcode": "1052BH Amsterdam",
+        "telefoon": "0202218765",
+        "website": "https://queenofsheba.nl",
+        "email": ""
+      },
+      {
+        "naam": "Wang's Flavour",
+        "adres": "Tweede Nassaustraat 9 H",
+        "postcode": "1052BJ Amsterdam",
+        "telefoon": "0206824300",
+        "website": "https://www.wangsflavouramsterdam.nl",
+        "email": ""
+      },
+      {
+        "naam": "Top Thai Thuis",
+        "adres": "Tweede Nassaustraat 3",
+        "postcode": "1052BJ Amsterdam",
+        "telefoon": "0206881305",
+        "website": "https://www.topthaithuis.nl",
+        "email": "info@topthaithuis.nl"
+      },
+      {
+        "naam": "Maharaj Indian Restaurant",
+        "adres": "Tweede Keucheniusstraat 12",
+        "postcode": "1051VR Amsterdam",
+        "telefoon": "0685383287",
+        "website": "https://www.maharajindianrestaurant.nl",
+        "email": ""
+      },
+      {
+        "naam": "Sababa",
+        "adres": "Van Hallstraat 270",
+        "postcode": "1053EN Amsterdam",
+        "telefoon": "0203636131",
+        "website": "https://sababa.nu/",
+        "email": "info@sababa.nu"
+      },
+      {
+        "naam": "Het Paviljoen",
+        "adres": "Van Beuningenplein 21",
+        "postcode": "1051VS Amsterdam",
+        "telefoon": "0204869124",
+        "website": "https://hetpaviljoen.amsterdam",
+        "email": "info@hetpaviljoen.amsterdam"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Snackbar",
+    "items": [
+      {
+        "naam": "Stomy's Snackbar",
+        "adres": "Van Limburg Stirumstraat 69",
+        "postcode": "1051BA Amsterdam",
+        "telefoon": "020 684 1444",
+        "website": "",
+        "email": ""
+      },
+      {
+        "naam": "Doardi Ice & Fries",
+        "adres": "Van Limburg Stirumstraat 15",
+        "postcode": "1051AZ Amsterdam",
+        "telefoon": "020 486 1010",
+        "website": "https://doardi.12waiter.eu/c/home",
+        "email": "bestellingen@doardi.nl"
+      },
+      {
+        "naam": "Onze Hanny",
+        "adres": "Van der Hoopstraat 129",
+        "postcode": "1051VE Amsterdam",
+        "telefoon": "020 684 0065",
+        "website": "https://www.instagram.com/explore/locations/2706037042799604/onze-hanny",
+        "email": ""
+      },
+      {
+        "naam": "De Buurman",
+        "adres": "Van Hallstraat 65",
+        "postcode": "1051GZ Amsterdam",
+        "telefoon": "020 488 5872",
+        "website": "https://menu.debuurman-amsterdam.nl",
+        "email": "Info@debuurman-amsterdam.nl"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Afhaal",
+    "items": [
+      {
+        "naam": "SuriKitchen",
+        "adres": "Tweede Nassaustraat 38",
+        "postcode": "1051BC Amsterdam",
+        "telefoon": "020-4751021",
+        "website": "https://surikitchen.nl",
+        "email": ""
+      },
+      {
+        "naam": "Punjab Express",
+        "adres": "Van Limburg Stirumstraat 71",
+        "postcode": "1051 BA Amsterdam",
+        "telefoon": "0206820017",
+        "website": "https://www.punjab-express.nl/",
+        "email": ""
+      },
+      {
+        "naam": "Ksushi",
+        "adres": "Van Hallstraat 222",
+        "postcode": "1051HL Amsterdam",
+        "telefoon": "0202390832",
+        "website": "https://www.ksushi.nl",
+        "email": ""
+      },
+      {
+        "naam": "Ama Sushi",
+        "adres": "Van Limburg Stirumstraat 107",
+        "postcode": "1051BA Amsterdam",
+        "telefoon": "0203418480",
+        "website": "https://www.amasushi.nl",
+        "email": ""
+      },
+      {
+        "naam": "Piccola Storia",
+        "adres": "Bentinckstraat 30 H",
+        "postcode": "1051GL Amsterdam",
+        "telefoon": "0207864947",
+        "website": "https://www.piccolastoriaamsterdam.nl",
+        "email": ""
+      }
+    ]
+  }
+]

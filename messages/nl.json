@@ -1,0 +1,147 @@
+{
+  "auth": {
+    "inloggen": "Inloggen",
+    "uitloggen": "Uitloggen",
+    "registreren": "Registreren",
+    "verwijder": "Verwijder",
+    "reageer": "reageer",
+    "bewerk": "Bewerk"
+  },
+  "menu": {
+    "historie": "Historie",
+    "social": "Social",
+    "nieuws": "Nieuws",
+    "demografie": "Demografie",
+    "beeld": "Beeld",
+    "over": "Over",
+    "praktisch": "Praktisch",
+    "westergas": "Westergas",
+    "buurt": "Buurt",
+    "kunst": "Kunst en Cultuur",
+    "weer": "Weer",
+    "contact": "Contact"
+  },
+  "historie": {
+    "titel": "Geschiedenis van de Staatsliedenbuurt",
+    "content_a1": [
+      "De Staatsliedenbuurt is een Amsterdamse buurt in het stadsdeel West.\n",
+      "De buurt ligt ten zuiden van de Haarlemmertrekvaart en ten westen van de vaarroute Singelgracht - Kattensloot - Kostverlorenvaart.\n",
+      "De buurt is ontstaan in de 19e eeuw en heeft sindsdien verschillende transformaties ondergaan. Oorspronkelijk was het een arbeiderswijk, maar het heeft zich ontwikkeld tot een levendige en multiculturele gemeenschap.\n",
+      "De buurt is vernoemd naar de staatslieden van Nederland, die een belangrijke rol hebben gespeeld in de geschiedenis van het land."
+    ],
+    "subtitel": "In den beginne",
+    "content_a2": [
+      "Als het gaat om de historie van de Staatsliedenbuurt is de vraag waar begint die geschiedenis. Waar moet je beginnen met dat verhaal?\n",
+      "Gezien de geografische ligging van de Staatsliedenbuurt in het gebied dat behoorde tot de vroegere gemeente Sloten, verdient de periode voor de annexatie (1877-1896-1921) door Amsterdam, toen Sloten zijn zelfstandigheid en grond verloor aan Amsterdam, hier zeker aandacht."
+    ],
+    "kaart_1": "Sloten en Amsterdam 1750",
+    "kaart_2": "Amsterdam 1860",
+    "kaart_3": "Amsterdam 1940",
+    "content_a3": [
+      "Alles wat zich bevindt tussen het IJ (en later het Noordzeekanaal) aan de noordzijde, en in het zuiden de Nieuwe Meer behoorde voor 1877 tot Sloten.\n",
+      "Aan de zijkanten ­golden de Schinkel en de Kostverlorenkade aan de ene kant en de Ringvaart van de Haarlemmermeer aan de ­andere kant, als de gemeentegrenzen.\n",
+      "Omstreeks het jaar 1000 werd het gebied geleidelijk tot ontwikkeling ­gebracht en ontstonden de eerste dorpen.\n",
+      "Volgens de geschiedenis van dit gebied werd de eerste vermelding van een kapel te Sloton tussen de jaren 993 en 1049 door monniken opgetekend in een middeleeuws ­gebedenboek.\n",
+      "Sloten is daarmee zo’n twee eeuwen ouder dan Amsterdam!\n",
+      "Sloten, dat een gemeente was vanaf 1816, werd in 1921 geannexeerd door Amsterdam. De stad was al vanaf het laatste kwart van de 19de eeuw aan het uitbreiden, wat ten koste ging van de omliggende gemeenten.\n",
+      "In 1877 werd ten westen van de ­Haarlemmerpoort een deel van Sloten al over­genomen, hier werden de Spaarndammerbuurt en een deel van de Staatsliedenbuurt gebouwd.\n",
+      "De trekvaart van Amsterdam naar Haarlem (Haarlemmervaart) was en is de noordelijke begrenzing van de buurt.\n",
+      "De belangrijkste trekpleister was Herberg d'Eenhonderd Roe, een uitspanning net buiten de stadsgrenzen, die geen stedelijke belasting hoefde te betalen.\n",
+      "De herberg was gelegen op een afstand van honderd roede (bijna vierhonderd meter) ten westen van de Haarlemmerpoort, de toenmalige gemeentegrens met Amsterdam en van 1632 tot 1883 het vertrekpunt van de trekschuit naar Haarlem.\n",
+      "In 1896 werd nog een stukje van Sloten afgesneden. Op 1 januari 1921 werd de ­gehele gemeente Sloten opgeheven en bij Amsterdam gevoegd.\n",
+      "Hier werden de wijken van Plan West, Bos en Lommer en de Westelijke Tuinsteden gebouwd.\n",
+      "De Slotenaren en de laatste burgemeester verzetten zich wel tegen de annexatie, maar naar verluidt speelde wethouder Willem Hendrik de Buisonjé een dubieuze rol door als Tweede Kamerlid voor de liberale Economische Bond te beweren dat de bewoners vóór ­annexatie waren."
+    ],
+    "content_a4": [
+      "Nadat de gemeente in 1877 een uitbreidingsplan voor het gebied tussen de Overtoom en de Haarlemmerweg had aangenomen, werd in het molenrijke weidegebied Binnenpolder van Sloten de Staatsliedenbuurt gebouwd.\n",
+      "Met de bouw van de Staatsliedenbuurt werd tegemoetgekomen aan de toenemende behoefte aan woningen door de snel groeiende bevolking van Amsterdam. Vooral betaalbare arbeiderswoningen waren nodig.\n",
+      "Particuliere beleggers zorgden met revolutiebouw voor nieuw aanbod. Na de invoering van de Woningwet in 1901 ontstonden ook bouwinitiatieven van woningbouwverenigingen, zoals Rochdale en De Arbeiderswoning.\n",
+      "De eerste woningwetwoningen van Nederland staan in de Van Beuningenstraat.\n",
+      "Voor het stratenpatroon werden goeddeels de verkavelsloten en houtmolenpaden aangehouden. De oudste straten waren de Nassaustraten en de De Wittenstraat; ook de latere straten, kades en pleinen werden naar staatslieden genoemd.\n",
+      "In de beginjaren van de 20ste eeuw was de bebouwing ten westen van de Van Hallstraat voltooid. Dit deel van het 'Staatsliedenkwartier' was een typisch 19de-eeuwse buurt geworden.\n",
+      "Huurders van de woningbouwverenigingen dienden te beschikken over een vaste baan die voldoende inkomen bood om wekelijks de huur te betalen.\n",
+      "De buurt stond ook wel bekend als de 'koperen knopenbuurt'.\n",
+      "Veel van de bewoners droegen namelijk uniformen door hun werk bij de nutsbedrijven in de omgeving (waterleiding, gasfabriek), of bij brandweer, spoorwegen, openbaar vervoer en politie.\n",
+      "De bevolking van de buurt bestond uit lagere ambtenaren, beter geschoolde arbeiders en middenstanders en onderscheidde zich maatschappelijk van de bewoners van de nieuwbouw beoosten de Van Hallstraat: de vanaf 1915 in de nieuwe gemeentewoningen aan de Van Hallstraat geplaatste Jordaanbewoners uit de kelderwoningen en weggesaneerde woonwagenbewoners waren asocialen in de ogen van de buurtgenoten.\n",
+      "In 1918 joegen zij het koninklijk gezin, dat de Prinsessekerk aan de Van Hallstraat kwam openen, de buurt uit. Doordat sinds de jaren dertig veel gezinnen vertrokken naar de betere woningen in de Bos en Lommerbuurt, nam de sociale homogeniteit van de bevolking toe. In 1931 waren de twee grootste beroepsgroepen de dagloners en de werklozen.\n",
+      "Huurstakingen vonden plaats in 1932 en 1933; in 1934 sloeg het Jordaanoproer* over naar de Staatsliedenbuurt. Een ambtelijk rapport uit 1959 concludeerde dat het gemiddelde IQ van de buurtbewoners tot de laagste van de stad behoorde en nog in 1970 ging er van de schoolverlaters niet een naar het gymnasium.\n",
+      "De buurt was en bleef arm. Het woningbestand van de buurt verloederde in de jaren zestig en zeventig. Zonder dat er plannen waren voor sloop of nieuwbouw werden honderden woningen dichtgetimmerd.\n",
+      "De Staatsliedenbuurt was begin jaren 80 zwaar verpauperd en bijna een staat in de staat, de politie kwam er nauwelijks meer, het recht van de sterksten gold er, wat in dit geval krakers waren. Er golden eigen wetten en regels, de krakers hielden er zelfs een compleet eigen woningdistributiesysteem op na."
+    ],
+    "content_a5": [
+      "Pas in 1978 kwam er een bestemmingsplan, dat in 1981 resulteerde in een nieuwbouwblok met gezinswoningen, terwijl de meerderheid van de buurtbewoners niet meer in een gezinssituatie woonde.\n",
+      "Intussen waren de sloopwoningen gekraakt, tot opluchting van de buren, die zich in een spookbuurt hadden gewaand.\n",
+      "De plaatselijke kraakbeweging, Woongroep geheten, ontwikkelde een bijzonder sterke positie in het bestuursvacuüm van de gemeentepolitiek; de samenwerking met buurtgroepen (winkeliers, wijkopbouworgaan, kerk, bewonersverenigingen) was innig.\n",
+      "Tegelijkertijd radicaliseerde de Woongroep door sinds 1981 ook distributiewoningen te kraken. Aan de andere kant werden hele blokken slooppanden vrijwillig door de krakers ontruimd, nadat zekerheid was verkregen dat er voor buurtbewoners betaalbare huizen voor in de plaats zouden komen.\n",
+      "Fout ging het, toen in 1982 het Gemeentelijke Grondbedrijf* zélf bewoners voor de sloopwoningen ging leveren. Het waren de jaren dat de Zeedijk werd 'schoongemaakt', wat nieuwe bewoners en veel heroïnehandel de buurt in bracht.\n",
+      "Toen burgemeester Van Thijn kenbaar maakte de buurt te willen bezoeken, werd een tribunaal georganiseerd, waarin alle bewonersgroepen, van bejaarden, kerk, en krakers tot winkeliers en scholen waren georganiseerd.\n",
+      "Van Thijn werd veroordeeld tot prompte uitvoering van het achterstallige stadsvernieuwings- en wijkverbeteringswerk. Toen hij vijf dagen later kwam, werd hij de buurt uitgespuugd."
+    ],
+    "content_a6": [
+      "De openbare orde kreeg vervolgens een hoge prioriteit op de agenda van B. en W. In de Marnixstraat werd een nieuw politiebureau geopend, dat drie weken later een moeder en kind (met urgentiebewijs) uit een woning in de Schaepmanstraat zette.\n",
+      "Er werd herkraakt en weer ontruimd en daags daarna, op 25 oktober 1985, stierf een van de arrestanten, Hans Kok, in een politiecel. De reacties van krakers en politie waren heftig.\n",
+      "Uiteindelijk is de openbare rust gekocht door tientallen miljoenen in de buurt te pompen; geen enkele aanvraag om voorzieningen of verbeteringen werd nog afgewezen. Sindsdien is er grootschalig gerenoveerd.\n",
+      "Er zijn verschillende nieuwbouwcomplexen, zoals de ecowijk op het voormalige waterleidingterrein. Het complex bejaardenwoningen De Koperen Knoop in de Van Limburg Stirumstraat bewaart de herinnering aan de oudste bewoners van de buurt.\n",
+      "In Zaal 100, een gekraakte school in de De Wittenstraat, en op het terrein van de voormalige Westergasfabriek bloeit de cultuur."
+    ],
+    "content_a7": [
+
+    ]
+  },
+  "demografie": {
+    "titel": "Demografie",
+    "desc": [
+      "Hier vindt je de demografische gegevens van de wijk.\n",
+      "Maar wat is demografie eigenlijk?\n",
+      "Demografie is bevolkingsonderzoek of bevolkingsleer. Demografie onderzoekt hoe een bevolkingsgroep (gemeenschap) is samengesteld.\n",
+      "Hierbij wordt gekeken naar bijvoorbeeld leeftijd, geslacht, nationaliteit, etniciteit, opleidingsniveau, burgerlijke staat en beroep.\n",
+      "Hierbij heb je ook te maken met sociale wetenschappen als geografie, sociologie, antropologie en geschiedenis, maar ook exacte wetenschappen als statistiek en wiskunde.\n",
+      "Beweeg met je muis over het diagram voor de exacte aantallen of percentages per jaar."
+    ]
+  },
+  "leesditeerst": {
+    "titel_1": "Een bericht plaatsen?",
+    "titel_2": "Lees dit eerst!",
+    "titel_3": "Regels voor online posten",
+    "alinea_1": "Om een bericht te posten dient u zich eerst te registreren en vervolgens in te loggen met uw email en gebruikersnaam. Door op uw naam te klikken gaat u naar uw profielpagina en kunt u, desgewenst een profielafbeelding toevoegen.",
+    "alinea_2": "U kunt uw meningen, kritische geluiden, afbeeldingen en opmerkingen via dit platform met ons delen. Om dit voor iedereen prettig te houden, vragen we u vriendelijk om u aan de volgende huisregels te houden:",
+    "regel_1": "Ga netjes met elkaar om op dit platform. Bedreigen, schelden, hatelijk gedrag en kwetsen is op dit platform niet gewenst.",
+    "regel_2": "Respecteer elkaars mening en privacy. Deel geen publiekelijke en privacygevoelige informatie",
+    "regel_3": "Plaatst u meer dan één keer ongepaste berichten op dit platform? Dan kunnen we u als gebruiker blokkeren.",
+    "regel_4": "Voldoet uw bericht niet aan deze regels? Dan mogen wij uw bericht verwijderen."
+  },
+  "post": {
+    "postiets": "Post hier iets",
+    "delen": "Wat wil je met ons delen?",
+    "gepostop": "Gepost op:"
+  },
+  "beeld": {
+    "titel": "De Staatsliedenbuurt in beeld",
+    "1900heden": "(1900-heden)"
+  },
+  "placeholder": {
+    "schrijfeenreactie": "Schrijf een reactie..."
+  },
+  "reactie": {
+    "reacties": "Reacties"
+  },
+  "schrijfbericht": {
+    "bericht": "Schrijf een bericht",
+    "afbeelding": "Voeg afbeelding toe:",
+    "error": "Geen tekst of afbeelding geselecteerd!",
+    "verstuur": "Verstuur"
+  },
+  "contact": {
+    "contact": "Heeft u een vraag, klacht of een tip ter verbetering van de app?"
+  },
+  "weer": {
+    "vandaag": "Het weer actueel",
+    "morgen": "Het weer morgen",
+    "druk": "Druk",
+    "vocht": "Vocht",
+    "zicht": "Zicht",
+    "zonop": "Zon op",
+    "zononder": "Zon onder",
+    "uur": "uur"
+  }
+}

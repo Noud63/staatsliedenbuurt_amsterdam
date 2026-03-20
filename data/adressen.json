@@ -1,0 +1,285 @@
+[
+  {
+    "id": 0,
+    "title": "Tandartsen",
+    "items": [
+      {
+        "naam": "Florens Tandartsen",
+        "adres": "Fannius Scholtenstraat 74",
+        "postcode": "1051GB Amsterdam West",
+        "telefoon": "020-3586966",
+        "website": "https://florenstandartsen.nl",
+        "email": "info@florenstandartsen.nl"
+      },
+      {
+        "naam": "Tandartspraktijk Westerpark",
+        "adres": "Waterspiegelplein 60",
+        "postcode": "1051PC Amsterdam",
+        "telefoon": "020 - 68 29 424",
+        "website": "https://www.tandartswesterpark.nl",
+        "email": "balie@tandartswesterpark.nl"
+      },
+      {
+        "naam": "Praktijk voor Parodontologie",
+        "adres": "Van Limburg Stirumstraat 2-A",
+        "postcode": "1051BB Amsterdam",
+        "telefoon": "020-486 40 40",
+        "website": "https://www.paropraktijk.com",
+        "email": "info@paropraktijk.com"
+      },
+      {
+        "naam": "Mondhygiënist F.W. Kurabachew",
+        "adres": " Van Limburg Stirumstraat 2-A",
+        "postcode": "1051BB Amsterdam",
+        "telefoon": "06 52154726",
+        "website": "https://www.paropraktijk.com/het-team",
+        "email": "info@paropraktijk.com"
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "title": "Huisartsen",
+    "items": [
+      {
+        "naam": "Huisartsen Westerpark",
+        "adres": "de Wittenkade 59",
+        "postcode": "1052AD Amsterdam",
+        "telefoon": "088-0030600",
+        "website": "https://www.huisartsenwesterpark.nl",
+        "email": null
+      },
+      {
+        "naam": "Huisartsenpraktijk Haarlemmerpoort",
+        "adres": "van Limburg Stirumstraat 20A",
+        "postcode": "1051BB Amsterdam West",
+        "telefoon": "020-6840133",
+        "website": "https://huisartsenpraktijkhaarlemmerpoort.nl",
+        "email": "info@hahp.nl",
+        "categorie": "Huisartsen"
+      },
+      {
+        "naam": "SAG",
+        "adres": "Van Hallstraat 200",
+        "postcode": "1051HL Amsterdam",
+        "telefoon": "020 68 40 770",
+        "website": "https://www.sag-staatsliedenbuurt.nl/ons-team",
+        "email": " info-staatslieden@sag-amsterdam.nl"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Fysiotherapie",
+    "items": [
+      {
+        "naam": "Fysio Westerpark",
+        "adres": "Van Hallstraat 200",
+        "postcode": "1051HL Amsterdam",
+        "telefoon": "020-6869806",
+        "website": "https://fysiowesterpark.nl",
+        "email": "info@fysiowesterpark.nl"
+      },
+      {
+        "naam": "Fysio Westerpark",
+        "adres": "De Wittenkade 59",
+        "postcode": "1052AD Amsterdam",
+        "telefoon": "020 – 686 98 06",
+        "website": "https://fysiowesterpark.nl",
+        "email": "info@fysiowesterpark.nl"
+      },
+      {
+        "naam": "Uniek Kind en Jeugdpraktijken",
+        "adres": "Van Hogendorpplein 11",
+        "postcode": "1051AX Amsterdam",
+        "telefoon": "085 - 877 22 32",
+        "website": "https://www.uniekpraktijken.nl/locaties/westerparkschool",
+        "email": "info@uniekpraktijken.nl"
+      },
+      {
+        "naam": "Psychosomatische Fysiotherapie",
+        "adres": "Groen van Prinstererstraat 20H",
+        "postcode": "1051EG Amsterdam",
+        "telefoon": "0630623337",
+        "website": "https://www.praktijkrefke.nl",
+        "email": "info@praktijkrefke.nl"
+      },
+      {
+        "naam": "Energetic",
+        "adres": "Van Hallstraat 294 BG",
+        "postcode": "1051HM Amsterdam",
+        "telefoon": "06 49320863",
+        "website": "https://www.energenic.nl/",
+        "email": "info@energenic.nl"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Acupunctuur",
+    "items": [
+      {
+        "naam": "Priktijk Westerpark",
+        "adres": "Groen van Prinstererstraat 29 hs",
+        "postcode": "1051VM Amsterdam",
+        "telefoon": "06-24426490",
+        "website": "https://www.priktijk.nl",
+        "email": "acupunctuur@priktijk.nl"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Psychologen",
+    "items": [
+      {
+        "naam": "Psychosomatische Fysiotherapie",
+        "adres": "Groen van Prinstererstraat 20H",
+        "postcode": "1051EG Amsterdam",
+        "telefoon": "0630623337",
+        "website": "https://www.praktijkrefke.nl",
+        "email": "info@praktijkrefke.nl"
+      },
+      {
+        "naam": "Gestaltpraktijk Amsterdam",
+        "adres": "Groen van Prinstererstraat 64",
+        "postcode": "1051EP Amsterdam",
+        "telefoon": " 06 12 93 01 24",
+        "website": "https://gestaltpraktijkamsterdam.nl",
+        "email": "nfo@gestaltpraktijkamsterdam.nl."
+      },
+      {
+        "naam": "De Schatkist",
+        "adres": "De Wittenkade 75",
+        "postcode": "1052AE Amsterdam",
+        "telefoon": "06-14794883",
+        "website": "https://www.deschatkist.info",
+        "email": "info@deschatkist.info"
+      },
+      {
+        "naam": "True Me",
+        "adres": "Korte de Wittenstraat 21",
+        "postcode": "1052 DG Amsterdam",
+        "telefoon": "06 43585349",
+        "website": "https://trueme.nl/contact.php",
+        "email": "praktijk.trueme@gmail.com"
+      },
+      {
+        "naam": "White Mudra Healing",
+        "adres": "Van der Hoopstraat 113-2",
+        "postcode": "1051VE Amsterdam",
+        "telefoon": "06 484 28 792",
+        "website": "https://whitemudrahealing.com/",
+        "email": "martijn@whitemudrahealing.com"
+      },
+      {
+        "naam": "Valeria Pierdominici",
+        "adres": "Eerste Keucheniusstraat 6HS",
+        "postcode": "1051HR Amsterdam",
+        "telefoon": "06 41 96 94 97",
+        "website": "https://www.proteatherapy.org",
+        "email": "proteapsychology@gmail.com"
+      },
+      {
+        "naam": "Mind of the Future",
+        "adres": "Wichersstraat 90",
+        "postcode": "1051ML Amsterdam",
+        "telefoon": "06 28106798",
+        "website": "https://www.mindofthefuture.com/nl",
+        "email": "bas@mindofthefuture.com"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Haptonomie",
+    "items": [
+      {
+        "naam": "Jantine de Boer, Haptotherapie",
+        "adres": "Groen van Prinstererstraat 64 ",
+        "postcode": "1051EP Amsterdam",
+        "telefoon": "06 304 82 430",
+        "website": "https://www.jantinedeboer.nl",
+        "email": "info@jantinedeboer.nl"
+      },
+      {
+        "naam": "Haptotherapeuten-vvh",
+        "adres": "Eerste Keucheniusstraat 35 H",
+        "postcode": "1051HP Amsterdam",
+        "telefoon": "020 488 7116",
+        "website": "https://www.haptotherapeuten-vvh.nl",
+        "email": "info@haptotherapeuten-vvh.nl"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Chiropractie",
+    "items": [
+      {
+        "naam": "Interchiro",
+        "adres": "Van Hallstraat 93 H",
+        "postcode": "1051HA, Amsterdam",
+        "telefoon": "020 23 82 130",
+        "website": "https://nl.interchiro.com",
+        "email": "amsterdam@interchiro.com"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Plastische chirurgie",
+    "items": [
+      {
+        "naam": "Samkliniek",
+        "adres": "Van der Palmkade 148",
+        "postcode": "1051RJ Amsterdam",
+        "telefoon": "020 261 4688",
+        "website": "https://www.samkliniek.nl",
+        "email": ""
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Dermatologie",
+    "items": [
+      {
+        "naam": "U-Clinic",
+        "adres": "Haarlemmerweg 25 A",
+        "postcode": "1051KN Amsterdam",
+        "telefoon": "085 022 05 80",
+        "website": "https://u-clinic.nl/locatie/u-clinic-amsterdam",
+        "email": "info@u-clinic.nl"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "title": "Verloskundigen",
+    "items": [
+      {
+        "naam": "LMcare",
+        "adres": "Van der Hoopstraat 40A",
+        "postcode": "1051VJ Amsterdam",
+        "telefoon": "020 6828657",
+        "website": "https://vroedvrouwen.nl/home-pagina",
+        "email": "info@vroedvrouwen.nl"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "title": "Apotheek",
+    "items": [
+      {
+        "naam": "Apotheek Staatslieden",
+        "adres": "Van Hallstraat 200",
+        "postcode": "1051HL Amsterdam",
+        "telefoon": "020 851 10607",
+        "website": "https://medicijnman.amsterdam/apotheek-staatslieden/",
+        "email": "staatslieden@medicijnmanapotheek.nl"
+      }
+    ]
+  }
+]

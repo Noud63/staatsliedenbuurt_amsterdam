@@ -1,0 +1,145 @@
+{
+  "auth": {
+    "inloggen": "Login",
+    "uitloggen": "Logout",
+    "registreren": "Register",
+    "verwijder": "Delete",
+    "reageer": "comment",
+    "bewerk": "Edit"
+  },
+  "menu": {
+    "historie": "History",
+    "social": "Social",
+    "nieuws": "News",
+    "demografie": "Demografics",
+    "beeld": "Images",
+    "over": "About",
+    "praktisch": "Praktical",
+    "westergas": "Westergas",
+    "buurt": "neighborhood",
+    "kunst": "Art & Culture",
+    "weer": "Weather",
+    "contact": "Contact"
+  },
+  "historie": {
+    "titel": "History of the Staatsliedenbuurt",
+    "content_a1": [
+      "The Staatsliedenbuurt is a neighborhood in Amsterdam located in the district of West.",
+      "The neighborhood lies south of the Haarlemmertrekvaart and west of the waterway route Singelgracht - Kattensloot - Kostverlorenvaart.",
+      "The area emerged in the 19th century and has since undergone various transformations. Originally a working-class neighborhood, it has developed into a vibrant and multicultural community.",
+      "The neighborhood is named after the statesmen of the Netherlands, who played an important role in the country's history."
+    ],
+    "subtitel": "In the beginning",
+    "content_a2": [
+      "When it comes to the history of the Staatsliedenbuurt, the question is: where does that history begin? Where should you start telling that story?",
+      "Given the geographical location of the Staatsliedenbuurt in the area that once belonged to the former municipality of Sloten, the period before the annexation (1877–1896–1921) by Amsterdam, when Sloten lost its independence and land to the city, certainly deserves attention here."
+    ],
+    "kaart_1": "Sloten en Amsterdam 1770",
+    "kaart_2": "Amsterdam 1860",
+    "kaart_3": "Amsterdam 1940",
+    "content_a3": [
+      "Everything located between the IJ (and later the North Sea Canal) to the north and the Nieuwe Meer to the south belonged before 1877 to Sloten.\n",
+      "On the sides, the Schinkel and the Kostverlorenkade on one side and the Ringvaart of the Haarlemmermeer on the other side were considered the municipal boundaries.\n",
+      "Around the year 1000, the area gradually began to be developed and the first villages emerged.\n",
+      "According to the history of this area, the first mention of a chapel in Sloton was recorded by monks between the years 993 and 1049 in a medieval prayer book.\n",
+      "Sloten is therefore about two centuries older than Amsterdam!\n",
+      "Sloten, which had been a municipality since 1816, was annexed by Amsterdam in 1921. The city had already been expanding since the last quarter of the 19th century, at the expense of the surrounding municipalities.\n",
+      "In 1877, a part of Sloten west of the Haarlemmerpoort was already taken over: the Spaarndammerbuurt and part of the Staatsliedenbuurt were built here.\n",
+      "The tow canal from Amsterdam to Haarlem (Haarlemmervaart) was and still is the northern boundary of the neighborhood.\n",
+      "The main attraction was Inn d'Eenhonderd Roe, a tavern just outside the city limits that did not have to pay municipal taxes.\n",
+      "The inn was located at a distance of one hundred rods (almost four hundred meters) west of the Haarlemmerpoort, the former municipal boundary with Amsterdam and, from 1632 to 1883, the departure point of the tow barge to Haarlem.\n",
+      "In 1896, another small part of Sloten was cut off. On January 1, 1921, the entire municipality of Sloten was dissolved and incorporated into Amsterdam.\n",
+      "Here, the neighborhoods of Plan West, Bos en Lommer, and the Western Garden Cities were built.\n",
+      "The residents of Sloten and the last mayor did resist the annexation, but reportedly alderman Willem Hendrik de Buisonjé played a dubious role by claiming, as a member of parliament for the liberal Economic Union, that the residents were in favor of annexation."
+    ],
+    "content_a4": [
+      "After the municipality adopted an expansion plan in 1877 for the area between the Overtoom and the Haarlemmerweg, the Staatsliedenbuurt was built in the mill-rich pastureland known as the Binnenpolder of Sloten.\n",
+      "The construction of the Staatsliedenbuurt addressed the growing need for housing due to the rapidly increasing population of Amsterdam. There was especially a need for affordable workers' housing.\n",
+      "Private investors created new housing supply through 'revolutionary construction.' After the Housing Act was introduced in 1901, housing associations such as Rochdale and De Arbeiderswoning also began building initiatives.\n",
+      "The first Housing Act homes in the Netherlands are located on Van Beuningenstraat.",
+      "For the street layout, the original parcel ditches and paths to timber mills were largely maintained. The oldest streets were the Nassaustraat streets and De Wittenstraat; later streets, quays, and squares were also named after statesmen.\n",
+      "In the early years of the 20th century, the buildings west of Van Hallstraat were completed. This part of the 'Staatsliedenkwartier' had become a typical 19th-century neighborhood.\n",
+      "Tenants of the housing associations were required to have a steady job that provided sufficient income to pay the rent weekly.\n",
+      "The neighborhood was also known as the 'brass buttons neighborhood.'\n",
+      "Many of the residents wore uniforms because they worked for nearby utility companies (waterworks, gas factory), or for the fire department, railways, public transport, and police.\n",
+      "The population of the neighborhood consisted of lower-level civil servants, better-educated workers, and small business owners, and was socially distinct from the residents of the new housing east of Van Hallstraat: the Jordaan residents from basement dwellings and evicted caravan dwellers placed in new municipal housing from 1915 onward were seen as antisocial by the rest of the neighborhood.\n",
+      "In 1918, they drove the royal family, who had come to open the Princess Church on Van Hallstraat, out of the neighborhood. As many families moved in the 1930s to better homes in the Bos en Lommer neighborhood, the social homogeneity of the population increased. In 1931, the two largest occupational groups were day laborers and the unemployed.\n",
+      "Rent strikes occurred in 1932 and 1933; in 1934, the Jordaan riots spread to the Staatsliedenbuurt. An official report from 1959 concluded that the average IQ of the neighborhood residents was among the lowest in the city, and even in 1970, not a single school-leaver went on to grammar school (gymnasium).\n",
+      "The neighborhood was and remained poor. The housing stock in the area deteriorated during the 1960s and 1970s. Hundreds of homes were boarded up without any plans for demolition or new construction.\n",
+      "In the early 1980s, the Staatsliedenbuurt was severely deteriorated and almost a state within a state. The police barely entered the area, the law of the strongest prevailed — in this case, the squatters. There were their own laws and rules; the squatters even maintained a completely independent housing distribution system."
+    ],
+    "content_a5": [
+      "It wasn't until 1978 that a zoning plan was introduced, which in 1981 resulted in a new housing block with family homes, even though the majority of the neighborhood’s residents no longer lived in family situations.\n",
+      "In the meantime, the slated-for-demolition houses had been squatted, to the relief of neighbors who had felt like they were living in a ghost neighborhood.\n",
+      "The local squatter movement, called the Woongroep (Living Group), developed a particularly strong position within the political vacuum left by the municipal government; cooperation with neighborhood groups (shopkeepers, community organizations, the church, residents' associations) was close-knit.\n",
+      "At the same time, the Woongroep became more radical, starting in 1981 to also squat distribution houses. On the other hand, entire blocks of condemned buildings were voluntarily vacated by the squatters once assurances were given that affordable homes for local residents would replace them.\n",
+      "Things went wrong when, in 1982, the Municipal Land Office* itself began supplying residents for the condemned houses. These were the years when the Zeedijk was being 'cleaned up,' which brought new residents and a great deal of heroin dealing into the neighborhood.\n",
+      "When Mayor Van Thijn announced his intention to visit the neighborhood, a tribunal was organized, involving all resident groups—from the elderly, the church, and squatters to shopkeepers and schools.\n",
+      "Van Thijn was sentenced to the prompt execution of long-overdue urban renewal and neighborhood improvement efforts. When he arrived five days later, he was spat out of the neighborhood."
+    ],
+    "content_a6": [
+      "Public order then became a top priority on the agenda of the municipal executive (B. en W.). A new police station was opened on Marnixstraat, which three weeks later evicted a mother and child (with a priority housing certificate) from a home on Schaepmanstraat.\n",
+      "The house was re-squatted and cleared again, and the following day, on October 25, 1985, one of the arrestees, Hans Kok, died in a police cell. The reactions from both squatters and police were intense.\n",
+      "In the end, public peace was bought by pouring tens of millions into the neighborhood; no application for facilities or improvements was rejected anymore. Since then, large-scale renovations have taken place.\n",
+      "There are various new housing complexes, such as the eco-district on the former waterworks site. The elderly housing complex De Koperen Knoop on Van Limburg Stirumstraat preserves the memory of the neighborhood's oldest residents.\n",
+      "In Zaal 100, a squatted school on De Wittenstraat, and on the grounds of the former Westergasfabriek, culture is thriving."
+    ],
+    "content_a7": []
+  },
+  "demografie": {
+    "titel": "Demografics",
+    "desc": [
+      "Here you will find the demographic data of the neighborhood.\n",
+      "But what is demography actually?\n",
+      "Demography is the study or science of populations. It examines how a population group (community) is composed.\n",
+      "It looks at things like age, gender, nationality, ethnicity, education level, marital status, and occupation.\n",
+      "This also involves social sciences such as geography, sociology, anthropology, and history, as well as exact sciences like statistics and mathematics.\n",
+      "Hover over the diagram with your mouse to see the exact numbers or percentages per year."
+    ]
+  },
+  "leesditeerst": {
+    "titel_1": "Wanna post a message?",
+    "titel_2": "Read this first!",
+    "titel_3": "Rules for posting online",
+    "alinea_1": "To post a message, you must first register and then log in with your email and username. By clicking on your name, you go to your profile page where you can, if you wish, add a profile picture.",
+    "alinea_2": "You can share your opinions, critical comments, images, and remarks with us through this platform. To keep this enjoyable for everyone, we kindly ask you to follow these house rules:",
+    "regel_1": "Treat each other respectfully on this platform. Threatening, swearing, hateful behavior, and hurting others are not allowed here.",
+    "regel_2": "Respect each other's opinions and privacy. Do not share public or sensitive personal information.",
+    "regel_3": "If you post inappropriate messages more than once on this platform, we may block you as a user.",
+    "regel_4": "If your message does not comply with these rules, we have the right to delete it."
+  },
+  "post": {
+    "postiets": "Post something",
+    "delen": "Share something with us?",
+    "gepostop": "Posted on:"
+  },
+  "beeld": {
+    "titel": "The Staatsliedenbuurt in pictures",
+    "1900heden": "(1900-present)"
+  },
+  "placeholder": {
+    "schrijfeenreactie": "Write a comment..."
+  },
+  "reactie": {
+    "reacties": "Comments"
+  },
+  "schrijfbericht": {
+    "bericht": "Write a message",
+    "afbeelding": "Add image:",
+    "error": "No text or image selected!",
+    "verstuur": "Send"
+  },
+  "contact": {
+    "contact": "Do you have a question, complaint, or a suggestion to improve the app?"
+  },
+  "weer": {
+    "vandaag": "Current weather",
+    "morgen": "The weather tomorrow",
+    "druk": "Pressure",
+    "vocht": "Humidity",
+    "zicht": "Visibility",
+    "zonop": "Sunrise",
+    "zononder": "Sunset",
+    "uur": "hour"
+  }
+}

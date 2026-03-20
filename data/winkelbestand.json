@@ -1,0 +1,270 @@
+[
+  {
+    "id": 0,
+    "title": "Supermarkten",
+    "items": [
+      {
+        "naam": "Albert Heijn",
+        "adres": "Van Limburg Stirumstraat 44",
+        "postcode": "1051BC Amsterdam",
+        "telefoon": "020-6812187",
+        "website": "https://www.ah.nl",
+        "email": ""
+      },
+      {
+        "naam": "Dirk van den Broek",
+        "adres": "Tweede Nassaustraat 23",
+        "postcode": "1052BK Amsterdam",
+        "telefoon": "088-3134280",
+        "website": "https://www.dirk.nl/winkels/amsterdam/2e-nassaustraat/30",
+        "email": ""
+      },
+      {
+        "naam": "Bario Market",
+        "adres": "Tweede Nassaustraat 12",
+        "postcode": "1052BK Amsterdam",
+        "telefoon": "020 475 2096",
+        "website": "",
+        "email": ""
+      },
+      {
+        "naam": "Minimarkt Alba",
+        "adres": "Van Hallstraat 254",
+        "postcode": "1051HM Amsterdam",
+        "telefoon": "06 34645699",
+        "website": "https://www.facebook.com/albaminimarkt/?locale=nl_NL",
+        "email": ""
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "title": "Drogisterijen",
+    "items": [
+      {
+        "naam": "Kruidvat",
+        "adres": "Van Limburg Stirumstraat 58",
+        "postcode": "1051BC Amsterdam",
+        "telefoon": "0318 798001",
+        "website": "https://www.kruidvat.nl",
+        "email": ""
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Bakkerijen",
+    "items": [
+      {
+        "naam": "Bakkerij Westerpark",
+        "adres": "Van Limburg Stirumstraat 34",
+        "postcode": "1051BC Amsterdam",
+        "telefoon": "020-6844180",
+        "website": "https://bakkerijwesterpark.com",
+        "email": ""
+      },
+      {
+        "naam": "Louf Westerpark",
+        "adres": "De Wittenkade 96",
+        "postcode": "1051AK Amsterdam",
+        "telefoon": "020-6844180",
+        "website": "https://www.bakkerijlouf.nl",
+        "email": "info@bakkerijlouf.nl"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "IJzerwaren",
+    "items": [
+      {
+        "naam": "Zijlstra's IJzerhandel",
+        "adres": "Tweede Nassaustraat 40-42-44",
+        "postcode": "1052BP Amsterdam",
+        "telefoon": "020-6860152",
+        "website": "https://www.zijlstraijzerhandel.nl/",
+        "email": "ronzijlstra@hetnet.nl"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Slijterijen",
+    "items": [
+      {
+        "naam": "Topslijter Westerpark",
+        "adres": "Van Limburg Stirumstraat 38",
+        "postcode": "1051BC Amsterdam",
+        "telefoon": "020 684 4395",
+        "website": "https://topslijter.nl",
+        "email": ""
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Stomerijen",
+    "items": [
+      {
+        "naam": "Perfekt Kledingreparatie en Stomerij",
+        "adres": "Tweede Nassaustraat 36",
+        "postcode": "1052BP Amsterdam",
+        "telefoon": "0643827448",
+        "website": "",
+        "email": ""
+      },
+       {
+         "naam": "Bohak Stomerij",
+         "adres": "Van Limburg Stirumstraat 12-A",
+         "postcode": "1051BE Amsterdam",
+         "telefoon": "020 682 6012",
+         "website": "",
+         "email": ""
+       }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Apotheken",
+    "items": [
+      {
+        "naam": "Apotheek Staatslieden",
+        "adres": "Van Hallstraat 200",
+        "postcode": "1051HL Amsterdam",
+        "telefoon": "020 851 10607",
+        "website": "https://medicijnman.amsterdam/apotheek-staatslieden/",
+        "email": "staatslieden@medicijnmanapotheek.nl"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Viswinkels",
+    "items": [
+      {
+        "naam": "La Pescheria Italiana",
+        "adres": "Van Hallstraat 268",
+        "postcode": "1051HM Amsterdam",
+        "telefoon": "",
+        "website": "",
+        "email": ""
+      },
+      {
+        "naam": "Viswinkel Ahlam",
+        "adres": "Van Hallstraat 268",
+        "postcode": "1051HM Amsterdam",
+        "telefoon": "",
+        "website": "",
+        "email": ""
+      },
+      {
+        "naam": "Alicante Vis",
+        "adres": "Van Slingelandtstraat 13-B",
+        "postcode": "1051CG Amsterdam",
+        "telefoon": "06-52394229",
+        "website": "https://www.alicantevis-amsterdam.nl",
+        "email": ""
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Coffeeshops",
+    "items": [
+      {
+        "naam": "Coffeeshop De Republiek",
+        "adres": "Tweede Nassaustraat 1B",
+        "postcode": "1052BJ Amsterdam",
+        "telefoon": "+31 20 682 8431",
+        "website": "https://thecoffeeshops.com",
+        "email": ""
+      },
+      {
+        "naam": "Coffeeshop Chapiteau",
+        "adres": "Van Boetzelaerstraat 29-31",
+        "postcode": "1051CZ Amsterdam",
+        "telefoon": "020 682 2548",
+        "website": "",
+        "email": ""
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "title": "Boekhandels",
+    "items": [
+      {
+        "naam": "OBA Staatsliedenbuurt",
+        "adres": "Van Hallstraat 615",
+        "postcode": "1051HE Amsterdam",
+        "telefoon": "+31 20 532 0900",
+        "website": "https://www.oba.nl",
+        "email": "oba@oba.nl"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "title": "Plantenwinkels",
+    "items": [
+      {
+        "naam": "Het Groene Paradijs",
+        "adres": "Van Hallstraat 99-103",
+        "postcode": "1051HP Amsterdam",
+        "telefoon": "0206845054",
+        "website": "https://www.facebook.com/hetgroneparadijs/",
+        "email": ""
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "title": "Wasserettes",
+    "items": [
+      {
+        "naam": "Wassalon Dusko",
+        "adres": "Van der Hoopstraat 30A",
+        "postcode": "1052VH Amsterdam",
+        "telefoon": "0206841532",
+        "website": "http://wassalondusko.nl/",
+        "email": "Dusko30@outlook.com"
+      },
+      {
+        "naam": "Wash-O-Matic",
+        "adres": "Van Beuningenstraat 163A",
+        "postcode": "1052AG Amsterdam",
+        "telefoon": "",
+        "website": "",
+        "email": ""
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "title": "Slagerijen",
+    "items": [
+      {
+        "naam": "Slagerij Alhoceima",
+        "adres": "Van Limburg Stirumstraat 113",
+        "postcode": "1051BA Amsterdam",
+        "telefoon": "020 682 1286",
+        "website": "https://www.slagerijalhoceima.nl",
+        "email": "info@slagerijalhoceima.nl"
+      }
+    ]
+  },
+   {
+     "id": 12,
+     "title": "Schoenmaker",
+     "items": [
+       {
+         "naam": "Bohak Schoenmakerij",
+         "adres": "Van Limburg Stirumstraat 12-A",
+         "postcode": "1051BE Amsterdam",
+         "telefoon": "020 682 6012",
+         "website": "",
+         "email": ""
+       }
+     ]
+   }
+]
