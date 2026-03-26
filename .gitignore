@@ -15,6 +15,7 @@
 
 # production
 /build
+production.text
 
 # misc
 .DS_Store

@@ -84,7 +84,7 @@ export const authOptions = {
 
           const email = credentials.email.toLowerCase();
 
-
+          //Not in production!
           const normalizeIp = (ip) => {
             if (!ip) return "unknown";
             if (ip === "::1") return "127.0.0.1";
@@ -117,7 +117,7 @@ export const authOptions = {
 
           // 3. Validate email (no DB hit yet)
           if (!validator.validate(email)) {
-            throw new CredentialsError(`INVALID_CREDENTIALS:${remaining}`);
+            throw new CredentialsError(`INVALID_EMAIL_FORMAT`);
           }
 
           await connectDB();
@@ -218,7 +218,7 @@ export const authOptions = {
   },
 };
 
-//--------------- !! In production add these !! ----------------------
+//--------------- !! In production add these to authorize !! ----------------------
 
 // sameSite: "lax", // Prevents CSRF but allows external-site navigation
 

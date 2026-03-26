@@ -1,0 +1,53 @@
+//--------------- !! In production add these to authorize !! ----------------------
+
+ sameSite: "lax", // Prevents CSRF but allows external-site navigation
+
+ SECURITY: Validate required environment variables
+ if (!process.env.NEXTAUTH_SECRET) {
+   throw new Error("NEXTAUTH_SECRET is not defined in environment variables");
+ }
+
+ SECURITY: Rate limiter (login with credentials) for brute force protection
+
+ SECURITY: Enhanced email validation with RFC 5322 simplified checks regex
+
+ Consideusing external rate limiting service (e.g., Redis) for production scaling
+
+ Add email verification flow for credential-based signups
+
+ Environment variable validation
+ Enhanced email validation (RFC 5322 compliant)
+ Removed allowDangerousEmailAccountLinking
+ Strict CSRF protection (sameSite: "strict")
+ Email verification checks
+ OAuth profile validation
+ Sanitized error logging (dev vs production)
+
+// And this:
+  utils/getClientIp.ts
+  export const getClientIp = (req: any) => {
+    //Try x-forwarded-for first (may contain multiple IPs)
+   const forwarded = req?.headers?.get("x-forwarded-for");
+   if (forwarded) {
+     // Take the first IP in the chain, trimming whitespace
+     const firstIp = forwarded.split(",")[0].trim();
+     if (firstIp) return firstIp;
+  }
+
+   // Fallback to x-real-ip
+   const realIp = req?.headers?.get("x-real-ip");
+   if (realIp) return realIp;
+
+   // Last fallback to socket remoteAddress
+   const remote = req?.socket?.remoteAddress;
+   if (remote) return remote;
+
+   // Could not detect IP → treat as unknown, but consider blocking requests without IP
+   return null;  };
+
+ //Get real client IP
+       const ip = getClientIp(req);
+     if (!ip) {
+       // Optional: reject requests without a detectable IP
+       throw new CredentialsError("INVALID_REQUEST");
+     }
