@@ -11,5 +11,7 @@ export async function GET(req) {
 
   const ttl = await getLockTTL(email);
 
-  return NextResponse.json({ ttl });
+  return Response.json({
+    ttl: ttl > 0 ? ttl : 0,
+  });
 }

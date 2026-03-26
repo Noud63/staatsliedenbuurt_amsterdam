@@ -23,6 +23,32 @@ const LoginForm = () => {
   const router = useRouter();
 
   useEffect(() => {
+    const restoreLock = async () => {
+      const savedEmail = localStorage.getItem("lastAttemptedEmail");
+      if (!savedEmail) return;
+
+      try {
+        const res = await fetch(`/api/lock-ttl?email=${savedEmail}`);
+        if (!res.ok) return;
+
+        console.log("Email:", email);
+
+        const data = await res.json();
+        if (data.ttl > 0) {
+          setDisabled(true);
+          setCountDown(data.ttl);
+          setMessage("Account tijdelijk geblokkeerd."); // ✅ restore the message
+        }
+      } catch (err) {
+        console.error("Failed to restore lock:", err);
+      }
+    };
+
+    restoreLock();
+  }, []); // run once on mount
+
+
+  useEffect(() => {
     if (countDown <= 0) return;
 
     const timer = setInterval(() => {
@@ -32,18 +58,20 @@ const LoginForm = () => {
     return () => clearInterval(timer);
   }, [countDown]);
 
+
   useEffect(() => {
     if (countDown === 0) {
       setDisabled(false);
       setMessage("");
+      localStorage.removeItem("lastAttemptedEmail");
     }
   }, [countDown]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (disabled) return;
+
     try {
-      // Clear previous UI states so failed attempts don't keep stale success banners/counters
       setSuccess(false);
       setLoginMessage("");
       setMessage("");
@@ -54,44 +82,31 @@ const LoginForm = () => {
         redirect: false,
       });
 
-      // Auth.js v5 / NextAuth `signIn({ redirect: false })` can still return `ok: true`
-      // even when `error` is present for Credentials provider failures.
-      // Always prioritize `error`/`code` for UI state.
       const errorString = res?.code ?? res?.error;
 
       if (res?.error || errorString) {
-        const [errorType, remaining] = (errorString ?? "").split(":");
+        const [errorType, value] = (errorString ?? "").split(":");
 
-        if (
-          errorString === "RATE_LIMIT_ACCOUNT" ||
-          errorString === "ACCOUNT_LOCKED"
-        ) {
-          //Get lock time from api => 60 sec
-          const response = await fetch(`/api/lock-ttl?email=${email}`);
-
-          if (response.ok) {
-            const data = await response.json();
-            setDisabled(true);
-            setCountDown(data.ttl || 60);
-            setMessage("Account tijdelijk geblokkeerd.");
-          }
+        if (errorType === "ACCOUNT_LOCKED") {
+          const ttl = Number(value) || 60;
+          localStorage.setItem("lastAttemptedEmail", email);
+          setDisabled(true);
+          setCountDown(ttl);
+          setMessage("Account tijdelijk geblokkeerd.");
         } else if (errorType === "INVALID_CREDENTIALS") {
-          setLoginMessage(
-            `Ongeldige inloggegevens! Nog ${remaining} pogingen.`,
-          );
-          setTimeout(() => setLoginMessage(""), 2000);
-        } else if (errorString === "INVALID_EMAIL_FORMAT") {
-          setLoginMessage(`Ongeldig e-mailadres.`);
-          setTimeout(() => setLoginMessage(""), 2000);
+          setLoginMessage(`Ongeldige inloggegevens! Nog ${value} pogingen.`);
+          setTimeout(() => setLoginMessage(""), 3000);
+        } else if (errorType === "RATE_LIMIT_IP") {
+          setMessage("Te veel pogingen. Probeer later opnieuw.");
         }
       } else if (res?.ok) {
         setSuccess(true);
-        setTimeout(() => {
-          router.push("/");
-        }, 1000);
+        localStorage.removeItem("lastAttemptedEmail");
+        setTimeout(() => router.push("/"), 1000);
       }
     } catch (error) {
-      console.log(error);
+      console.error("Unexpected client error:", error);
+      setLoginMessage("Er ging iets mis. Probeer opnieuw.");
     } finally {
       setEmail("");
       setPassword("");

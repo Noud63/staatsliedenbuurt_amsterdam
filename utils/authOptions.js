@@ -16,7 +16,6 @@ import {
 
 class CredentialsError extends CredentialsSignin {
   code;
-
   constructor(code) {
     super();
     this.code = code;
@@ -85,35 +84,40 @@ export const authOptions = {
 
           const email = credentials.email.toLowerCase();
 
-          const ip =
-            req?.headers?.["x-forwarded-for"]?.split(",")[0] ||
-            req?.socket?.remoteAddress ||
-            "unknown";
 
-          // Validate email FIRST → no Redis hit
-          if (!validator.validate(email)) {
-            throw new CredentialsError("INVALID_EMAIL_FORMAT");
-          }
+          const normalizeIp = (ip) => {
+            if (!ip) return "unknown";
+            if (ip === "::1") return "127.0.0.1";
+            return ip;
+          };
 
-          // Check account lock
-          const locked = await isAccountLocked(email);
-          if (locked) {
-            throw new CredentialsError("ACCOUNT_LOCKED");
-          }
+          const ip = normalizeIp(
+            req?.headers?.get?.("x-forwarded-for")?.split(",")[0] ||
+              req?.headers?.get?.("x-real-ip"),
+          );
 
-          // IP limiter
-          const { success: ipSuccess } = await ipLimiter.limit(ip);
-          if (!ipSuccess) {
+          // ✅ 1. GLOBAL limiter (covers invalid emails too)
+          const { success: ipSuccess, remaining } = await ipLimiter.limit(ip);
+
+          if (!ipSuccess || remaining === 0) {
+            // only lock VALID emails
+            if (validator.validate(email)) {
+              const lockTime = await lockAccount(email);
+              throw new CredentialsError(`ACCOUNT_LOCKED:${lockTime}`);
+            }
+
             throw new CredentialsError("RATE_LIMIT_IP");
           }
 
-          // Account limiter
-          const { success: accountSuccess, remaining } =
-            await accountLimiter.limit(email);
+          // 2. Check lock AFTER limiter (prevents bypass spam)
+          const locked = await isAccountLocked(email);
+          if (locked) {
+            throw new CredentialsError("ACCOUNT_LOCKED:60");
+          }
 
-          if (!accountSuccess || remaining === 0) {
-            await lockAccount(email);
-            throw new CredentialsError("RATE_LIMIT_ACCOUNT");
+          // 3. Validate email (no DB hit yet)
+          if (!validator.validate(email)) {
+            throw new CredentialsError(`INVALID_CREDENTIALS:${remaining}`);
           }
 
           await connectDB();
@@ -129,8 +133,6 @@ export const authOptions = {
 
           // successful login → clear lock
           await resetLoginAttempts(email);
-
-          console.log("dbUser:", dbUser)
 
           return {
             id: dbUser._id.toString(),
@@ -211,7 +213,6 @@ export const authOptions = {
       // Assign avatar to the session
       session.user.avatar = token.avatar;
       // console.log("Session:", session);
-      console.log("Session:", session)
       return session;
     },
   },
@@ -241,3 +242,33 @@ export const authOptions = {
 // Email verification checks
 // OAuth profile validation
 // Sanitized error logging (dev vs production)
+
+// And this:
+// utils/getClientIp.ts
+// export const getClientIp = (req: any) => {
+//   // Try x-forwarded-for first (may contain multiple IPs)
+//   const forwarded = req?.headers?.get("x-forwarded-for");
+//   if (forwarded) {
+//     // Take the first IP in the chain, trimming whitespace
+//     const firstIp = forwarded.split(",")[0].trim();
+//     if (firstIp) return firstIp;
+//   }
+
+//   // Fallback to x-real-ip
+//   const realIp = req?.headers?.get("x-real-ip");
+//   if (realIp) return realIp;
+
+//   // Last fallback to socket remoteAddress
+//   const remote = req?.socket?.remoteAddress;
+//   if (remote) return remote;
+
+//   // Could not detect IP → treat as unknown, but consider blocking requests without IP
+//   return null; 
+// };
+
+// Get real client IP
+    // const ip = getClientIp(req);
+    // if (!ip) {
+    //   // Optional: reject requests without a detectable IP
+    //   throw new CredentialsError("INVALID_REQUEST");
+    // }
