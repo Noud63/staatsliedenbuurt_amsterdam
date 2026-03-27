@@ -124,10 +124,15 @@ export const authOptions = {
 
           const dbUser = await User.findOne({ email }).select("+password");
 
-          if (
-            !dbUser ||
-            !(await bcrypt.compare(credentials.password, dbUser.password))
-          ) {
+          //Against timing attacks use dummy password
+          const dummyHash = process.env.DUMMY_ARGON2_HASH; // any valid bcrypt hash format
+          const passwordHash = dbUser?.password || dummyHash;
+          const isValidPassword = await bcrypt.compare(
+            credentials.password,
+            passwordHash,
+          );
+
+          if (!dbUser || !isValidPassword) {
             throw new CredentialsError(`INVALID_CREDENTIALS:${remaining}`);
           }
 
@@ -263,12 +268,12 @@ export const authOptions = {
 //   if (remote) return remote;
 
 //   // Could not detect IP → treat as unknown, but consider blocking requests without IP
-//   return null; 
+//   return null;
 // };
 
 // Get real client IP
-    // const ip = getClientIp(req);
-    // if (!ip) {
-    //   // Optional: reject requests without a detectable IP
-    //   throw new CredentialsError("INVALID_REQUEST");
-    // }
+// const ip = getClientIp(req);
+// if (!ip) {
+//   // Optional: reject requests without a detectable IP
+//   throw new CredentialsError("INVALID_REQUEST");
+// }
