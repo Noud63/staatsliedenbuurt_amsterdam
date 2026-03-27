@@ -18,20 +18,7 @@ export const Metadata = {
   description: "Webapp voor de Staatsliedenbuurt in Amsterdam",
   keywords: ["Staatsliedenbuurt", "Amsterdam", "Staatslieden", "Westerpark" ],
   authors: [{ name: "Noud van Dun" }],
-  openGraph: {
-    title: "Staatsliedenbuurt Amsterdam",
-    description: "Webapp voor de Staatsliedenbuurt in Amsterdam",
-    url: "",
-    siteName: "Staatsliedenbuurt Amsterdam",
-    images: [
-      {
-        url: "https://appcollection.netlify.app/screens/sl_home.png",
-        width: 1200,
-        height: 630,
-      },
-    ],
-    type: "website",
-  }
+  
 };
 
 // Replace hasLocale with a custom implementation
