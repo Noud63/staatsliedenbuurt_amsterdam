@@ -33,8 +33,6 @@ const LoginForm = () => {
         const res = await fetch(`/api/lock-ttl?email=${savedEmail}`);
         if (!res.ok) return;
 
-        console.log("Email:", email);
-
         const data = await res.json();
         if (data.ttl > 0) {
           setDisabled(true);

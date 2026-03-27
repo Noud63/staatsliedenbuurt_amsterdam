@@ -96,7 +96,7 @@ export const authOptions = {
               req?.headers?.get?.("x-real-ip"),
           );
 
-          // ✅ 1. GLOBAL limiter (covers invalid emails too)
+          // 1. GLOBAL limiter (covers invalid emails too)
           const { success: ipSuccess, remaining } = await ipLimiter.limit(ip);
 
           if (!ipSuccess || remaining === 0) {

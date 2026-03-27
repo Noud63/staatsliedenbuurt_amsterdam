@@ -11,6 +11,28 @@ import { Toaster } from "react-hot-toast";
 import { hasLocale } from "next-intl";
 import "yet-another-react-lightbox/styles.css";
 import "yet-another-react-lightbox/plugins/captions.css";
+import { Metadata } from 'next'
+
+export const Metadata = {
+  title: "Staatsliedenbuurt Amsterdam",
+  description: "Webapp voor de Staatsliedenbuurt in Amsterdam",
+  keywords: ["Staatsliedenbuurt", "Amsterdam", "Staatslieden", "Westerpark" ],
+  authors: [{ name: "Noud van Dun" }],
+  openGraph: {
+    title: "Staatsliedenbuurt Amsterdam",
+    description: "Webapp voor de Staatsliedenbuurt in Amsterdam",
+    url: "https://www.staatsliedenbuurtamsterdam.nl/nl",
+    siteName: "Staatsliedenbuurt Amsterdam",
+    images: [
+      {
+        url: "https://appcollection.netlify.app/screens/sl_home.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    type: "website",
+  }
+};
 
 // Replace hasLocale with a custom implementation
 // const isValidLocale = (locales, locale) => locales.includes(locale);
