@@ -11,15 +11,6 @@ import { Toaster } from "react-hot-toast";
 import { hasLocale } from "next-intl";
 import "yet-another-react-lightbox/styles.css";
 import "yet-another-react-lightbox/plugins/captions.css";
-import { Metadata } from 'next'
-
-export const Metadata = {
-  title: "Staatsliedenbuurt Amsterdam",
-  description: "Webapp voor de Staatsliedenbuurt in Amsterdam",
-  keywords: ["Staatsliedenbuurt", "Amsterdam", "Staatslieden", "Westerpark" ],
-  authors: [{ name: "Noud van Dun" }],
-  
-};
 
 // Replace hasLocale with a custom implementation
 // const isValidLocale = (locales, locale) => locales.includes(locale);
