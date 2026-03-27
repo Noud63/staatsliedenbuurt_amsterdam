@@ -21,7 +21,7 @@ export const Metadata = {
   openGraph: {
     title: "Staatsliedenbuurt Amsterdam",
     description: "Webapp voor de Staatsliedenbuurt in Amsterdam",
-    url: "https://www.staatsliedenbuurtamsterdam.nl/nl",
+    url: "https://www.staatsliedenbuurtamsterdam.nl",
     siteName: "Staatsliedenbuurt Amsterdam",
     images: [
       {
