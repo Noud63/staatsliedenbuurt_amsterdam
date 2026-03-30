@@ -48,8 +48,6 @@ export const POST = async (request) => {
     //Add uploaded images to the post
     profile.image = result.secure_url;
 
-    console.log("Uploaded Image URL:", profile.image);
-
     const avatar = await Avatar.findOne({userId});
 
     if (!avatar) {
@@ -87,7 +85,6 @@ export const POST = async (request) => {
         },
         { new: true } // Return the updated document
       );
-      console.log("Updated User:", updateUser)
 
     return new Response(JSON.stringify(updateUser), { status: 200 });
     

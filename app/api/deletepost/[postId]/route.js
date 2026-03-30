@@ -15,8 +15,6 @@ export const DELETE = async (request, { params }) => {
 
     const { postId } = params;
 
-    console.log("PostId to delete:", postId);
-
     const sessionUser = await getSessionUser();
 
     if (!sessionUser || !sessionUser.user?.id || !postId) {
@@ -45,7 +43,6 @@ export const DELETE = async (request, { params }) => {
       const imageToDelete = image;
       const publicId = extractPublicId(imageToDelete);
       const result = await deleteImageFromCloudinary(publicId);
-      console.log(result);
     }
 
     // Delete post
@@ -64,9 +61,6 @@ export const DELETE = async (request, { params }) => {
     await CommentLike.deleteMany({ postId: postId });
     //Delete notifications
    await Notification.deleteMany({postId: postId}); 
- 
-    
-    console.log("Deleted:", deletedPost);
 
     return new Response(
       JSON.stringify({ message: "Post deleted successfully!" }),

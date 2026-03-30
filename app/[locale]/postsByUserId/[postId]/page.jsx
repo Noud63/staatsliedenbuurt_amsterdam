@@ -1,37 +1,42 @@
-"use client"
+"use client";
 import React, { use as usePromise } from "react";
 // import { fetchPosts } from '@/utils/postsRequest';
-import SinglePost from '@/components/SinglePost'
+import SinglePost from "@/components/SinglePost";
 import useSWR from "swr";
 import Spinner from "@/components/Spinner";
 
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
-const PostByUserPage =({params}) => {
-
+const PostByUserPage = ({ params }) => {
   const { postId: userId } = usePromise(params); // params may be a Promise in Next.js 15
 
-const { data, error, isLoading } = useSWR(
-  `/api/getposts/postsByUserId/${userId}`,
-  fetcher
-);
-
-if (isLoading)
-  return (
-    <div>
-      <Spinner loading={isLoading} />
-    </div>
+  const { data, error, isLoading } = useSWR(
+    `/api/getposts/postsByUserId/${userId}`,
+    fetcher,
   );
 
-if (error) return <div className="flex justify-center text-xl text-white mt-20">Error loading posts!</div>;
+  if (isLoading)
+    return (
+      <div className="mt-[150px]">
+        <Spinner loading={isLoading} height={50} width={50} />
+      </div>
+    );
+
+  if (error)
+    return (
+      <div className="mt-20 flex justify-center text-xl text-white">
+        Error loading posts!
+      </div>
+    );
 
   return (
     <div className="py-4">
-      {data && data.map((post) => (
-          <SinglePost post={post} key={post._id} comments={post.comments}/>
+      {data &&
+        data.map((post) => (
+          <SinglePost post={post} key={post._id} comments={post.comments} />
         ))}
     </div>
   );
-}
+};
 
-export default PostByUserPage
+export default PostByUserPage;

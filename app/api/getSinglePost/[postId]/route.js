@@ -12,7 +12,7 @@ export async function GET(req, { params }) {
   try {
     await connectDB();
 
-    const { postId } = params;
+    const { postId } = await params;
     const sessionUser = await getSessionUser();
     const currentUserId = sessionUser?.user?.id;
 

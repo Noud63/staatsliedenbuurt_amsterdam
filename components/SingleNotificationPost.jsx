@@ -1,12 +1,11 @@
-"use client"
+"use client";
 import React from "react";
 import SinglePost from "./SinglePost";
 import Spinner from "./Spinner";
 
 const SingleNotificationPost = ({ postId, setPostId }) => {
-  
   if (!postId) {
-    return <Spinner loading={true} height={50} width={50} />;
+    return <Spinner loading={true} height={40} width={40} />;
   }
   return (
     <div
@@ -14,7 +13,7 @@ const SingleNotificationPost = ({ postId, setPostId }) => {
       onClick={setPostId}
     >
       <div
-        className="relative max-h-[100vh] w-full max-w-[720px] overflow-y-auto p-6 shadow-xl max-sm:px-2 max-sm:pt-2 max-sm:pb-8"
+        className="relative max-h-[100vh] w-full max-w-[720px] overflow-y-auto p-6 shadow-xl max-sm:px-2 max-sm:pb-8 max-sm:pt-2"
         onClick={(e) => e.stopPropagation()}
       >
         <SinglePost postId={postId} setPostId={setPostId} />

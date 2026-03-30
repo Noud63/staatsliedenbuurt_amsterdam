@@ -8,7 +8,7 @@ import useSWR from "swr";
 import NotificationListItems from "./NotificationListItems";
 
 const fetcher = async (url) => {
-  const res = await fetch(url, { credentials: 'include' });
+  const res = await fetch(url, { credentials: "include" });
   console.log("Fetcher response status:", res.status);
   const json = await res.json();
   console.log("Fetcher json:", json);
@@ -26,23 +26,25 @@ const SideBarNotificationList = ({
 
   const sidebarRef = useRef(null);
 
-  const { data, error, mutate } = useSWR(session?.user?.id ? "/api/getNotifications" : null, fetcher);
+  const { data, error, mutate } = useSWR(
+    session?.user?.id ? "/api/getNotifications" : null,
+    fetcher,
+  );
 
-const notifications = data?.notifications || [];
+  const notifications = data?.notifications || [];
 
-useEffect(() => {
-  // Check if data and notifications are not empty, wait for fetch!
-  // Otherwise count is set to 0, no notifications!
-  if (!data) return;
-  if(!notifications) return;
+  useEffect(() => {
+    // Check if data and notifications are not empty, wait for fetch!
+    // Otherwise count is set to 0, no notifications!
+    if (!data) return;
+    if (!notifications) return;
 
-  if (notifications.length > 9) {
-    setCount(9);
-  } else {
-    setCount(notifications.length);
-  }
-}, [data, notifications, setCount]);
-
+    if (notifications.length > 9) {
+      setCount(9);
+    } else {
+      setCount(notifications.length);
+    }
+  }, [data, notifications, setCount]);
 
   // Close when clicking outside sidebar
   useEffect(() => {
@@ -63,7 +65,6 @@ useEffect(() => {
     };
   }, [showPanel, setShowPanel]);
 
-
   const getLikedPost = (postId) => {
     if (!postId) {
       console.warn("No postId found for notification:", note);
@@ -75,37 +76,34 @@ useEffect(() => {
 
   const deleteAllNotifications = async () => {
     try {
-    // Optimistic update
-    mutate(
-      "/api/getNotifications",
-      (data) => {
-        if (!data) return data;
-        return { ...data, notifications: [] };
-      },
-      false
-    );
-   // Send delete request to server
-    const response = await fetch("/api/deleteAllNotifications", {
-      method: "DELETE",
-    });
+      // Optimistic update
+      mutate(
+        "/api/getNotifications",
+        (data) => {
+          if (!data) return data;
+          return { ...data, notifications: [] };
+        },
+        false,
+      );
+      // Send delete request to server
+      const response = await fetch("/api/deleteAllNotifications", {
+        method: "DELETE",
+      });
 
-    if (!response.ok) throw new Error("Failed to delete notifications");
+      if (!response.ok) throw new Error("Failed to delete notifications");
 
-    // Revalidate to ensure server truth
-    mutate("/api/getNotifications");
+      // Revalidate to ensure server truth
+      mutate("/api/getNotifications");
 
-    setShowPanel(false);
-
-  } catch (error) {
-    console.error("Error deleting notifications:", error);
-  }
+      setShowPanel(false);
+    } catch (error) {
+      console.error("Error deleting notifications:", error);
+    }
   };
-
 
   return (
     <div
-      className={`sidebar_scroll ${showPanel ? "translate-x-0" : "translate-x-full"} fixed bottom-0 right-0 top-0 z-[10] flex h-full max-h-screen w-full max-w-[340px] flex-col 
-      overflow-y-auto bg-gradient-to-r from-yellow-800  to-red-950 pb-16 shadow-xl backdrop-blur-sm transition duration-300 ease-in singlepost pl-3`}
+      className={`sidebar_scroll ${showPanel ? "translate-x-0" : "translate-x-full"} singlepost fixed bottom-0 right-0 top-0 z-[10] flex h-full max-h-screen w-full max-w-[340px] flex-col overflow-y-auto bg-gradient-to-r from-yellow-800 to-red-950 pb-16 pl-3 shadow-xl backdrop-blur-sm transition duration-300 ease-in`}
       ref={sidebarRef}
     >
       <div className="mt-4 flex w-full justify-around border-b border-white">

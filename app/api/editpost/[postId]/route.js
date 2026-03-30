@@ -7,7 +7,7 @@ export const PUT = async (request, { params }) => {
   try {
     await connectDB();
 
-    const { postId } = params;
+    const { postId } = await params;
 
     const formData = await request.formData();
 

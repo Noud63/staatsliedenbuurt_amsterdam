@@ -7,36 +7,27 @@ import Notification from "@/models/notification";
 import Post from "@/models/post";
 
 export const POST = async (request) => {
-   console.log("Received Comment Data:", await request.body);
 
   try {
-    await connectDB();
-
-    const { postId, parentId, userId, comment, username } =
-      await request.json();
-
-     console.log("Data:", {
-      postId,
-      parentId,
-      userId,
-      comment,
-      username,
-    } );
 
     const sessionUser = await getSessionUser();
 
     const {
       user: { name, email, image, id, avatar },
     } = sessionUser;
-  console.log("User:", sessionUser);
 
     if (!sessionUser || !sessionUser.user?.id) {
       return new Response("Not authorized!", { status: 401 });
     }
 
-    if (!postId) {
+   const { postId, parentId, userId, comment, username } =
+      await request.json();
+
+       if (!postId) {
       return NextResponse.json({ message: "Invalid post ID" }, { status: 400 });
     }
+
+    await connectDB();
 
     const newComment = await Comment.create({
       postId,
@@ -74,8 +65,6 @@ export const POST = async (request) => {
         sender: userId,
         postId: postId,
       });
-      
-      console.log("Post Owner Note:", JSON.stringify("PostOwnerNote:", postOwnerNote, null, 2) );
     }
 
     return NextResponse.json(newComment, { status: 201 });
