@@ -117,7 +117,7 @@ export const authOptions = {
 
           // 3. Validate email (no DB hit yet)
           if (!validator.validate(email)) {
-            throw new CredentialsError(`INVALID_EMAIL_FORMAT`);
+            throw new CredentialsError(`INVALID_EMAIL_FORMAT:${remaining}`);
           }
 
           await connectDB();
