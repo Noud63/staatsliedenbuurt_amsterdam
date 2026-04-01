@@ -99,7 +99,7 @@ const LoginForm = () => {
         } else if (errorType === "RATE_LIMIT_IP") {
           setMessage("Te veel pogingen. Probeer later opnieuw.");
         } else if (errorType === "INVALID_EMAIL_FORMAT") {
-          setLoginMessage(`Ongeldige email!`);
+          setLoginMessage(`Ongeldige email! Nog ${value} pogingen.`);
           setTimeout(() => setLoginMessage(""), 3000);
         }
       } else if (res?.ok) {
