@@ -13,7 +13,7 @@ export const DELETE = async (request, { params }) => {
   try {
     await connectDB();
 
-    const { postId } = params;
+    const { postId } = await params;
 
     const sessionUser = await getSessionUser();
 

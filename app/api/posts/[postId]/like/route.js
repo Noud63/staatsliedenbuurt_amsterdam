@@ -6,7 +6,7 @@ import Notification from "@/models/notification";
 
 export const POST = async (req, { params }) => {
 
-  const { postId } = params;
+  const { postId } = await params;
   const session = await getSessionUser();
   await connectDB();
 

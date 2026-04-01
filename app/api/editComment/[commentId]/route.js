@@ -8,7 +8,7 @@ export const PUT = async (request, { params }) => {
   try {
     await connectDB();
 
-    const { commentId } = params;
+    const { commentId } = await params;
 
     console.log({ "CommentId": commentId }); 
 
