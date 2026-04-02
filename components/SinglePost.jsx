@@ -14,8 +14,7 @@ import threedots from "../assets/icons/threedots.png";
 import { usePostActions } from "@/hooks/usePostActions";
 import Spinner from "./Spinner";
 import CloseSinglePostButton from "./CloseSinglePostButton";
-
-const fetcher = (url) => fetch(url).then((res) => res.json());
+import { POSTS_ENDPOINTS, fetcher } from "@/lib/posts";
 
 const SinglePost = ({ postId, post: initialPost, setPostId }) => {
   // SWR fetch only if no initial post is provided
@@ -23,7 +22,7 @@ const SinglePost = ({ postId, post: initialPost, setPostId }) => {
     data: post,
     mutate,
     isLoading,
-  } = useSWR(postId ? `/api/getSinglePost/${postId}` : null, fetcher, {
+  } = useSWR(postId ? POSTS_ENDPOINTS.single(postId) : null, fetcher, {
     fallbackData: initialPost,
   });
 
@@ -61,11 +60,7 @@ const SinglePost = ({ postId, post: initialPost, setPostId }) => {
     : [];
 
   if (!post) {
-    return (
-      
-        <Spinner loading={isLoading} height={50} width={50} />
-      
-    );
+    return <Spinner loading={isLoading} height={50} width={50} />;
   }
 
   return (

@@ -2,15 +2,12 @@ import { mutate } from "swr";
 
 import { revalidatePostCaches } from "@/utils/revalidatePost";
 import { revalidateNotificationsCaches } from "@/utils/revalidatePost";
+import { POSTS_ENDPOINTS, matchPostCacheKeys } from "@/lib/posts";
 
 //Mutate all caches that contain the post (feed, posts by user id, single post) with the same optimistic update function
 export const mutatePostCaches = (postId, updater) => {
   mutate(
-    (key) =>
-      typeof key === "string" &&
-      (key === "/api/getposts" ||
-        key.startsWith("/api/getposts/postsByUserId/") ||
-        key === `/api/getSinglePost/${postId}`),
+    matchPostCacheKeys(postId),
     updater,
     {
       revalidate: false,
@@ -68,7 +65,7 @@ export function usePostActions() {
       return data;
     });
 
-    await fetch(`/api/posts/${postId}/like`, {
+    await fetch(POSTS_ENDPOINTS.like(postId), {
       method: "POST",
     });
   };

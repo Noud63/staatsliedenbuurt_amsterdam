@@ -2,24 +2,21 @@
 import React, { useState, useRef } from "react";
 import { IoMdCloseCircleOutline } from "react-icons/io";
 import { useTranslations } from "next-intl";
-import { useRouter } from "next/navigation";
 import { IoWarningOutline } from "react-icons/io5";
-import { mutate } from "swr";
+import { useCreatePost } from "@/hooks/useCreatePost";
 
 const AddPostModal = ({ inView, setInView }) => {
   const [newFiles, setNewFiles] = useState({ images: [] });
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(false);
 
   const t = useTranslations("schrijfbericht");
-
-  const router = useRouter();
   const imageRef = useRef(null);
 
   const closeModal = () => {
     setInView(false);
     setNewFiles({ images: [] });
   };
+
+  const { submitPost, loading, error } = useCreatePost({ onSuccess: closeModal });
 
   const handleChange = (e) => {
     const { files } = e.target;
@@ -45,41 +42,8 @@ const AddPostModal = ({ inView, setInView }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    setLoading(true);
-
     const formData = new FormData(e.target);
-
-    const content = formData.get("postContent");
-    console.log(content);
-
-    newFiles.images.forEach((file) => {
-      formData.append("images", file);
-    });
-
-
-    if (newFiles.images.length === 0 && !content) {
-      setLoading(false);
-      setError(true);
-      setTimeout(() => {
-        setError(false);
-      }, 2000);
-      return;
-    }
-
-    try {
-      const res = await fetch("/api/posts", {
-        method: "POST",
-        body: formData,
-      });
-      if (res.status === 200) {
-        closeModal();
-        setLoading(false);
-      }
-    } catch (error) {
-      console.log(error);
-    }
-     mutate("/api/getposts");
+    await submitPost(formData, newFiles.images);
   };
 
   return (

@@ -6,14 +6,7 @@ import { FaThumbsUp } from "react-icons/fa";
 import { IoMdCloseCircleOutline } from "react-icons/io";
 import useSWR from "swr";
 import NotificationListItems from "./NotificationListItems";
-
-const fetcher = async (url) => {
-  const res = await fetch(url, { credentials: "include" });
-  console.log("Fetcher response status:", res.status);
-  const json = await res.json();
-  console.log("Fetcher json:", json);
-  return json;
-};
+import { fetcher } from "@/lib/posts";
 
 const SideBarNotificationList = ({
   setCount,

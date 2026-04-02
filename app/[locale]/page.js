@@ -5,14 +5,12 @@ import LeesDit from "@/components/LeesDit";
 import { fetchPosts } from "@/utils/postsRequest";
 
 export default async function Home() {
-  
-  const initialData = await fetchPosts(); // Fetch on server
-
-  return (
+  const initialData = await fetchPosts();
+return (
     <>
       <LeesDit />
       <AddPost />
-      <GetAllPosts initialData={initialData}/>
+      <GetAllPosts initialData={initialData} />
     </>
   );
 }

@@ -7,7 +7,7 @@ import { useRouter } from "next/navigation";
 import { IoWarningOutline } from "react-icons/io5";
 import { IoMdCloseCircleOutline } from "react-icons/io";
 import Link from "next/link";
-import { mutate } from "swr";
+import { revalidateFeedCache } from "@/lib/posts";
 
 const ProfileForm = () => {
   const { data: session, update } = useSession();
@@ -72,7 +72,7 @@ const ProfileForm = () => {
     } catch (err) {
       console.error(err);
     }
-    mutate("/api/getposts");
+    revalidateFeedCache();
   };
 
   // console.log("Avatar:", session.user.avatar);
