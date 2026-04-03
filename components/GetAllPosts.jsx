@@ -5,8 +5,15 @@ import Image from "next/image";
 import usePostsFetcher from "@/hooks/usePostsFeed";
 
 const GetAllPosts = ({ initialData }) => {
-  
-  const { data, error, isLoading } = usePostsFetcher(initialData); // Use the custom hook to fetch data
+  const {
+    posts,
+    error,
+    isLoading,
+    isLoadingMore,
+    isReachingEnd,
+    size,
+    setSize,
+  } = usePostsFetcher(initialData);
 
   if (error)
     return (
@@ -35,12 +42,23 @@ const GetAllPosts = ({ initialData }) => {
   return (
     <div className="flex w-full justify-center px-4 max-xsm:px-0">
       <div className="w-full max-w-[620px] flex-grow flex-col rounded-lg py-4">
-        {data &&
-          data.map((post) => (
-            <div key={post._id}>
-              <SinglePost post={post} />
-            </div>
-          ))}
+        {posts.map((post) => (
+          <div key={post._id}>
+            <SinglePost post={post} />
+          </div>
+        ))}
+
+        {!isReachingEnd && (
+          <div className="flex justify-center py-4">
+            <button
+              onClick={() => setSize(size + 1)}
+              disabled={isLoadingMore}
+              className="rounded-lg border-2 w-[150px] py-3 text-white disabled:border-0"
+            >
+              {isLoadingMore ? <Spinner loading={isLoadingMore} height={40} width={40} /> : "Meer berichten"}
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );

@@ -1,19 +1,31 @@
 "use client";
-import React, { use as usePromise } from "react";
-// import { fetchPosts } from '@/utils/postsRequest';
+import React, { use } from "react";
 import SinglePost from "@/components/SinglePost";
-import useSWR from "swr";
+import useSWRInfinite from "swr/infinite";
 import Spinner from "@/components/Spinner";
-
-const fetcher = (...args) => fetch(...args).then((res) => res.json());
+import { getByUserKey, fetcher, PAGE_SIZE } from "@/lib/posts";
+import { useTranslations } from "next-intl";
 
 const PostByUserPage = ({ params }) => {
-  const { postId: userId } = usePromise(params); // params may be a Promise in Next.js 15
+  // Client component — use use() to access params directly without useRouter or useSearchParams
+  const { postId: userId } = use(params); // PostId is the userId in this context
 
-  const { data, error, isLoading } = useSWR(
-    `/api/getposts/postsByUserId/${userId}`,
+  const { data, error, isLoading, size, setSize } = useSWRInfinite(
+    getByUserKey(userId),
     fetcher,
   );
+
+  console.log("Data:", data, "Loading:", isLoading, "Size:", size);
+  
+    const t = useTranslations("post");
+
+  const posts = data ? data.flat() : [];
+  const userName = posts[0]?.name;
+  const isLoadingMore =
+    isLoading || (size > 0 && data && typeof data[size - 1] === "undefined");
+  const isReachingEnd =
+    data?.[0]?.length === 0 ||
+    (data && data[data.length - 1]?.length < PAGE_SIZE);
 
   if (isLoading)
     return (
@@ -30,12 +42,31 @@ const PostByUserPage = ({ params }) => {
     );
 
   return (
-    <div className="py-4">
-      {data &&
-        data.map((post) => (
+    <>
+      <div className="py-4">
+        <div className="mb-4 flex w-full items-center justify-start rounded-lg border-2 px-4 py-2 text-white max-xsm:px-0">
+          <div>
+            <span>{t("allepostvan")}</span>
+            <span className="ml-1 text-lg font-semibold">{userName}</span>
+          </div>
+        </div>
+        {posts.map((post) => (
           <SinglePost post={post} key={post._id} comments={post.comments} />
         ))}
-    </div>
+
+        {!isReachingEnd && (
+          <div className="flex justify-center py-4">
+            <button
+              onClick={() => setSize(size + 1)}
+              disabled={isLoadingMore}
+              className="rounded-lg bg-gradient-to-r from-red-950 via-yellow-700 to-red-950 px-6 py-3 text-white disabled:opacity-50"
+            >
+              {isLoadingMore ? "Laden..." : "Meer berichten"}
+            </button>
+          </div>
+        )}
+      </div>
+    </>
   );
 };
 

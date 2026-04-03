@@ -20,14 +20,23 @@ export async function GET(request, { params }) {
     const resolvedParams = await Promise.resolve(params);
     const userId = resolvedParams?.slug?.[1]; // optional userId from URL
 
-    // console.log("Slug", params?.slug); Slug, [ 'postsByUserId', '66f531615ed693d84f788a5e' ]
+    // Pagination params
+    const { searchParams } = new URL(request.url);
+    const limit = parseInt(searchParams.get("limit")) || 3;
+    const cursor = searchParams.get("cursor");
 
     // Fetch posts filtered by userId if provided
     const query = userId ? { userId: userId } : {};
 
-    const posts = await Post.find(query) // Filter posts by userId if provided else get all posts {}
+    // Cursor-based pagination: fetch posts older than the cursor
+    if (cursor) {
+      query._id = { $lt: new mongoose.Types.ObjectId(cursor) };
+    }
+
+    const posts = await Post.find(query)
       .sort({ createdAt: -1 })
-      .lean()
+      .limit(limit)
+      .lean();
 
     // Fetch all avatars
     const userIds = posts.map((p) => p.userId);
@@ -47,7 +56,9 @@ export async function GET(request, { params }) {
     const likedPosts = new Set(likes.map((l) => l.postId.toString()));
 
     const postsWithComments = await Promise.all(
-      posts.map((post) => postWithComments(post, currentUserId, avatarMap, likedPosts)),
+      posts.map((post) =>
+        postWithComments(post, currentUserId, avatarMap, likedPosts),
+      ),
     );
 
     return NextResponse.json(postsWithComments, { status: 200 });

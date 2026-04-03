@@ -6,8 +6,7 @@ import { useRouter } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { usePostActions } from "@/hooks/usePostActions";
 
-const PostCommentForm = ({postId, parentId = null, setShowForm, post }) => {
-  
+const PostCommentForm = ({ postId, parentId = null, setShowForm, post }) => {
   const [text, setText] = useState("");
   const [sendButton, setSendButton] = useState(false);
 
@@ -24,14 +23,13 @@ const PostCommentForm = ({postId, parentId = null, setShowForm, post }) => {
   const t = useTranslations("placeholder");
 
   const tempComment = {
-     _id: `temp-${Date.now()}`,
+    _id: `temp-${Date.now()}`,
     postId,
     parentId: parentId || null,
     userId: session?.user.id,
     username: session?.user.username,
     comment: text,
     createdAt: new Date().toISOString(),
-
   };
 
   const handleSubmit = async (e) => {
@@ -40,22 +38,21 @@ const PostCommentForm = ({postId, parentId = null, setShowForm, post }) => {
 
     try {
       await addComment(post, postId, tempComment);
-      setShowForm(false);
     } catch (error) {
       console.error("An unexpected error happened:", error);
     } finally {
-      textareaRef.current.value = "";
+      if (textareaRef.current) textareaRef.current.value = "";
       setSendButton(false);
+      setShowForm(false);
     }
-   
   };
 
   useEffect(() => {
     if (text) {
       setSendButton(true);
-    } else if(text === "") {
+    } else if (text === "") {
       setSendButton(false);
-      setShowForm(false)
+      setShowForm(false);
     }
   }, [text]);
 
@@ -83,7 +80,7 @@ const PostCommentForm = ({postId, parentId = null, setShowForm, post }) => {
         ref={textareaRef}
         type="text"
         name="comment"
-        className="max-h-[500px] w-full resize-none overflow-y-hidden rounded-xl bg-yellow-800/10 py-2 pl-2 pr-10 text-black placeholder-gray-500 outline-non"
+        className="outline-non max-h-[500px] w-full resize-none overflow-y-hidden rounded-xl bg-yellow-800/10 py-2 pl-2 pr-10 text-black placeholder-gray-500"
         placeholder={t("schrijfeenreactie")}
         defaultValue={text}
         onChange={handleInputChange}

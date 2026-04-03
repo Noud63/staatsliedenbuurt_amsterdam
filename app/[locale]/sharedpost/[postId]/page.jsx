@@ -9,7 +9,7 @@ import SharedPost from '@/components/SharedPost';
 const SharedPostPage = async ({ params }) => {
   await connectDB();
 
-  const { postId } = params;
+  const { postId } = await params;
 
   const post = await Post.findById({ _id: postId }).lean();
 

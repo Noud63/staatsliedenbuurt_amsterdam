@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef } from "react";
+import React, { useRef, useMemo } from "react";
 import { useEffect } from "react";
 import { useSession } from "next-auth/react";
 import { FaThumbsUp } from "react-icons/fa";
@@ -24,7 +24,9 @@ const SideBarNotificationList = ({
     fetcher,
   );
 
-  const notifications = data?.notifications || [];
+   const notifications = useMemo(() => {
+    return data?.notifications || [];
+  }, [data]);
 
   useEffect(() => {
     // Check if data and notifications are not empty, wait for fetch!

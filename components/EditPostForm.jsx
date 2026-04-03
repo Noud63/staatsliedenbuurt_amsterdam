@@ -6,6 +6,7 @@ import replace from "../assets/icons/replace.png";
 import Image from "next/image";
 import { revalidatePostCaches } from "@/utils/revalidatePost";
 import { mutatePostCaches } from "@/hooks/usePostActions";
+import { updatePostsInCache } from "@/lib/posts";
 import Spinner from "./Spinner";
 
 const EditPostForm = ({ setShowEditForm, post }) => {
@@ -101,21 +102,11 @@ const EditPostForm = ({ setShowEditForm, post }) => {
 
   const deleteImage = async () => {
     //Optimistic delete image from cached data
-    mutatePostCaches(postId, (data) => {
-      if (!data) return data;
-
-      // feed cache
-      if (Array.isArray(data)) {
-        return data.map((p) => (p._id === postId ? { ...p, images: [] } : p));
-      }
-
-      // single post cache
-      if (data._id === postId) {
-        return { ...data, images: [] };
-      }
-
-      return data;
-    });
+    mutatePostCaches(postId, post.userId, (data) =>
+      updatePostsInCache(data, (p) =>
+        p._id === postId ? { ...p, images: [] } : p,
+      ),
+    );
 
     try {
       const res = await fetch(`/api/deleteImage/${post._id}`, {

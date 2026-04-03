@@ -2,23 +2,21 @@
 import React, { useState, useRef, useEffect } from "react";
 import { IoMdCloseCircleOutline } from "react-icons/io";
 import { IoSendSharp } from "react-icons/io5";
-import { useTranslations } from 'next-intl';
+import { useTranslations } from "next-intl";
 import { usePostActions } from "@/hooks/usePostActions";
 
-const EditCommentForm = ({comment, setShowEditComment, post}) => {
-  
+const EditCommentForm = ({ comment, setShowEditComment, post }) => {
   const [commentContent, setCommentContent] = useState(comment?.comment);
 
   const textareaRef = useRef(null);
 
-  const t = useTranslations("auth");  
+  const t = useTranslations("auth");
 
-  let { editComment, deleteComment } = usePostActions()
+  let { editComment, deleteComment } = usePostActions();
 
   const updatedData = {
     commentContent,
   };
-
 
   useEffect(() => {
     // Focus the textarea when the component mounts
@@ -30,7 +28,6 @@ const EditCommentForm = ({comment, setShowEditComment, post}) => {
     }
   }, []);
 
-
   useEffect(() => {
     const textarea = textareaRef.current;
     if (textarea) {
@@ -39,13 +36,14 @@ const EditCommentForm = ({comment, setShowEditComment, post}) => {
     }
   }, [commentContent]); // Depend on comment to update on each change
 
-
   const handleEditPost = async (e) => {
     e.preventDefault();
-  
-  if(commentContent === ""){
-     await deleteComment(comment._id, post)
-  }
+
+    if (commentContent === "") {
+      await deleteComment(comment._id, post);
+      setShowEditComment(false);
+      return;
+    }
     const formData = new FormData(e.target);
     formData.append("commentContent", commentContent);
 
@@ -66,13 +64,12 @@ const EditCommentForm = ({comment, setShowEditComment, post}) => {
               name="commentContent"
               defaultValue={commentContent}
               onChange={(e) => setCommentContent(e.target.value)}
-              className="max-h-[500px] w-full resize-none rounded-xl bg-transparent py-2 pr-10 text-black text-base placeholder-gray-500 outline-none"
+              className="max-h-[500px] w-full resize-none rounded-xl bg-transparent py-2 pr-10 text-base text-black placeholder-gray-500 outline-none"
             />
           </div>
 
           <div className="mb-2 flex w-full justify-between border-t border-yellow-800 pt-2">
             <div className="flex items-center justify-between pb-1 pt-2">
-            
               <div
                 className="flex cursor-pointer items-center"
                 onClick={() => setShowEditComment(false)}
@@ -93,6 +90,6 @@ const EditCommentForm = ({comment, setShowEditComment, post}) => {
       </div>
     </div>
   );
-}
+};
 
-export default EditCommentForm
+export default EditCommentForm;

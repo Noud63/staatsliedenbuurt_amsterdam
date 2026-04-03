@@ -113,7 +113,8 @@
   "post": {
     "postiets": "Post hier iets",
     "delen": "Wat wil je met ons delen?",
-    "gepostop": "Gepost op:"
+    "gepostop": "Gepost op:",
+    "allepostvan": "Alle berichten van"
   },
   "beeld": {
     "titel": "De Staatsliedenbuurt in beeld",
