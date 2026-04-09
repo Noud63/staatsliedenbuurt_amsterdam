@@ -37,7 +37,7 @@ const Comment = ({ comment, parentId, post, onLikeComment, onDeleteComment }) =>
         className={`${parentId === null ? "h-[40px] w-[40px]" : "h-[30px] w-[30px]"} flex overflow-hidden rounded-full`}
       >
         <Image
-          src={comment.avatar ? comment.avatar : "/images/defaultAvatar1.png"}
+          src={comment?.avatar || "/images/defaultAvatar1.png"}
           alt="icon"
           width={100}
           height={100}

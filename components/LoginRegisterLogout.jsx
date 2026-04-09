@@ -7,6 +7,7 @@ import Hamburger from "./Hamburger";
 import Weatherreport from "./Weatherreport";
 import { useTranslations } from "next-intl";
 import NavbarNotificationBadge from "./NavbarNotificationBadge";
+import Image from "next/image";
 
 const LoginRegisterLogout = () => {
 
@@ -34,7 +35,7 @@ const LoginRegisterLogout = () => {
             </Link>
           ) : (
             <div className="relative flex flex-1 items-center">
-              {session?.user?.avatar && <div className="mr-2 flex justify-center items-center"><img src={session?.user?.avatar} alt="avatar" className="w-[30px] h-[30px] rounded-full"/></div>}
+              {session?.user?.avatar && <div className="mr-2 flex justify-center items-center"><Image src={session?.user?.avatar} alt="avatar" width={30} height={30} className="rounded-full"/></div>}
             <Link href="/profile">
               <span className="flex items-center justify-start">{`Hi, ${session?.user?.username}`}</span>
             </Link>

@@ -20,6 +20,7 @@ const AddPostModal = ({ inView, setInView }) => {
 
   const handleChange = (e) => {
     const { files } = e.target;
+    //push files in copy of newFiles.images and set state. Don't mutate state directly  
     const addedImages = [...newFiles.images];
 
     for (const file of files) {

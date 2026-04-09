@@ -2,7 +2,7 @@ import connectDB from "@/connectDB/database";
 import cloudinary from "@/config/cloudinary";
 import User from "@/models/User";
 import Avatar from "@/models/avatar";
-import { getSessionUser } from "@/utils/getSessionUser";
+import { getSessionUser } from "@/lib/auth/getSessionUser";
 
 export const POST = async (request) => {
   try {
@@ -38,17 +38,17 @@ export const POST = async (request) => {
       //Make request to upload to cloudinary
       result = await cloudinary.uploader.upload(
         `data:image/png;base64,${imageBase64}`,
-        { folder: "nextjs_blog" }
+        { folder: "nextjs_blog" },
       );
     } catch (uploadError) {
       console.error("Cloudinary upload failed", uploadError);
       return new Response("Image upload failed", { status: 500 });
     }
-    
+
     //Add uploaded images to the post
     profile.image = result.secure_url;
 
-    const avatar = await Avatar.findOne({userId});
+    const avatar = await Avatar.findOne({ userId });
 
     if (!avatar) {
       await Avatar.create({
@@ -58,36 +58,35 @@ export const POST = async (request) => {
     }
 
     if (avatar) {
-     await Avatar.updateOne(
+      await Avatar.updateOne(
         { userId },
         {
           $set: {
             avatar: profile.image,
           },
-        }
+        },
       );
     }
 
-    const user = await User.findOne({_id:userId})
+    const user = await User.findOne({ _id: userId });
 
     if (!user) {
       throw new Error("No such user, register first!");
     }
 
-   const updateUser = await User.findOneAndUpdate(
-        {
-          _id: userId,
+    const updateUser = await User.findOneAndUpdate(
+      {
+        _id: userId,
+      },
+      {
+        $set: {
+          avatar: profile.image,
         },
-        {
-          $set: {
-            avatar: profile.image,
-          },
-        },
-        { new: true } // Return the updated document
-      );
+      },
+      { new: true }, // Return the updated document
+    );
 
     return new Response(JSON.stringify(updateUser), { status: 200 });
-    
   } catch (error) {
     console.log(error);
     return new Response("Failed to add post", { status: 500 });

@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import connectDB from "@/connectDB/database";
 import cloudinary from "@/config/cloudinary";
-import { getSessionUser } from "@/utils/getSessionUser";
+import { getSessionUser } from "@/lib/auth/getSessionUser";
 import mongoose from "mongoose";
 import Post from "@/models/post";
 import Comment from "@/models/comment";
@@ -41,20 +41,20 @@ export const POST = async (request) => {
     };
 
     const imageUploadPromises = images.map(async (image) => {
-  const imageBuffer = await image.arrayBuffer();
-  const imageArray = Array.from(new Uint8Array(imageBuffer));
-  const imageData = Buffer.from(imageArray);
+      const imageBuffer = await image.arrayBuffer();
+      const imageArray = Array.from(new Uint8Array(imageBuffer));
+      const imageData = Buffer.from(imageArray);
 
-  const imageBase64 = imageData.toString("base64");
+      const imageBase64 = imageData.toString("base64");
 
-  return cloudinary.uploader.upload(
-    `data:image/png;base64,${imageBase64}`,
-    { folder: "nextjs_blog" },
-  );
-});
+      return cloudinary.uploader.upload(
+        `data:image/png;base64,${imageBase64}`,
+        { folder: "nextjs_blog" },
+      );
+    });
 
-const uploadedResults = await Promise.all(imageUploadPromises);
-postData.images = uploadedResults.map(result => result.secure_url);
+    const uploadedResults = await Promise.all(imageUploadPromises);
+    postData.images = uploadedResults.map((result) => result.secure_url);
 
     // console.log("Post:", postData);
 

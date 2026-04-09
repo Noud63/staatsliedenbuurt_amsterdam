@@ -1,11 +1,10 @@
 import connectDB from "@/connectDB/database";
 import Post from "@/models/post";
 import PostLike from "@/models/postLikes";
-import { getSessionUser } from "@/utils/getSessionUser";
+import { getSessionUser } from "@/lib/auth/getSessionUser";
 import Notification from "@/models/notification";
 
 export const POST = async (req, { params }) => {
-
   const { postId } = await params;
   const session = await getSessionUser();
   await connectDB();
@@ -33,10 +32,10 @@ export const POST = async (req, { params }) => {
           sender: userId,
           type: "like",
           post: post._id,
-          postId: post._id
+          postId: post._id,
         });
       }
-      
+
       return new Response(JSON.stringify({ message: "dec" }), { status: 200 });
     } else {
       // If not liked, create a new like
@@ -51,7 +50,7 @@ export const POST = async (req, { params }) => {
           sender: userId,
           type: "like",
           post: post._id,
-          postId:post._id,
+          postId: post._id,
           isRead: false,
         });
       }
@@ -62,6 +61,3 @@ export const POST = async (req, { params }) => {
     return new Response({ message: error.message }, { status: 500 });
   }
 };
-
-
-

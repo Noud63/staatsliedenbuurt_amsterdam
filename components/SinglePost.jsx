@@ -29,7 +29,6 @@ const SinglePost = ({ postId, post: initialPost, setPostId }) => {
   const { data: session } = useSession();
   const [showThreeDots, setShowThreeDots] = useState(false);
   const [showOptions, setShowOptions] = useState(false);
-  const [profilePic, setProfilePic] = useState(null);
   const [open, setOpen] = useState(false);
 
   const { likePost, likeComment, deleteComment } = usePostActions(post);
@@ -50,10 +49,7 @@ const SinglePost = ({ postId, post: initialPost, setPostId }) => {
     if (session?.user?.id === post?.userId) {
       setShowThreeDots(true);
     }
-    if (post?.avatar) {
-      setProfilePic(post.avatar);
-    }
-  }, [session, post?.userId, post?.avatar]);
+  }, [session, post?.userId]);
 
   const slides = post?.images?.length
     ? post.images.map((img) => ({ src: img }))
@@ -84,7 +80,7 @@ const SinglePost = ({ postId, post: initialPost, setPostId }) => {
         <div className="flex flex-1 items-center">
           <div className="flex h-[45px] w-[45px] flex-row overflow-hidden">
             <Image
-              src={profilePic ? profilePic : "/images/defaultAvatar.png"}
+              src={post?.avatar || "/images/defaultAvatar.png"}
               alt="icon"
               width={45}
               height={45}

@@ -1,9 +1,10 @@
 import { NextResponse } from "next/server";
 import connectDB from "@/connectDB/database";
 import cloudinary from "@/config/cloudinary";
-import { getSessionUser } from "@/utils/getSessionUser";
+import { getSessionUser } from "@/lib/auth/getSessionUser";
 import mongoose from "mongoose";
 import Post from "@/models/post";
+import User from "@/models/User";
 import Comment from "@/models/comment";
 import PostLike from "@/models/postLikes";
 import Avatar from "@/models/avatar";
@@ -38,13 +39,17 @@ export async function GET(request, { params }) {
       .limit(limit)
       .lean();
 
-    // Fetch all avatars
-    const userIds = posts.map((p) => p.userId);
-    const avatars = await Avatar.find({ userId: { $in: userIds } }).lean();
+    //...new Set() removes duplicates, then we convert back to array
+    const userIds = [...new Set(posts.map((p) => p.userId.toString()))];
 
-    const avatarMap = Object.fromEntries(
-      avatars.map((a) => [a.userId.toString(), a.avatar]),
+    const users = await User.find({ _id: { $in: userIds } })
+      .select("name username avatar")
+      .lean();
+
+    const userMap = Object.fromEntries(
+      users.map((user) => [user._id.toString(), user]),
     );
+    // console.log("User Map:", userMap);
 
     //Fetch all posts likes
     const postIds = posts.map((p) => p._id);
@@ -57,9 +62,11 @@ export async function GET(request, { params }) {
 
     const postsWithComments = await Promise.all(
       posts.map((post) =>
-        postWithComments(post, currentUserId, avatarMap, likedPosts),
+        postWithComments(post, currentUserId, userMap, likedPosts),
       ),
     );
+
+    // console.log("Posts with comments:", postsWithComments);
 
     return NextResponse.json(postsWithComments, { status: 200 });
   } catch (error) {

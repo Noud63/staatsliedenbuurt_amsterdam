@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import getWeatherData from "@/helper/getWeatherData";
+import getWeatherData from "@/utils/getWeatherData";
 import Image from "next/image";
 
 const Weatherreport = () => {

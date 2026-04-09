@@ -6,7 +6,7 @@ import PostLike from "@/models/postLikes";
 import CommentLike from "@/models/commentLikes";
 import Notification from "@/models/notification";
 import { deleteImageFromCloudinary } from "@/utils/deleteImageFromCloudinary";
-import { getSessionUser } from "@/utils/getSessionUser";
+import { getSessionUser } from "@/lib/auth/getSessionUser";
 
 export const DELETE = async (request, { params }) => {
   console.log("API HIT:", params);
@@ -24,7 +24,7 @@ export const DELETE = async (request, { params }) => {
       );
     }
 
-    const post = await Post.findById({_id:postId});
+    const post = await Post.findById({ _id: postId });
     if (!post) {
       return new Response(JSON.stringify({ message: "Post not found" }), {
         status: 404,
@@ -46,7 +46,7 @@ export const DELETE = async (request, { params }) => {
     }
 
     // Delete post
-    const deletedPost = await Post.findOneAndDelete({_id:postId});
+    const deletedPost = await Post.findOneAndDelete({ _id: postId });
     if (!deletedPost) {
       return new Response(
         JSON.stringify({ message: "Post not found or already deleted!" }),
@@ -60,7 +60,7 @@ export const DELETE = async (request, { params }) => {
     //delete all comment likes
     await CommentLike.deleteMany({ postId: postId });
     //Delete notifications
-   await Notification.deleteMany({postId: postId}); 
+    await Notification.deleteMany({ postId: postId });
 
     return new Response(
       JSON.stringify({ message: "Post deleted successfully!" }),

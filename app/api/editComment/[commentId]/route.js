@@ -1,8 +1,7 @@
 import connectDB from "@/connectDB/database";
 
 import Comment from "@/models/comment";
-import { getSessionUser } from "@/utils/getSessionUser";
-
+import { getSessionUser } from "@/lib/auth/getSessionUser";
 
 export const PUT = async (request, { params }) => {
   try {
@@ -10,7 +9,7 @@ export const PUT = async (request, { params }) => {
 
     const { commentId } = await params;
 
-    console.log({ "CommentId": commentId }); 
+    console.log({ CommentId: commentId });
 
     const formData = await request.formData();
 
@@ -19,12 +18,12 @@ export const PUT = async (request, { params }) => {
     if (!sessionUser || !sessionUser.user.id) {
       return new Response(
         JSON.stringify({ message: "You need to login first or register!" }),
-        { status: 401 }
+        { status: 401 },
       );
     }
 
     const content = await formData.get("commentContent");
-  
+
     const commentData = {
       comment: content,
     };
@@ -34,14 +33,18 @@ export const PUT = async (request, { params }) => {
         _id: commentId,
       },
       { $set: commentData },
-      { new: true }
+      { new: true },
     );
 
-    // console.log("Updated Post:", JSON.stringify(updatedPost, null, 2));  
+    // console.log("Updated Post:", JSON.stringify(updatedPost, null, 2));
 
     return new Response(
-      JSON.stringify(updatedPost, { message: "Comment updated successfully!" }, {status: 200}),
-      { status: 200 }
+      JSON.stringify(
+        updatedPost,
+        { message: "Comment updated successfully!" },
+        { status: 200 },
+      ),
+      { status: 200 },
     );
   } catch (error) {
     console.log(error);

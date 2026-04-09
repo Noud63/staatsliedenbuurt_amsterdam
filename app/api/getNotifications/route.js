@@ -1,4 +1,4 @@
-import { getSessionUser } from "@/utils/getSessionUser";
+import { getSessionUser } from "@/lib/auth/getSessionUser";
 import Notification from "@/models/notification";
 import Post from "@/models/post"; // ✅ add this
 import Comment from "@/models/comment"; // ✅ add this if you populate comments

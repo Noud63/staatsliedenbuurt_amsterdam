@@ -1,7 +1,7 @@
 import connectDB from "@/connectDB/database";
 import cloudinary from "@/config/cloudinary";
 import Post from "@/models/post";
-import { getSessionUser } from "@/utils/getSessionUser";
+import { getSessionUser } from "@/lib/auth/getSessionUser";
 
 export const PUT = async (request, { params }) => {
   try {
@@ -16,7 +16,7 @@ export const PUT = async (request, { params }) => {
     if (!sessionUser || !sessionUser.user.id) {
       return new Response(
         JSON.stringify({ message: "You need to login first or register!" }),
-        { status: 401 }
+        { status: 401 },
       );
     }
 
@@ -43,7 +43,7 @@ export const PUT = async (request, { params }) => {
         //Make request to upload to cloudinary
         const result = await cloudinary.uploader.upload(
           `data:image/png;base64,${imageBase64}`,
-          { folder: "nextjs_blog" }
+          { folder: "nextjs_blog" },
         );
 
         imageUploadPromises.push(result.secure_url);
@@ -61,12 +61,12 @@ export const PUT = async (request, { params }) => {
         _id: postId,
       },
       { $set: postData },
-      { new: true }
+      { new: true },
     );
 
     return new Response(
       JSON.stringify({ message: "Post updated successfully!" }),
-      { status: 200 }
+      { status: 200 },
     );
   } catch (error) {
     console.log(error);

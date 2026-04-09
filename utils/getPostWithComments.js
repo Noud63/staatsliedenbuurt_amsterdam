@@ -3,7 +3,7 @@ import Comment from "@/models/comment";
 import PostLike from "@/models/postLikes";
 import Avatar from "@/models/avatar";
 
-export async function postWithComments(post, currentUserId, avatarMap, likedPosts) {
+export async function postWithComments(post, currentUserId, userMap, likedPosts) {
   if (!post) return null;
 
   // Fetch comments with aggregation pipeline
@@ -33,18 +33,21 @@ export async function postWithComments(post, currentUserId, avatarMap, likedPost
       },
     },
     {
-      $lookup: {
-        from: "avatars",
-        localField: "replies.userId",
-        foreignField: "userId",
-        as: "replyAvatars",
-      },
-    },
-    {
-      $addFields: {
-        "replies.avatar": { $arrayElemAt: ["$replyAvatars.avatar", 0] },
-      },
-    },
+  $lookup: {
+    from: "users",
+    localField: "userId",
+    foreignField: "_id",
+    as: "author",
+  },
+},
+{
+  $addFields: {
+    author: { $arrayElemAt: ["$author", 0] },
+    avatar: { $ifNull: [{ $arrayElemAt: ["$author.avatar", 0] }, null] },
+    username: { $ifNull: [{ $arrayElemAt: ["$author.username", 0] }, null] },
+    name: { $ifNull: [{ $arrayElemAt: ["$author.name", 0] }, null] },
+  },
+},
     {
       $lookup: {
         from: "commentlikes",
@@ -63,13 +66,15 @@ export async function postWithComments(post, currentUserId, avatarMap, likedPost
     { $sort: { createdAt: -1 } },
   ]);
 
-  const postAvatar = avatarMap[post.userId.toString()] || null;
+  const postAuthor = userMap[post.userId.toString()];
   const postLiked = likedPosts.has(post._id.toString())
 
   return {
     ...post,
-    avatar: postAvatar,
-    comments: comments.length > 0 ? comments : [],
-    likedByUser: postLiked,
+  name: postAuthor?.name ?? null,
+  username: postAuthor?.username ?? null,
+  avatar: postAuthor?.avatar ?? null,
+  comments: comments.length > 0 ? comments : [],
+  likedByUser: postLiked,
   };
 }

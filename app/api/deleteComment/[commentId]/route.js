@@ -2,7 +2,7 @@ import connectDB from "@/connectDB/database";
 import Comment from "@/models/comment";
 import mongoose from "mongoose";
 import CommentLike from "@/models/commentLikes";
-import { getSessionUser } from "@/utils/getSessionUser";
+import { getSessionUser } from "@/lib/auth/getSessionUser";
 import Notification from "@/models/notification";
 
 export const DELETE = async (request, { params }) => {
