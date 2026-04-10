@@ -48,7 +48,7 @@ const GetAllPosts = ({ initialData }) => {
           </div>
         ))}
 
-        {!isReachingEnd && (
+        {!isReachingEnd ? (
           <div className="flex justify-center py-4">
             <button
               onClick={() => setSize(size + 1)}
@@ -58,7 +58,9 @@ const GetAllPosts = ({ initialData }) => {
               {isLoadingMore ? <Spinner loading={isLoadingMore} height={40} width={40} /> : "Meer berichten"}
             </button>
           </div>
-        )}
+        ) :  (<div className="flex m-auto justify-center py-4 rounded-lg border-2 w-[180px] text-white disabled:border-0 mt-12">
+             Geen berichten meer  
+            </div>)}
       </div>
     </div>
   );

@@ -39,7 +39,7 @@ export async function GET(request, { params }) {
       .limit(limit)
       .lean();
 
-    //...new Set() removes duplicates, then we convert back to array
+    //...new Set() removes duplicates, then convert back to array
     const userIds = [...new Set(posts.map((p) => p.userId.toString()))];
 
     const users = await User.find({ _id: { $in: userIds } })
@@ -53,6 +53,7 @@ export async function GET(request, { params }) {
 
     //Fetch all posts likes
     const postIds = posts.map((p) => p._id);
+    
     const likes = await PostLike.find({
       postId: { $in: postIds },
       userId: currentUserId,
