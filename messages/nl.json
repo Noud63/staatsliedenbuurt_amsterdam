@@ -5,7 +5,13 @@
     "registreren": "Registreren",
     "verwijder": "Verwijder",
     "reageer": "reageer",
-    "bewerk": "Bewerk"
+    "bewerk": "Bewerk",
+    "geenaccount": "Nog geen account?",
+    "registreer": "Registreer hier!",
+    "account": "Heb je al een account?",
+    "login": "Log hier in!",
+    "google": "Log in met Google",
+    "verstuur": "Verstuur"
   },
   "menu": {
     "historie": "Historie",

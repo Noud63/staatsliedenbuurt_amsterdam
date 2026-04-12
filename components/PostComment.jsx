@@ -1,5 +1,5 @@
 "use client";
-import React, { useMemo, useState, useEffect } from "react";
+import React, { useMemo, useState} from "react";
 import Image from "next/image";
 import PostCommentForm from "./PostCommentForm";
 import { useSession } from "next-auth/react";
@@ -15,7 +15,7 @@ const PostComment = ({ post, onLikeComment, onDeleteComment }) => {
   const [showForm, setShowForm] = useState(false);
   const [showAllComments, setShowAllComments] = useState(false);
 
-  const allComments = post.comments || [];
+  const allComments = useMemo(() => post.comments || [], [post.comments]);
 
   //Group comments by parentId ( null or comment._id) for efficient lookup
   const commentsByParent = useMemo(() => {
@@ -23,9 +23,7 @@ const PostComment = ({ post, onLikeComment, onDeleteComment }) => {
 
     for (const comment of allComments) {
       const key = comment.parentId === null ? null : String(comment.parentId);
-      // console.log("Key for comment", comment._id, "is", key);
       const existingComments = groupedComments.get(key) || [];
-      // console.log("Existing comments for key:", existingComments);
       existingComments.push(comment);
       groupedComments.set(key, existingComments);
     }
@@ -47,7 +45,7 @@ const PostComment = ({ post, onLikeComment, onDeleteComment }) => {
     // console.log("Child comments by parentId");
     const childComments = commentsByParent.get(key) || [];
 
-    console.log("Comments grouped by parentId:");
+    // console.log("Comments grouped by parentId:");
 
     return childComments.map((comment) => (
       <div key={comment._id} className="comment">

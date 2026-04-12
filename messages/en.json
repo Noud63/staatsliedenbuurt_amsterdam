@@ -5,18 +5,24 @@
     "registreren": "Register",
     "verwijder": "Delete",
     "reageer": "comment",
-    "bewerk": "Edit"
+    "bewerk": "Edit",
+    "geenaccount": "Don't have an account?",
+    "registreer": "Register here!",
+    "account": "Already have an account?",
+    "login": "Log in here!",
+    "google": "Log in with Google",
+    "verstuur": "Submit"
   },
   "menu": {
     "historie": "History",
     "social": "Social",
     "nieuws": "News",
-    "demografie": "Demografics",
+    "demografie": "Demographics",
     "beeld": "Images",
     "over": "About",
-    "praktisch": "Praktical",
+    "praktisch": "Practical",
     "westergas": "Westergas",
-    "buurt": "neighborhood",
+    "buurt": "Neighborhood",
     "kunst": "Art & Culture",
     "weer": "Weather",
     "contact": "Contact"

@@ -13,14 +13,14 @@ const Navbar = () => {
       <div className="mx-auto flex w-full max-w-[1980px] flex-row items-center justify-between px-6 max-sm:justify-between max-sm:px-0">
         <div className="flex flex-row items-center">
           <Link href={`/${locale}`}>
-            <div className="mb-2 flex flex-col items-center leading-none tracking-wide">
-              <div className="w-fit text-center font-CloisterBlack text-[3.4rem] text-white">
-                Staatslieden
-              </div>
-              <div className="text-[0.65rem] text-[#ffcb3b] retina:text-[0.58rem]">
-                webapplicatie voor de Staatsliedenbuurt Amsterdam
-              </div>
-            </div>
+            <div className="mb-2 flex w-fit flex-col leading-none tracking-wide">
+  <div className="w-full text-center font-CloisterBlack text-[3.4rem] text-white">
+    Staatslieden
+  </div>
+  <div className="w-full text-center text-[0.65rem] text-[#ffcb3b]">
+    webapplicatie voor de Staatsliedenbuurt Amsterdam
+  </div>
+</div>
           </Link>
         </div>
 

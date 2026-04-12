@@ -2,13 +2,14 @@
 import { useState, useEffect } from "react";
 import { SendHorizontal } from "lucide-react";
 import { ArrowRight } from "lucide-react";
-import { CircleX } from "lucide-react";
 import { CircleCheckBig } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { signIn } from "next-auth/react";
-import { useLocale } from "next-intl";
+import { useTranslations } from "next-intl";
+import Spinner from "./Spinner";
+import React from "react";
 
 const LoginForm = () => {
   const [email, setEmail] = useState("");
@@ -19,9 +20,11 @@ const LoginForm = () => {
   const [message, setMessage] = useState("");
   const [loginMessage, setLoginMessage] = useState("");
   const [countDown, setCountDown] = useState(60);
+  const [isLoading, setIsLoading] = useState(false);
 
   const router = useRouter();
 
+  const t = useTranslations("auth");
 
   //Persist counter on page refresh
   useEffect(() => {
@@ -47,7 +50,6 @@ const LoginForm = () => {
     restoreLock();
   }, []); // run once on mount
 
-
   useEffect(() => {
     if (countDown <= 0) return;
 
@@ -57,7 +59,6 @@ const LoginForm = () => {
 
     return () => clearInterval(timer);
   }, [countDown]);
-
 
   useEffect(() => {
     if (countDown === 0) {
@@ -69,6 +70,7 @@ const LoginForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsLoading(true);
     if (disabled) return;
 
     try {
@@ -89,6 +91,7 @@ const LoginForm = () => {
 
         if (errorType === "ACCOUNT_LOCKED") {
           const ttl = Number(value) || 60;
+          //Store email to persist the locked account state across a page refresh
           localStorage.setItem("lastAttemptedEmail", email);
           setDisabled(true);
           setCountDown(ttl);
@@ -113,6 +116,7 @@ const LoginForm = () => {
     } finally {
       setEmail("");
       setPassword("");
+      setIsLoading(false);
     }
   };
 
@@ -184,7 +188,13 @@ const LoginForm = () => {
               }`}
               type="submit"
             >
-              <SendHorizontal className="mr-2" /> Log in
+              {isLoading ? (
+                <Spinner loading={isLoading} height={24} width={24} />
+              ) : (
+                <>
+                  <SendHorizontal className="mr-2" /> Log in
+                </>
+              )}
             </button>
           </div>
 
@@ -200,12 +210,11 @@ const LoginForm = () => {
               height={20}
               className="mr-2 h-5 w-5"
             />
-            Log in met Google
+            {t("google")}
           </button>
 
           <div className="mt-4 flex w-full items-center gap-1 font-medium">
-            Nog geen account? <ArrowRight size={16} />
-            <Link href="/register">Registreer</Link>
+            {t("geenaccount")} <ArrowRight size={16} /> <Link href="/register"><span className="underline cursor-pointer">{t("registreer")}</span></Link>
           </div>
         </form>
       </div>

@@ -6,9 +6,12 @@ import { CircleX } from "lucide-react";
 import { CircleCheckBig } from "lucide-react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { useTranslations } from "next-intl";
+import Spinner from "./Spinner";
 
 
 const RegisterForm = () => {
+
   const [name, setName] = useState("");
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
@@ -16,8 +19,11 @@ const RegisterForm = () => {
   const [error, setError] = useState(false);
   const [success, setSuccess] = useState(false);
   const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const router = useRouter();
+
+  const t = useTranslations("auth");
 
   const validateEmailClientSide = (email) => {
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -33,7 +39,7 @@ const RegisterForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+  setLoading(true);
     const data = {
       name,
       username,
@@ -73,6 +79,8 @@ const RegisterForm = () => {
       }
     } catch (error) {
       console.log(error);
+    }finally {
+      setLoading(false);
     }
   };
 
@@ -80,7 +88,7 @@ const RegisterForm = () => {
     <div className="mx-auto mt-4 w-full px-4 max-xsm:px-2">
       <div className="mx-auto w-full max-w-[620px] rounded-lg bg-white p-6 shadow-md">
         <div className="mb-4 flex justify-center border-b-2 border-dotted border-black pb-4 text-xl font-bold">
-          Registreer
+          {t("registreer")}
         </div>
 
         <form onSubmit={handleSubmit}>
@@ -161,13 +169,13 @@ const RegisterForm = () => {
               className="text-md flex w-full items-center justify-center rounded-lg bg-gradient-to-r from-yellow-900 via-yellow-700 to-yellow-900 py-6 text-white"
               type="submit"
             >
-              <SendHorizontal className="mr-2" /> Verstuur
+              {loading ? <Spinner loading={isLoading} height={24} width={24} /> : <SendHorizontal className="mr-2" />} {t("verstuur")}
             </button>
           </div>
 
           <div className="mt-4 flex w-full items-center gap-1 font-medium">
-            Heb je al een account? <ArrowRight size={16} />
-            <Link href="/login">Login</Link>
+            {t("account")} <ArrowRight size={16} />
+            <Link href="/login">{t("login")}</Link>
           </div>
         </form>
       </div>
