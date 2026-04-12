@@ -1,4 +1,5 @@
-import React from "react";
+"use client"
+import React, {useState, useEffect} from "react";
 import Link from "next/link";
 import Weatherreport from "./Weatherreport";
 import LoginRegisterLogout from "./LoginRegisterLogout";
@@ -7,6 +8,13 @@ import { useLocale } from "next-intl";
 
 const Navbar = () => {
   const locale = useLocale();
+
+  const [isRetina, setIsRetina] = useState(false);
+
+  useEffect(() => {
+    if(window.devicePixelRatio >= 2)
+  setIsRetina(true);
+}, []);
 
   return (
     <div className="navbar flex h-[100px] w-full justify-between border-b border-yellow-800 py-3 max-sm:px-4">
@@ -17,7 +25,7 @@ const Navbar = () => {
   <div className="w-full text-center font-CloisterBlack text-[3.4rem] text-white">
     Staatslieden
   </div>
-  <div className="w-full text-center text-[0.65rem] text-[#ffcb3b]">
+ <div className={`w-full text-center text-[#ffcb3b] ${isRetina ? "text-[0.58rem]" : "text-[0.65rem]"}`}>
     webapplicatie voor de Staatsliedenbuurt Amsterdam
   </div>
 </div>
