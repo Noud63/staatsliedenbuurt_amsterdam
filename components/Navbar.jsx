@@ -1,5 +1,5 @@
-"use client"
-import React, {useState, useEffect} from "react";
+"use client";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Weatherreport from "./Weatherreport";
 import LoginRegisterLogout from "./LoginRegisterLogout";
@@ -12,9 +12,10 @@ const Navbar = () => {
   const [isRetina, setIsRetina] = useState(false);
 
   useEffect(() => {
-    if(window.devicePixelRatio >= 2)
-  setIsRetina(true);
-}, []);
+    if (window.devicePixelRatio >= 2){
+      setIsRetina(true);
+    }
+  }, []);
 
   return (
     <div className="navbar flex h-[100px] w-full justify-between border-b border-yellow-800 py-3 max-sm:px-4">
@@ -22,13 +23,15 @@ const Navbar = () => {
         <div className="flex flex-row items-center">
           <Link href={`/${locale}`}>
             <div className="mb-2 flex w-fit flex-col leading-none tracking-wide">
-  <div className="w-full text-center font-CloisterBlack text-[3.4rem] text-white">
-    Staatslieden
-  </div>
- <div className={`w-full text-center text-[#ffcb3b] ${isRetina ? "text-[0.58rem]" : "text-[0.65rem]"}`}>
-    webapplicatie voor de Staatsliedenbuurt Amsterdam
-  </div>
-</div>
+              <div className="w-full text-center font-CloisterBlack text-[3.4rem] text-white">
+                Staatslieden
+              </div>
+              <div
+                className={`w-full text-center text-[#ffcb3b] ${isRetina ? "text-[0.58rem]" : "text-[0.65rem]"}`}
+              >
+                webapplicatie voor de Staatsliedenbuurt Amsterdam
+              </div>
+            </div>
           </Link>
         </div>
 
