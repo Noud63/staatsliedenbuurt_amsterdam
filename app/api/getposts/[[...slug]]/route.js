@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import connectDB from "@/connectDB/database";
+import connectDB from "@/lib/database";
 import cloudinary from "@/config/cloudinary";
 import { getSessionUser } from "@/lib/auth/getSessionUser";
 import mongoose from "mongoose";
@@ -53,7 +53,7 @@ export async function GET(request, { params }) {
 
     //Fetch all posts likes
     const postIds = posts.map((p) => p._id);
-    
+
     const likes = await PostLike.find({
       postId: { $in: postIds },
       userId: currentUserId,

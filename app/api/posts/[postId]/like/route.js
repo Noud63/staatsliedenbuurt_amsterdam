@@ -1,4 +1,4 @@
-import connectDB from "@/connectDB/database";
+import connectDB from "@/lib/database";
 import Post from "@/models/post";
 import PostLike from "@/models/postLikes";
 import { getSessionUser } from "@/lib/auth/getSessionUser";

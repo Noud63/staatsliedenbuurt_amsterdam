@@ -1,4 +1,4 @@
-import connectDB from "@/connectDB/database";
+import connectDB from "@/lib/database";
 import { extractPublicId } from "cloudinary-build-url";
 import Post from "@/models/post";
 import { getSessionUser } from "@/lib/auth/getSessionUser";

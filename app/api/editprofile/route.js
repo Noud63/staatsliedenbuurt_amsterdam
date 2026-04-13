@@ -1,4 +1,4 @@
-import connectDB from "@/connectDB/database";
+import connectDB from "@/lib/database";
 import cloudinary from "@/config/cloudinary";
 import User from "@/models/User";
 import Avatar from "@/models/avatar";

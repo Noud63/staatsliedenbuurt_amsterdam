@@ -1,56 +1,35 @@
-
 import createNextIntlPlugin from "next-intl/plugin";
 const withNextIntl = createNextIntlPlugin();
+
+const allowedHostnames = [
+  "lh3.googleusercontent.com",
+  "res.cloudinary.com",
+  "openweathermap.org",
+  "image.buienradar.nl",
+  "platform-lookaside.fbsbx.com",
+  "avatars.githubusercontent.com",
+  "shorturl.at",
+  "amsterdamflavours.com",
+  "static.wixstatic.com",
+  "barcoco.nl",
+  "jamhoreca.nl",
+  "ik.imagekit.io",
+   "djn5iqj8vm44t.cloudfront.net",
+   "image.parool.nl",
+   "www.dewestkrant.nl",
+  "espressofabriek.nl"
+];
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "lh3.googleusercontent.com",
-        port: "",
-        pathname: "**",
-      },
-      {
-        protocol: "https",
-        hostname: "res.cloudinary.com",
-        port: "",
-        pathname: "**",
-      },
-      {
-        protocol: "https",
-        hostname: "openweathermap.org",
-        port: "",
-        pathname: "**",
-      },
-      {
-        protocol: "https",
-        hostname: "image.buienradar.nl",
-        port: "",
-        pathname: "**",
-      },
-      {
-        protocol: "https",
-        hostname: "platform-lookaside.fbsbx.com",
-        port: "",
-        pathname: "**",
-      },
-      {
-        protocol: "https",
-        hostname: "avatars.githubusercontent.com",
-        port: "",
-        pathname: "**",
-      },
-      {
-        protocol: "https",
-        hostname: "shorturl.at",
-        port: "",
-        pathname: "**",
-      },
-    ],
+    remotePatterns: allowedHostnames.map((hostname) => ({
+      protocol: "https",
+      hostname,
+      port: "",
+      pathname: "**",
+    })),
   },
 };
-
 
 export default withNextIntl(nextConfig);

@@ -1,5 +1,5 @@
 "use client";
-import React, { useMemo, useState} from "react";
+import React, { useMemo, useState } from "react";
 import Image from "next/image";
 import PostCommentForm from "./PostCommentForm";
 import { useSession } from "next-auth/react";
@@ -23,9 +23,10 @@ const PostComment = ({ post, onLikeComment, onDeleteComment }) => {
 
     for (const comment of allComments) {
       const key = comment.parentId === null ? null : String(comment.parentId);
-      const existingComments = groupedComments.get(key) || [];
-      existingComments.push(comment);
-      groupedComments.set(key, existingComments);
+      if (!groupedComments.has(key)) {
+        groupedComments.set(key, []);
+      }
+      groupedComments.get(key).push(comment);
     }
     return groupedComments;
   }, [allComments]);

@@ -98,7 +98,8 @@ const SideBarNotificationList = ({
 
   return (
     <div
-      className={`sidebar_scroll ${showPanel ? "translate-x-0" : "translate-x-full"} singlepost fixed bottom-0 right-0 top-0 z-[10] flex h-full max-h-screen w-full max-w-[340px] flex-col overflow-y-auto bg-gradient-to-r from-yellow-800 to-red-950 pb-16 pl-3 shadow-xl backdrop-blur-sm transition duration-300 ease-in`}
+      className={`sidebar_scroll ${showPanel ? "translate-x-0" : "translate-x-full"} singlepost fixed bottom-0 right-0 top-0 z-[10] 
+      flex h-dvh max-h-dvh w-full max-w-[340px] flex-col overflow-y-auto bg-gradient-to-r from-yellow-800 to-red-950 pb-16 pl-3 shadow-xl backdrop-blur-sm transition duration-300 ease-in`}
       ref={sidebarRef}
     >
       <div className="mt-4 flex w-full justify-around border-b border-white">

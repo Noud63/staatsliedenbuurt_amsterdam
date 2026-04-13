@@ -1,5 +1,5 @@
 import User from "@/models/User";
-import connectDB from "@/connectDB/database";
+import connectDB from "@/lib/database";
 
 export const GET = async (request, { params }) => {
   try {
@@ -18,7 +18,7 @@ export const GET = async (request, { params }) => {
       email: user.email,
       name: user.name,
       userName: user.username,
-      avatar:user?.avatar
+      avatar: user?.avatar,
     };
 
     return new Response(JSON.stringify(userInfo), { status: 200 });

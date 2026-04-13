@@ -1,10 +1,9 @@
-
 //No api route needed for shared url, you can directly fetch from the database
-import connectDB from "@/connectDB/database";
+import connectDB from "@/lib/database";
 import Post from "@/models/post";
 import { notFound } from "next/navigation";
-import Avatar from '@/models/avatar';
-import SharedPost from '@/components/SharedPost';
+import Avatar from "@/models/avatar";
+import SharedPost from "@/components/SharedPost";
 
 const SharedPostPage = async ({ params }) => {
   await connectDB();
@@ -23,4 +22,4 @@ const SharedPostPage = async ({ params }) => {
   return <SharedPost sharedPost={sharedPost} />;
 };
 
-export default SharedPostPage
+export default SharedPostPage;

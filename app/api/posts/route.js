@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import connectDB from "@/connectDB/database";
+import connectDB from "@/lib/database";
 import cloudinary from "@/config/cloudinary";
 import { getSessionUser } from "@/lib/auth/getSessionUser";
 import mongoose from "mongoose";

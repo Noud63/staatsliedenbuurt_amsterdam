@@ -1,4 +1,4 @@
-import connectDB from "@/connectDB/database";
+import connectDB from "@/lib/database";
 import User from "@/models/User";
 import bcrypt from "bcrypt";
 import Emailvalidation from "@everapi/emailvalidation-js";

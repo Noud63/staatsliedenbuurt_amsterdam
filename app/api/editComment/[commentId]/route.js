@@ -1,4 +1,4 @@
-import connectDB from "@/connectDB/database";
+import connectDB from "@/lib/database";
 
 import Comment from "@/models/comment";
 import { getSessionUser } from "@/lib/auth/getSessionUser";
@@ -9,7 +9,7 @@ export const PUT = async (request, { params }) => {
 
     const { commentId } = await params;
 
-    console.log({ CommentId: commentId });
+    // console.log({ CommentId: commentId });
 
     const formData = await request.formData();
 

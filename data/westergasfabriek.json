@@ -1,0 +1,212 @@
+[
+  {
+    "category": "Food & Drinks",
+    "businesses": [
+      {
+        "name": "Bar Coco \"Vino e Pizza\"",
+        "about": "Bar Coco is ontstaan uit de vriendschap van twee horeca-harten. Oprechte gastvrijheid en ouderwetse gezelligheid is waar wij voor staan.Of je nu langskomt voor een informele borrel, een intiem diner of gewoon een gezellig samenzijn met vrienden, bij Bar Coco staat genieten centraal. Kom proosten op nieuwe herinneringen en heerlijke smaken in het hart van het Westerpark.",
+        "website": "https://barcoco.nl/",
+        "route": "https://goo.gl/maps/UJvBHHENzBH2",
+        "img": "https://barcoco.nl/wp-content/uploads/2025/05/Bar-Coco_1920x1080_158.jpg"
+      },
+      {
+        "name": "Brouwerij Troost",
+        "about": "In 2013 brouwden wij voor het eerst bier in onze eerste brouwerij in de Amsterdamse Pijp. Inmiddels maken we prijswinnende bieren en frisdranken, en van bier dat overblijft stoken we weer gin en jenever. Onze brouwerijen bevinden zich in prachtige historische panden op de mooiste plekken in Amsterdam. We maken alles zelf, met lokaal geteelde ingrediënten, want dat is beter voor ons bier én voor de planeet. Niet de makkelijkste weg natuurlijk, maar des te leuker!",
+        "website": "https://brouwerijtroost.nl/",
+        "route": "https://goo.gl/maps/fcYCtW7BMhE2",
+        "img": "https://jamhoreca.nl/wp-content/uploads/2017/10/IMG_5768-bannerformat-scaled.jpg"
+      },
+      {
+        "name": "Amsterdam Flavours",
+        "about": "Het cultuurpark Westergas is een van de meest stralende plekken waar mensen elkaar ontmoeten in Amsterdam; ‘out of the box’ richting frisse visies; beslissen, zich inspannen en ontspannen. In het unieke stadspark met z’n historische Westergas fabrieksgebouwen, vind je inspirerend veel groen. Met veel mooie plekken voor het maken van creatieve en strategische sprongen: bewegingen van denken en ontwerpen, naar bouwen en maken. Ruimte voor grote en kleine evenementen. Meerdere horeca-, film- theater- en expositiegelegenheden. Fijne ontmoetings-, werk- en ontspanningsplekken.",
+        "website": "http://amsterdamflavoursexperience.com/",
+        "route": "https://goo.gl/maps/Hpb7E4Q7NgP2",
+        "img": "https://amsterdamflavours.com/wp-content/uploads/2021/04/header_klein_desktop.png"
+      },
+      {
+        "name": "Bakkerswinkel",
+        "about": "De Bakkerswinkel is een gezellige plek waar je kunt genieten van heerlijke broodjes, taarten en andere lekkernijen. Onze passie voor ambachtelijk gebakken producten komt tot uiting in alles wat we doen. Kom langs voor een smakelijke ervaring in een warme en gastvrije sfeer.",
+        "website": "http://www.debakkerswinkel.nl/",
+        "route": "https://goo.gl/maps/Buh8giCDDQL2",
+        "img": "https://static.wixstatic.com/media/396d30_494695db383a43f5bd5928302a0a4ee9~mv2.jpg/v1/fill/w_640,h_280,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/396d30_494695db383a43f5bd5928302a0a4ee9~mv2.jpg"
+      },
+      {
+        "name": "Cantine de Caron",
+        "about": "CANTINE ligt midden in het historische Cultuurpark Westergas in het Westerpark, dat in 1885 begon als gasfabriek en in 2003 werd omgebouwd tot een bruisend cultureel park. Oorspronkelijk gebouwd als industrieel onderkomen voor een van de energiecentrales van de stad, herbergt dit voormalige fabrieksgebouw nu een brasserie die je verwelkomt voor een snelle lunch of een uitgebreid diner. Neem binnen plaats aan een van de tafels in dit rauwe, romantische monument of buiten op ons zonovergoten terras, met uitzicht op het Westerpark.",
+        "website": "https://cantinedecaron.nl/",
+        "route": "https://www.google.com/maps?q=52.3863469,4.870628",
+        "img": "https://djn5iqj8vm44t.cloudfront.net/photos/233/cantine-de-caron_6412edfb3ead5_1200.webp"
+      },
+      {
+        "name": "Conscious Café",
+        "about": "I am Conscious café, a sexy Grab & Go located at the entrance of Conscious Hotel Westerpark. I offer pleasures for every occasion, just grab me and take me anywhere.",
+        "website": "http://consciouscafe.com/",
+        "route": "https://goo.gl/maps/D2WTJpCVTp12",
+        "img": "https://ik.imagekit.io/mxzivwassd/default/ConsciousCafe_giftshop_cafe_AmsterdamWest_stores_COSH_2023-10-22-213533_iktl.jpg?tr=w-1200%2Cc-at_max_enlarge%3Aw-1200%2Ch-630%2Cf-auto%2Ccm-extract%2Cxc-600%2Cyc-421.82269063856%2Cq-82%2CindexId%3A&v=1698010534"
+      },
+      {
+        "name": "De Parkwachter",
+        "website": "https://www.de-parkwachter.nl/",
+        "route": "https://www.google.com/maps?q=52.3877301,4.8727653",
+        "img": "https://image.parool.nl/216544120/width/2480/afbeelding"
+      },
+      {
+        "name": "Dough",
+        "website": "",
+        "route": "https://www.google.com/maps?q=52.3859357,4.8740701",
+        "img": "https://www.dewestkrant.nl/wp-content/uploads/2025/09/IMG_2876-e1757237171609.jpg"
+      },
+      {
+        "name": "Espressofabriek",
+        "website": "http://www.espressofabriek.nl/",
+        "route": "https://goo.gl/maps/FCbqGbMXbx12",
+        "img": "https://espressofabriek.nl/cdn/shop/files/IMG_20231207_103739103_HDR.jpg?v=1720692107&width=1500"
+      },
+      {
+        "name": "IJscuypje",
+        "website": "https://www.ijscuypje.nl/",
+        "route": "https://www.google.com/maps?q=52.3863691,4.8724786"
+      },
+      {
+        "name": "Mossel & Gin",
+        "website": "https://www.mosselengin.nl/",
+        "route": "https://goo.gl/maps/mqUc2r2KixA2"
+      },
+      {
+        "name": "Pacific",
+        "website": "https://www.pacificamsterdam.nl/",
+        "route": "https://goo.gl/maps/zY7rJgxa23APbfq8A"
+      },
+      {
+        "name": "Radio Radio",
+        "website": "https://radioradio.radio/",
+        "route": "https://goo.gl/maps/NVciVzJ8Geo"
+      },
+      {
+        "name": "Raïnaraï",
+        "website": "https://rainarai.nl/",
+        "route": "https://goo.gl/maps/EdUEULzs9pP2"
+      },
+      {
+        "name": "WestWeelde – Restaurant",
+        "website": "http://www.westergasterras.nl/",
+        "route": "https://goo.gl/maps/Jw7eDDAKEbx"
+      }
+    ]
+  },
+  {
+    "category": "View",
+    "businesses": [
+      {
+        "name": "Fabrique des Lumières",
+        "website": "https://www.fabrique-lumieres.com/en",
+        "route": "https://www.google.com/maps?q=52.3859624,4.8695868"
+      },
+      {
+        "name": "Het Ketelhuis",
+        "website": "https://www.ketelhuis.nl/",
+        "route": "https://goo.gl/maps/vRkRABrtuKUHEv7H6"
+      },
+      {
+        "name": "Museum Villa",
+        "website": "https://www.museumvilla.com/en/",
+        "route": "https://www.google.com/maps?q=52.3861269,4.8727214"
+      }
+    ]
+  },
+  {
+    "category": "Dance",
+    "businesses": [
+      {
+        "name": "Gashouder",
+        "website": "https://gashouder.nl/",
+        "route": "https://maps.app.goo.gl/7woKnW9g5CFtnfoLA"
+      },
+      {
+        "name": "WestWeelde – De Club",
+        "website": "http://www.westerunie.nl/",
+        "route": "https://goo.gl/maps/zHh3HhfHyFt"
+      },
+      {
+        "name": "WestWeelde – Events",
+        "website": "http://www.westerliefde.nl/",
+        "route": "https://goo.gl/maps/H83Tcpde1D22"
+      }
+    ]
+  },
+  {
+    "category": "Shop",
+    "businesses": [
+      {
+        "name": "Kaaskuipje Westergas",
+        "website": "https://kaaskuipje.nl/",
+        "route": "https://www.google.com/maps/search/Kaaskuipje+Westergas+Amsterdam"
+      },
+      {
+        "name": "Qicq",
+        "website": "https://www.qicq.nl/",
+        "route": "https://goo.gl/maps/k7Qbbxfs6qN2"
+      },
+      {
+        "name": "The Citydressers",
+        "website": "https://www.thecitydressers.com/",
+        "route": "https://maps.app.goo.gl/qPFzwU7mVcn5HELx5"
+      }
+    ]
+  },
+  {
+    "category": "Others",
+    "businesses": [
+      {
+        "name": "Amsterdam in Motion",
+        "website": "https://www.amsterdaminmotion.com/nl/",
+        "route": null
+      },
+      {
+        "name": "Comedytrain",
+        "website": "https://www.comedytrain.nl/westergas/",
+        "route": null
+      },
+      {
+        "name": "Conscious Hotel",
+        "website": "https://www.conscioushotels.com/",
+        "route": "https://goo.gl/maps/rACvu8hRzCk"
+      },
+      {
+        "name": "De Wester",
+        "website": "https://westergas.nl/de-wester-als-evenementenlocatie/",
+        "route": "https://maps.app.goo.gl/GZaVq229HYMVxuzk7"
+      },
+      {
+        "name": "Milkshake B.V.",
+        "website": "https://www.milkshakefestival.com/",
+        "route": "https://www.google.com/maps?q=52.3856596,4.8705931"
+      },
+      {
+        "name": "SamSam Westerpark",
+        "website": "http://www.kdvsamsam.com/",
+        "route": "https://goo.gl/maps/K2bi6hnoVyG2"
+      },
+      {
+        "name": "Stichting For All Who Love Foundation",
+        "website": "https://www.forallwholove.com/",
+        "route": "https://www.google.com/maps?q=52.3856596,4.8705931"
+      },
+      {
+        "name": "Table For Ten B.V.",
+        "website": "https://www.tableforten.nl/",
+        "route": "https://www.google.com/maps?q=52.3856596,4.8705931"
+      },
+      {
+        "name": "Theater de Krakeling",
+        "website": "https://krakeling.nl/",
+        "route": "https://www.google.com/maps?q=52.3858481,4.8713256"
+      },
+      {
+        "name": "TonTon Club",
+        "website": "https://tontonclub.nl/",
+        "route": "https://goo.gl/maps/ESMvT6U4PGu"
+      }
+    ]
+  }
+]

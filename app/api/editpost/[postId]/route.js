@@ -1,4 +1,4 @@
-import connectDB from "@/connectDB/database";
+import connectDB from "@/lib/database";
 import cloudinary from "@/config/cloudinary";
 import Post from "@/models/post";
 import { getSessionUser } from "@/lib/auth/getSessionUser";

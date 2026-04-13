@@ -1,4 +1,4 @@
-import connectDB from "@/connectDB/database";
+import connectDB from "@/lib/database";
 import Notification from "@/models/notification";
 import { getSessionUser } from "@/lib/auth/getSessionUser";
 

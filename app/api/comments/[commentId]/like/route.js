@@ -1,4 +1,4 @@
-import connectDB from "@/connectDB/database";
+import connectDB from "@/lib/database";
 import CommentLike from "@/models/commentLikes";
 import Comment from "@/models/comment";
 import Post from "@/models/post";
