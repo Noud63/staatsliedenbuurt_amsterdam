@@ -27,13 +27,13 @@ export default function NavbarNotificationBadge() {
 
   return (
     <>
-      <div onClick={handleBadgeClick}>
+      <button onClick={handleBadgeClick} disabled={showPanel}>
         <div
           className="relative cursor-pointer"
         >
           <div className="absolute -top-[30px] -right-[22px] flex items-center justify-center w-5 h-5 bg-red-500 text-white text-xs font-bold rounded-full">{count}</div>
         </div>
-      </div>
+      </button>
 
       <SideBarNotificationList
         postId={postId}

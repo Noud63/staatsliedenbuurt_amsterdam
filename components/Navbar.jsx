@@ -18,8 +18,8 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className="navbar flex h-[100px] w-full justify-between border-b border-yellow-800 py-3 max-sm:px-4">
-      <div className="mx-auto flex w-full max-w-[1980px] flex-row items-center justify-between px-6 max-sm:justify-between max-sm:px-0">
+    <div className="navbar flex h-[100px] w-full justify-center border-b border-yellow-800 py-3 max-sm:px-4 mx-auto">
+      <div className="w-full max-w-[1980px] mx-auto flex flex-row items-center justify-between px-6 max-sm:justify-between max-sm:px-0">
         <div className="flex flex-row items-center">
           <Link href={`/${locale}`}>
             <div className="mb-2 flex w-fit flex-col leading-none tracking-wide">

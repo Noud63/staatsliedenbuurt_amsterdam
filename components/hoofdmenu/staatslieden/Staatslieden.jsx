@@ -12,7 +12,7 @@ const staatslieden = () => {
   // console.log("Hrefs:", hrefs)
 
 return (
-    <div className="mx-auto mt-8 w-full max-w-[1280px] px-4 text-white max-md:mt-4 max-sm:mt-4 max-sm:px-4">
+    <div className="mx-auto mt-8 w-full max-w-[1280px] px-4 text-white max-md:mt-4 max-sm:mt-4 max-sm:px-4 max-xsm:px-2">
       <div className="flex justify-center border-b-2 text-2xl font-semibold tracking-wide">
         <div className="px-4 pb-4">De Staatslieden</div>
       </div>

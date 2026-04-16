@@ -1,6 +1,6 @@
 [
   {
-    "category": "Food & Drinks",
+    "category": "Eten & Drinken",
     "businesses": [
       {
         "name": "Bar Coco \"Vino e Pizza\"",
@@ -21,10 +21,10 @@
         "about": "Het cultuurpark Westergas is een van de meest stralende plekken waar mensen elkaar ontmoeten in Amsterdam; ‘out of the box’ richting frisse visies; beslissen, zich inspannen en ontspannen. In het unieke stadspark met z’n historische Westergas fabrieksgebouwen, vind je inspirerend veel groen. Met veel mooie plekken voor het maken van creatieve en strategische sprongen: bewegingen van denken en ontwerpen, naar bouwen en maken. Ruimte voor grote en kleine evenementen. Meerdere horeca-, film- theater- en expositiegelegenheden. Fijne ontmoetings-, werk- en ontspanningsplekken.",
         "website": "http://amsterdamflavoursexperience.com/",
         "route": "https://goo.gl/maps/Hpb7E4Q7NgP2",
-        "img": "https://amsterdamflavours.com/wp-content/uploads/2021/04/header_klein_desktop.png"
+        "img": "https://slowfood.nl/wp-content/uploads/2023/02/01-Amsterdam_Flavours-30-keuken-zijruimte-smal-1.jpeg"
       },
       {
-        "name": "Bakkerswinkel",
+        "name": "De Bakkerswinkel",
         "about": "De Bakkerswinkel is een gezellige plek waar je kunt genieten van heerlijke broodjes, taarten en andere lekkernijen. Onze passie voor ambachtelijk gebakken producten komt tot uiting in alles wat we doen. Kom langs voor een smakelijke ervaring in een warme en gastvrije sfeer.",
         "website": "http://www.debakkerswinkel.nl/",
         "route": "https://goo.gl/maps/Buh8giCDDQL2",
@@ -35,7 +35,7 @@
         "about": "CANTINE ligt midden in het historische Cultuurpark Westergas in het Westerpark, dat in 1885 begon als gasfabriek en in 2003 werd omgebouwd tot een bruisend cultureel park. Oorspronkelijk gebouwd als industrieel onderkomen voor een van de energiecentrales van de stad, herbergt dit voormalige fabrieksgebouw nu een brasserie die je verwelkomt voor een snelle lunch of een uitgebreid diner. Neem binnen plaats aan een van de tafels in dit rauwe, romantische monument of buiten op ons zonovergoten terras, met uitzicht op het Westerpark.",
         "website": "https://cantinedecaron.nl/",
         "route": "https://www.google.com/maps?q=52.3863469,4.870628",
-        "img": "https://djn5iqj8vm44t.cloudfront.net/photos/233/cantine-de-caron_6412edfb3ead5_1200.webp"
+        "img": "https://media.heerlijk.nl/contentpage/56/1658910750_0.jpg"
       },
       {
         "name": "Conscious Café",
@@ -46,41 +46,42 @@
       },
       {
         "name": "De Parkwachter",
+        "about": "In het mooie Westerpark vind je onze park kiosk De Parkwachter, naast de openbare tennisbanen en achter de spartelvijver. Een plek waar je een ijsje kan halen, een koffietje mee kan nemen voor je uitlaatrondje, een toilet-rondje kan doen of een tosti kan bestellen. Niet ingewikkeld maar wel lekker. We zijn er elke dag, als de dagen wat warmer en langer duren, blijven we langer open. Indien het de gehele dag regent, gaan we wat eerder dicht. Wil je zeker weten of de spartelvijver is gevuld? Check onze Facebook en Instagram, als het is gevuld zullen wij dit in de ochtend posten.",
         "website": "https://www.de-parkwachter.nl/",
         "route": "https://www.google.com/maps?q=52.3877301,4.8727653",
         "img": "https://image.parool.nl/216544120/width/2480/afbeelding"
       },
       {
         "name": "Dough",
-        "website": "",
+        "about": "Dough Bakery in Westerpark biedt een scala aan ambachtelijk bereide deegwaren. Gelegen achter Radio Radio, is het een knusse plek voor verse sandwiches en koeken.",
+        "website": "Geen website",
         "route": "https://www.google.com/maps?q=52.3859357,4.8740701",
         "img": "https://www.dewestkrant.nl/wp-content/uploads/2025/09/IMG_2876-e1757237171609.jpg"
       },
       {
         "name": "Espressofabriek",
+        "about": "We branden onze koffie met liefde één keer per week, zodat elke batch vers, consistent en vol karakter is. Al onze bonen worden zorgvuldig geselecteerd via cuppings, waardoor we alleen koffie van de hoogste kwaliteit kiezen. We werken met twee vertrouwde leveranciers die op een verantwoorde en ethische manier inkopen, zodat boeren in het buitenland gedurende het hele proces worden ondersteund en eerlijk worden behandeld. Ben je geïnteresseerd om Espressofabriek-koffie te serveren in je eigen café, restaurant of bedrijf? Neem dan gerust contact met ons op!",
         "website": "http://www.espressofabriek.nl/",
         "route": "https://goo.gl/maps/FCbqGbMXbx12",
         "img": "https://espressofabriek.nl/cdn/shop/files/IMG_20231207_103739103_HDR.jpg?v=1720692107&width=1500"
       },
       {
         "name": "IJscuypje",
+        "about": "Sinds 2017 staat IJscuypje voor écht ambachtelijk ijs met een Amsterdamse oorsprong. Wat begon als een kleine ijswinkel aan de Albert Cuyp, die we nog steeds hebben, is anno 2026 uitgegroeid tot een succesvol franchiseconcept met ruim 20 vestigingen in Amsterdam en omstreken. Toch blijft onze kern onveranderd: ijs maken zoals het hoort, met verse ingrediënten en volgens traditioneel vakmanschap.",
         "website": "https://www.ijscuypje.nl/",
         "route": "https://www.google.com/maps?q=52.3863691,4.8724786"
       },
       {
         "name": "Mossel & Gin",
+        "about": "Bij Mossel & Gin draait het allemaal om het aanmoedigen van mensen om meer mosselen te eten. En waarom niet de combinatie maken met een andere favoriet: de gin-tonic? Bij Mossel & Gin geloven we sterk in het belang van duurzaamheid en verantwoord eten. We willen onze gasten niet alleen laten genieten van de heerlijke smaken, maar ook bewustzijn creëren over de voordelen van het eten van deze schaal- en schelpdieren. Wist je bijvoorbeeld dat mosselen de zee filteren? Of dat ze boordevol mineralen en vitaminen zitten? Yes!",
         "website": "https://www.mosselengin.nl/",
         "route": "https://goo.gl/maps/mqUc2r2KixA2"
       },
       {
         "name": "Pacific",
+        "about": "Gelegen in het bruisende Cultuurdorp Westergas in Amsterdam bevindt Pacific zich als dé hangout spot van West. Dagelijks zijn wij open voor koffie, ontbijt, lunch en diner. In de avonden kun je hangen aan de bar en in de weekenden gaan de tafels aan de kant voor onze clubavonden.Stap binnen en laat je verrassen.",
         "website": "https://www.pacificamsterdam.nl/",
         "route": "https://goo.gl/maps/zY7rJgxa23APbfq8A"
-      },
-      {
-        "name": "Radio Radio",
-        "website": "https://radioradio.radio/",
-        "route": "https://goo.gl/maps/NVciVzJ8Geo"
       },
       {
         "name": "Raïnaraï",
@@ -89,48 +90,66 @@
       },
       {
         "name": "WestWeelde – Restaurant",
+        "about": "Welkom in Het Restaurant, het kloppend hart van WestWeelde. Een warme, levendige plek waar mensen samenkomen om te genieten van goed eten, goed gezelschap en een unieke sfeer. Overdag stroomt het zonlicht door de grote ramen en voel je de rust van het groen buiten. ’s Avonds transformeert de ruimte tot een intieme setting voor diners, borrels of feestelijke avonden.",
         "website": "http://www.westergasterras.nl/",
         "route": "https://goo.gl/maps/Jw7eDDAKEbx"
       }
     ]
   },
   {
-    "category": "View",
+    "category": "Kijk & Luister",
     "businesses": [
       {
         "name": "Fabrique des Lumières",
+        "about": "Noem het een modern museum, of een meeslepende, zinnenprikkelende, audiovisuele totaalervaring. Maar hoe je het ook noemt: Fabrique des Lumières is een belevenis die draait om kunst. Bedoeld om te prikkelen, te raken en overdonderen. Toegankelijk voor iedereen en uniek in z’n soort.",
         "website": "https://www.fabrique-lumieres.com/en",
-        "route": "https://www.google.com/maps?q=52.3859624,4.8695868"
+        "route": "https://www.google.com/maps?q=52.3859624,4.8695868",
+        "img": "https://www.fabrique-lumieres.com/sites/default/files/styles/1280x460/public/2026-01/dinosaurs_immersive_fabrique_des_lumieres.jpeg.webp?itok=g-Np2Eyq"
       },
       {
         "name": "Het Ketelhuis",
+        "about": "Sinds 29 maart 1999 is Het Ketelhuis stevig verankerd op het Westergasterrein. Zowel ‘kleine’ artistieke als de meer commerciële speelfilms, documentaires en korte films krijgen bij ons een podium. Daarnaast vertonen we Nederlandse en internationale arthouse-titels en een brede waaier aan jeugdfilms.",
         "website": "https://www.ketelhuis.nl/",
-        "route": "https://goo.gl/maps/vRkRABrtuKUHEv7H6"
+        "route": "https://goo.gl/maps/vRkRABrtuKUHEv7H6",
+        "img": "https://www.ketelhuis.nl/wp-content/uploads/2025/05/het-ketelhuis-huren-5-1920x800-1.jpg"
       },
       {
         "name": "Museum Villa",
+        "about": "Villa is een particulier museum en draait volledig op eigen kracht — we krijgen geen subsidie. Juist die onafhankelijke positie geeft ons de ruimte om onze eigen koers te varen. Om dit platform voor kunst en kunstenaars te bouwen. Om Villa een succes te laten zijn. Omdat Villa van top tot teen gebouwd is met kunstenaars, ontvangen zij een reguliere vergoeding en delen zij mee in het financiële succes van het museum. Steun van mensen en bedrijven die, net als wij, kunst een warm hart toedragen, is onmisbaar voor wat we doen.",
         "website": "https://www.museumvilla.com/en/",
-        "route": "https://www.google.com/maps?q=52.3861269,4.8727214"
+        "route": "https://www.google.com/maps?q=52.3861269,4.8727214",
+        "img": "https://framerusercontent.com/images/t7usmOllSOduXblBQBd6KARg8s.jpg?width=5330&height=3553"
       }
     ]
   },
   {
-    "category": "Dance",
+    "category": "Dans & Muziek",
     "businesses": [
       {
         "name": "Gashouder",
+        "about": "De iconische, ronde Gashouder is dé perfecte match als je op zoek bent naar een monumentale evenementenlocatie met een rauwe en industriële charme voor een groot event. Deze industriële locatie ademt een grootsheid die je op geen enkele evenementenlocatie in Amsterdam ervaart. Met een oppervlakte van 2500 m² en een hoogte van 14,5 meter biedt Gashouder een indrukwekkende backdrop voor een beurs, seminar of congres, maar ook voor presentaties en live shows.",
         "website": "https://gashouder.nl/",
-        "route": "https://maps.app.goo.gl/7woKnW9g5CFtnfoLA"
+        "route": "https://maps.app.goo.gl/7woKnW9g5CFtnfoLA",
+        "img": "https://image.volkskrant.nl/215973697/width/2480/the-opposites-in-de-gashouder-in-amsterdam"
       },
       {
         "name": "WestWeelde – De Club",
+        "about": "De Club van WestWeelde (Voormalig Westerunie) is een industriële nachtclub gelegen op de Amsterdamse Westergas in het Westerpark. Sinds 2007 vinden hier elk weekend feesten plaats, georganiseerd door zowel nationale als internationale promotors. De programmering is net zo veelzijdig als de inwoners van Amsterdam zelf, met muziekstijlen variërend van techno en hiphop tot latin en disco.",
         "website": "http://www.westerunie.nl/",
-        "route": "https://goo.gl/maps/zHh3HhfHyFt"
+        "route": "https://goo.gl/maps/zHh3HhfHyFt",
+        "img": "https://cdn.sanity.io/images/qcf0k7mi/production/7e5d925e46dbe57f3b4900270f7d15e57192aed7-1120x677.png?w=1280&q=80"
       },
       {
         "name": "WestWeelde – Events",
-        "website": "http://www.westerliefde.nl/",
+        "about": "Onze vier verschillende inspirerende locaties ( De Liefde, De Unie, De Wester en Het Restaurant), kunnen gecombineerd of los van elkaar worden ingezet, afhankelijk van het aantal gasten en het aantal ruimtes dat nodig is. Ons team beschikt over ruim 20 jaar ervaring en denkt graag van A tot Z mee, in het organiseren van jouw perfecte event.",
+        "website": "http://www.westweelde.nl/events",
         "route": "https://goo.gl/maps/H83Tcpde1D22"
+      },
+      {
+        "name": "Radio Radio",
+        "website": "https://radioradio.radio/",
+        "route": "https://goo.gl/maps/NVciVzJ8Geo",
+        "img": "https://cdn.amsterdam-dance-event.nl/images/images/transforms/_1200x630_crop_center-center_none/2668996/250720-RadioRadio_BORDERLINEATACAN_106_3.webp"
       }
     ]
   },
@@ -139,36 +158,69 @@
     "businesses": [
       {
         "name": "Kaaskuipje Westergas",
+        "about": "Waar je in de zomer de lekkerste ijsjes haalt bij het IJscuypje, verandert dit monumentale pandje uit 1885 in de winter in Kaaskuipje – hét kaasfondue restaurant van het Westerpark. Een perfecte afwisseling: waar op zonnige dagen lange rijen staan voor een ijsje, roepen de koude winteravonden juist om dampende pannetjes kaasfondue.",
         "website": "https://kaaskuipje.nl/",
-        "route": "https://www.google.com/maps/search/Kaaskuipje+Westergas+Amsterdam"
+        "route": "https://www.google.com/maps/search/Kaaskuipje+Westergas+Amsterdam",
+        "img": "https://www.dewestkrant.nl/wp-content/uploads/2025/11/DSC03339-scaled-e1763479377125.jpg"
       },
       {
         "name": "Qicq",
+        "about": "Bij QicQ kun je terecht voor dé topmerken elektrische fietsen, speed pedelecs, en bakfietsen. Of je nu langskomt of belt, we nemen uitgebreid de tijd voor je. Wil je eerst een week een e bike testen? Ook dat kan. Woon je niet in de buurt? Geen probleem wij hebben een haal- en brengservice, ook voor testfietsen.",
         "website": "https://www.qicq.nl/",
         "route": "https://goo.gl/maps/k7Qbbxfs6qN2"
       },
       {
         "name": "The Citydressers",
+        "about": "We are Jet and Kim, two Creative Directors with a background in the cultural event industry. We work and live in Amsterdam and have been creating concepts and organising events together for more than 30 years.",
         "website": "https://www.thecitydressers.com/",
         "route": "https://maps.app.goo.gl/qPFzwU7mVcn5HELx5"
+      },
+      {
+        "name": "Sunday Market",
+        "about": "De Westergas - voormalig cultuurpark Westergasfabriek - is al sinds 2008 de 'home' of Sunday Market. Door de combinatie van de historische fabrieksgebouwen en het groen van het Westerpark is het perfecte decor voor de Sunday Market. Op deze plek kunnen wij de ontmoetingsplaats zijn die we willen zijn. Elke eerste zondag van de maand bouwen we er ons feestje. Kom er genieten van al het moois dat de ontwerpers en creatievelingen je aanbieden, genieten van de live muziek op het open podium, laat je prikkelen door de bijzondere toneelstukken van het markttheater en geniet van een hapje en drankje op een van de vele gezellige terrasjes.",
+        "website": "https://sundaymarket.nl/",
+        "route": "https://www.google.com/maps?q=52.385788,4.870149",
+        "img": "https://mindtrip.ai/attractions/2a66/74cc/c5cc/465b/924a/64a0/1059/cb8e"
       }
     ]
   },
   {
-    "category": "Others",
+    "category": "Events",
+    "businesses": [
+      {
+        "name": "Milkshake B.V.",
+        "about": "Milkshake Festival is an open-minded electronic dance festival for all who love and takes place yearly in the city centre of Amsterdam since 2012. Milkshake shows that entertainment, music choice, choice of clothing have nothing to do with status, gender or sexuality. In previous years there have been 11 stages per day that showcase (inter)national event organizations, artists, and performance artists. The most played genres are electronic, house, disco, pop, techno, R&B, and dancehall.",
+        "website": "https://www.milkshakefestival.com/",
+        "route": "https://www.google.com/maps?q=52.3856596,4.8705931",
+        "img": "https://www.milkshakefestival.com/180566/1762467618-1736874444-20240727-milkshake_saturday-0909-dennisbouman.jpeg?auto=format&cs=origin&fit=clip&fm=webp&q=75"
+      },
+      {
+        "name": "Rollende Keukens",
+        "about": "Wij zijn vijf Amsterdamse families en bouwen met elkaar sinds 2008 in het Hemelvaartsweekend een openlucht-restaurant in onze achtertuin, het Westerpark. Het kan dus voorkomen dat oma de tafel voor je dekt en een praatje komt maken, een verloren zoon je melanzane alla parmigiana bakt en de jongste kleindochter zorgt dat het muziekprogramma goed verloopt.",
+        "website": "https://rollendekeukens.amsterdam/",
+        "route": "https://www.google.com/maps?q=52.387287,4.872381",
+        "img": "https://esjaw2wge86.exactdn.com/nl/wp-content/uploads/sites/2/2020/02/RK-2-1920x1280.jpg?strip=all"
+      }
+    ]
+  },
+  {
+    "category": "Anders",
     "businesses": [
       {
         "name": "Amsterdam in Motion",
+        "about": "Amsterdam in Motion – gecureerd door het Amsterdam Museum – is dé experience voor iedereen die Amsterdam wil zien, voelen en beleven. Reis door de geschiedenis van Amsterdam, ontdek verborgen verhalen en krijg een blik op de stad van morgen.",
         "website": "https://www.amsterdaminmotion.com/nl/",
-        "route": null
+        "img": "https://www.amsterdam.nl/publish/pages/1077383/amsterdaminmotion-hero.png"
       },
       {
         "name": "Comedytrain",
+        "about": "Al bijna dertig jaar is Comedytrain het keurmerk van stand-upcomedy in Nederland. In de comedyclub, voorheen Toomler, wordt talent een podium geboden om ideeën uit te proberen en de basis te leggen voor de vervolgstappen in hun comedycarrière. Of komen gerenommeerde namen terug naar hun club om zich te laten inspireren door nieuwe talenten bij het maken van nieuw materiaal.",
         "website": "https://www.comedytrain.nl/westergas/",
-        "route": null
+        "img": "https://www.comedytrain.nl/wp-content/uploads/2025/12/foyer-WG-schets-1024x437.jpg"
       },
       {
         "name": "Conscious Hotel",
+        "about": "We zijn ons bewust van de keuzes die we maken en duurzaamheid staat centraal bij alles wat we doen. Onze stijlvolle hotels en restaurants zijn een bijzondere ervaring, met elk hun eigen unieke stijl en verhaal. We zijn al meer dan 10 jaar groen, lang voordat het cool was, waardoor we pioniers zijn op het gebied van milieuvriendelijk gastvrijheid. Onze Tripadvisor-gasten beoordeelden ons zelfs als een van de beste hotels ter wereld en we zijn er trots op dat dit ons de Travelers’ Choice Award voor 2022 heeft opgeleverd.",
         "website": "https://www.conscioushotels.com/",
         "route": "https://goo.gl/maps/rACvu8hRzCk"
       },
@@ -176,11 +228,6 @@
         "name": "De Wester",
         "website": "https://westergas.nl/de-wester-als-evenementenlocatie/",
         "route": "https://maps.app.goo.gl/GZaVq229HYMVxuzk7"
-      },
-      {
-        "name": "Milkshake B.V.",
-        "website": "https://www.milkshakefestival.com/",
-        "route": "https://www.google.com/maps?q=52.3856596,4.8705931"
       },
       {
         "name": "SamSam Westerpark",

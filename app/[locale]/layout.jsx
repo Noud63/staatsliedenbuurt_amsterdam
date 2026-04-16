@@ -28,8 +28,7 @@ export default async function RootLayout({ children, params }) {
 
   return (
     <html lang={locale}>
-      <body className="relative bg-gradient-to-r from-red-950 via-yellow-700 to-red-950">
-        <div className="fixed -z-10 h-full w-full bg-[url('/images/homebg2.png')] bg-cover bg-top bg-no-repeat" />
+      <body className="bodybackground relative bg-gradient-to-r from-red-950 via-yellow-700 to-red-950">
         <NextIntlClientProvider >
           <AuthProvider>
             <Navbar />

@@ -22,9 +22,9 @@ const Historie = () => {
 
   return (
     <>
-      <div className="w-full px-4">
+      <div className="w-full px-4 max-xsm:px-2">
         <div className="flex justify-center border-b-2 text-2xl font-semibold tracking-wide mt-8">
-        <span className="px-4 pb-4">{t("titel")}</span>
+        <span className="px-4 pb-4 max-xsm:px-0">{t("titel")}</span>
       </div>
         {/* <TitleBar title={t("titel")} titleWidth={"font-bold max-xsm:text-[16px]"}/> */}
 

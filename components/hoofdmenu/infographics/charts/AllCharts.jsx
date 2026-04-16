@@ -16,7 +16,7 @@ const AllCharts = () => {
       <div className="flex justify-center border-b-2 text-2xl font-semibold tracking-wide">
         <span className="px-4 pb-4">{t("titel")}</span>
       </div>
-      <div className="whitespace-pre-line border-b-2 py-6 pl-4">
+      <div className="whitespace-pre-line border-b-2 py-6 pl-4 max-xsm:pl-0">
         {t.raw("desc")}
       </div>
       <div className="grid grid-cols-3 gap-4 max-xl:grid-cols-2 max-md:grid-cols-1">

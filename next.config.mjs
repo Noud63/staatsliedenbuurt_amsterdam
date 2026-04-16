@@ -14,10 +14,23 @@ const allowedHostnames = [
   "barcoco.nl",
   "jamhoreca.nl",
   "ik.imagekit.io",
-   "djn5iqj8vm44t.cloudfront.net",
-   "image.parool.nl",
-   "www.dewestkrant.nl",
-  "espressofabriek.nl"
+  "djn5iqj8vm44t.cloudfront.net",
+  "image.parool.nl",
+  "www.dewestkrant.nl",
+  "espressofabriek.nl",
+  "slowfood.nl",
+  "www.ketelhuis.nl",
+  "www.fabrique-lumieres.com",
+  "framerusercontent.com",
+  "image.volkskrant.nl",
+  "cdn.sanity.io",
+  "cdn.amsterdam-dance-event.nl",
+  "media.heerlijk.nl",
+  "www.amsterdam.nl",
+  "www.comedytrain.nl",
+  "mindtrip.ai",
+  "www.milkshakefestival.com",
+  "esjaw2wge86.exactdn.com"
 ];
 
 /** @type {import('next').NextConfig} */

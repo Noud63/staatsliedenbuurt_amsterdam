@@ -7,9 +7,14 @@ import Werk from "./Werk";
 import Ontmoeten from "./Ontmoeten";
 import Zorg from "./Zorg";
 import Veiligheid from "./Veiligheid";
-import { ArrowUp, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import ScrollButton from "@/components/ScrollButton";
+import { useScrollVisibility } from "@/hooks/useScrollVisibility";
 
 const BuurtTeam = () => {
+  
+  const { showScrollButton, scrollToTop, handleScroll } = useScrollVisibility(1000, "buurtteam-menu"); //Set scrollY threshold to 1000px
+
   const items = [
     { label: "Financiën", id: "financien" },
     { label: "Huisvesting", id: "huisvesting" },
@@ -21,31 +26,6 @@ const BuurtTeam = () => {
     { label: "Veiligheid", id: "veiligheid" },
   ];
 
-  const [showScrollButton, setShowScrollButton] = useState(false);
-
-  useEffect(() => {
-    const handleScrollVisibility = () => {
-      if (window.scrollY > 1000) {
-        setShowScrollButton(true);
-      } else {
-        setShowScrollButton(false);
-      }
-    };
-
-    window.addEventListener("scroll", handleScrollVisibility);
-    return () => window.removeEventListener("scroll", handleScrollVisibility);
-  }, []);
-
-  const handleScroll = (id) => {
-    const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-  };
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
 
   return (
     <div className="my-4 text-lg text-white max-xsm:text-base">
@@ -84,7 +64,7 @@ const BuurtTeam = () => {
           </div>
         </div>
 
-        <div className="mt-6">
+        <div className="mt-6 mx" id="buurtteam-menu">
           <div className="w-full rounded-md border-b border-yellow-800 bg-yellow-700 px-4 py-2 text-lg shadow-lg">
             Het buurtteam kan u bijstaan op het gebied van :
           </div>
@@ -127,13 +107,7 @@ const BuurtTeam = () => {
 
       {/* Scroll to Top Button */}
       {showScrollButton && (
-        <button
-          onClick={scrollToTop}
-          className="singlepost fixed bottom-6 right-6 rounded-full border-2 bg-gradient-to-l from-red-950 to-yellow-700 p-2 text-white shadow-lg transition-all duration-300 max-md:p-1"
-          aria-label="Scroll to top"
-        >
-          <ArrowUp size={30} />
-        </button>
+        <ScrollButton scrollToTop={scrollToTop} />
       )}
     </div>
   );

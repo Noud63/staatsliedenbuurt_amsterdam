@@ -6,7 +6,7 @@ const ContactPage = () => {
   const t = useTranslations("contact");
 
   return (
-    <div className="mx-auto mt-4 w-full max-w-[660px] px-4 max-md:max-w-full">
+    <div className="mx-auto mt-4 w-full max-w-[660px] px-4 max-md:max-w-full max-xsm:px-2">
       <TitleBar title="Contact" titleWidth={"pl-2 font-bold"} />
       <div className="mt-4 w-full rounded-lg border-2 p-4 text-white">
         <div>
