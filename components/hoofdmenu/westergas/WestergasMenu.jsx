@@ -9,7 +9,7 @@ const WestergasMenu = ({ categoryNames }) => {
 
   return (
     <>
-      <div className="mx-auto mt-4 grid w-full max-w-[620px] grid-cols-3 gap-2 max-md:max-w-full max-xxm:grid-cols-2 max-xxsm:grid-cols-1">
+      <div className="mx-auto mt-4 grid w-full max-w-[1980px] grid-cols-6 gap-2 max-md:max-w-full max-lg:grid-cols-3 max-sm:grid-cols-1">
         {categoryNames?.map((name, idx) => (
           <div
             key={idx}

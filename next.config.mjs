@@ -30,7 +30,8 @@ const allowedHostnames = [
   "www.comedytrain.nl",
   "mindtrip.ai",
   "www.milkshakefestival.com",
-  "esjaw2wge86.exactdn.com"
+  "esjaw2wge86.exactdn.com",
+  "archief.amsterdam"
 ];
 
 /** @type {import('next').NextConfig} */

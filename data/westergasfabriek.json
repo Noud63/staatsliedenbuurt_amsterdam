@@ -85,6 +85,7 @@
       },
       {
         "name": "Raïnaraï",
+        "about": "Laurent Med Khellout is chef-kok en eigenaar van restaurant en cateringbedrijf Raïnaraï. Daar voert hij een Algerijns-nomadische keuken met uitsluitend natuurlijke producten.",
         "website": "https://rainarai.nl/",
         "route": "https://goo.gl/maps/EdUEULzs9pP2"
       },
@@ -147,6 +148,7 @@
       },
       {
         "name": "Radio Radio",
+        "about": "Radio Radio is an intimate club and radio station (RRFM) with a great sound system located next to Amsterdam's Westerpark. Go to radioradio.radio to enjoy their program and dive into their radio archive.",
         "website": "https://radioradio.radio/",
         "route": "https://goo.gl/maps/NVciVzJ8Geo",
         "img": "https://cdn.amsterdam-dance-event.nl/images/images/transforms/_1200x630_crop_center-center_none/2668996/250720-RadioRadio_BORDERLINEATACAN_106_3.webp"
@@ -226,31 +228,37 @@
       },
       {
         "name": "De Wester",
+        "about":  "Het monumentale De Wester, het voormalige Transformatorhuis, is dé flexibele en authentieke evenementenlocatie van Westergas. Of je jouw event nu vanuit een casco-opstelling wilt organiseren of kiest voor een van de op maat gemaakte, instapklare pakketten, De Wester biedt veelzijdige mogelijkheden.",
         "website": "https://westergas.nl/de-wester-als-evenementenlocatie/",
         "route": "https://maps.app.goo.gl/GZaVq229HYMVxuzk7"
       },
       {
         "name": "SamSam Westerpark",
+        "about": "Bij SamSam geloven we er in dat kinderen vol talenten zitten en zelf vorm geven aan hun eigen ontwikkeling. Ze zijn van nature nieuwsgierig en onderzoeken de wereld met alles wat in hen zit!",
         "website": "http://www.kdvsamsam.com/",
         "route": "https://goo.gl/maps/K2bi6hnoVyG2"
       },
       {
         "name": "Stichting For All Who Love Foundation",
+        "about": "For All Who Love Foundation has the purpose to create more tolerance and acceptance for people who are different from the ideal image of society. We are committed to creating more courtesy and love for each other.",
         "website": "https://www.forallwholove.com/",
         "route": "https://www.google.com/maps?q=52.3856596,4.8705931"
       },
       {
-        "name": "Table For Ten B.V.",
+        "name": "Table For Ten",
+        "about": "Let’s set the table for ten. Thousand. Million. Gazillion. The more the merrier, right? We’re committed to creating connections between brands and people that benefit both, equally. There’s simply so many creative ways to meet each other at the table and form bonds that have meaning, are a whole lot of fun or simply help further a good cause.",
         "website": "https://www.tableforten.nl/",
         "route": "https://www.google.com/maps?q=52.3856596,4.8705931"
       },
       {
         "name": "Theater de Krakeling",
+        "about": "Theater De Krakeling is een hét jeugdtheater in Amsterdam dat zich volledig richt op de Amsterdamse jeugd. In het theater komen de mooiste, grappigste en spannendste verhalen tot leven. Via muziek, spel, multimedia, dans, mime, poppen en beeldende kunst stap je tijdens onze voorstellingen éven in een andere wereld. Van nieuw talent tot gevestigde makers. De Krakeling is een huis voor iedereen: wij stimuleren de verbeeldingskracht, dagen uit en verbreden het wereldbeeld van álle Amsterdamse kinderen en jongeren. ",
         "website": "https://krakeling.nl/",
         "route": "https://www.google.com/maps?q=52.3858481,4.8713256"
       },
       {
         "name": "TonTon Club",
+        "about": "Stap binnen in de wondere wereld van TonTon Club, Nederland’s allereerste arcade bar! Hier op het bruisende Westergasterrein vind je geen doorsnee restaurant, maar een speelparadijs voor volwassenen, boordevol bord- en (retro) arcadespellen.",
         "website": "https://tontonclub.nl/",
         "route": "https://goo.gl/maps/ESMvT6U4PGu"
       }
