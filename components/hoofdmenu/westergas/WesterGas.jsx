@@ -5,11 +5,17 @@ import Image from "next/image";
 import CategorySection from "./CategorySection";
 import WestergasMenu from "./WestergasMenu";
 import Lightbox from "yet-another-react-lightbox";
+import Zoom from "yet-another-react-lightbox/plugins/zoom";
 import "yet-another-react-lightbox/styles.css";
+import Captions from "yet-another-react-lightbox/plugins/captions";
+import "yet-another-react-lightbox/plugins/captions.css";
+import slides from "@/components/Slides";
 import SectionHeader from "@/components/SectionHeader";
+
 
 const WesterGas = () => {
   const [open, setOpen] = useState(false);
+
   const categories = Object.fromEntries(
     westergasfabriek.map((item) => [item.category, item]),
   );
@@ -44,9 +50,9 @@ const WesterGas = () => {
         />
         <div className="flex">
           <span className="flex-1 py-1 text-[12px]">
-            Gashouder in aanbouw 1902
+            Gashouder in 1903
           </span>
-          <span className="flex-1 py-1 text-[12px]">Rave party 2025</span>
+          <span className="flex-1 justify-center py-1 text-[12px] pl-1">Rave party 2021</span>
         </div>
       </div>
       <div className="flex flex-col gap-4 max-w-[620px] mx-auto max-lg:max-w-full">
@@ -61,7 +67,8 @@ const WesterGas = () => {
       <Lightbox
         open={open}
         close={() => setOpen(false)}
-        slides={[{ src: "/images/gashouder.jpg" }]}
+        slides={slides}
+        plugins={[Zoom, Captions]}
         styles={{
           container: {
             "--yarl__color_backdrop": "rgba(0, 0, 0, 0.8)",
