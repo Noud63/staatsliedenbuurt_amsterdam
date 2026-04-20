@@ -2,7 +2,7 @@
 import React from "react";
 import straatnamen from "@/data/straatnamen.json";
 import Image from "next/image";
-
+import SectionHeader from "@/components/SectionHeader";
 import Description from "./Description";
 
 const staatslieden = () => {
@@ -13,11 +13,11 @@ const staatslieden = () => {
 
 return (
     <div className="mx-auto mt-8 w-full max-w-[1280px] px-4 text-white max-md:mt-4 max-sm:mt-4 max-sm:px-4 max-xsm:px-2">
-      <div className="flex justify-center border-b-2 text-2xl font-semibold tracking-wide">
-        <div className="px-4 pb-4">De Staatslieden</div>
-      </div>
+      
+        <SectionHeader title="De Staatslieden" />
+    
 
-      <div className="mb-6 mt-4">
+      <div className="mb-6 mt-2 border-t-2 pt-4">
         De staasliedenbuurt kent 35 straten.
         <br />
         Alle straatnamen zijn vernoemd naar Nederlandse staatslieden uit de 18e

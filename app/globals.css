@@ -90,6 +90,10 @@ body::before {
   }
 }
 
+/* .praktisch {
+  text-shadow: 0px 0px 4px #3a1402;
+} */
+
 .yarl__navigation_next,
 .yarl__navigation_prev {
   display: none !important;

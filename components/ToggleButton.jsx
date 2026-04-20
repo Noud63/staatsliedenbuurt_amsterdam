@@ -13,7 +13,7 @@ const ToggleButton = ({ ID, title, dropDownId, setDropDownId }) => {
   return (
     <button
       type="button"
-      className="mb-4 flex w-full items-center justify-between rounded-md bg-yellow-700 px-4 py-2 text-base shadow-lg"
+      className="mb-4 flex w-full items-center justify-between rounded-full bg-yellow-700 px-4 py-2 text-base shadow-lg"
       onClick={toggleDropdown}
     >
       <span>- {title}</span>

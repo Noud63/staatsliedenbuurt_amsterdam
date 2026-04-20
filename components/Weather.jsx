@@ -46,7 +46,7 @@ const Weather = () => {
   return (
     <div className="mx-auto mt-4 w-full text-white md:max-w-[650px]">
       <div className="mx-4 bg-[url('/images/cloud2.png')] bg-cover bg-center bg-no-repeat max-sm:mx-4 max-xsm:mx-2">
-        <div className="flex items-center justify-between rounded-lg bg-white px-4 py-2 text-xl font-semibold text-yellow-900 max-xsm:text-xl">
+        <div className="flex items-center justify-between rounded-full bg-white px-4 py-2 text-xl font-semibold text-yellow-900 max-xsm:text-xl">
           <span>{t("vandaag")}</span>
           <span className="flex items-end py-1 text-base font-normal">
             <span className="text-lg font-semibold">{today}</span>
@@ -57,7 +57,7 @@ const Weather = () => {
       </div>
 
       <div className="mx-4 mt-8 bg-[url('/images/cloud.png')] bg-center bg-no-repeat max-xsm:mx-2">
-        <div className="flex items-center justify-between rounded-lg bg-white px-4 py-2 text-xl font-semibold text-yellow-900 max-xsm:text-xl">
+        <div className="flex items-center justify-between rounded-full bg-white px-4 py-2 text-xl font-semibold text-yellow-900 max-xsm:text-xl">
           <span>{t("morgen")}</span>
           <span className="flex items-end py-1 text-base font-normal">
             <span className="text-lg font-semibold">

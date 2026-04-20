@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const IconsMenu = () => {
   return (
-    <div className="w-full border-b-2 pb-4">
+    <div className="w-full border-b-2 border-t-2 pb-4 mt-2">
       <div className="flex flex-col gap-2 px-2 pt-4 text-lg max-xsm:px-0">
         <Link
           href="/menu/praktisch/grofvuil"

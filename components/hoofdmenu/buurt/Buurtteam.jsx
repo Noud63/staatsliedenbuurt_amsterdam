@@ -28,9 +28,9 @@ const BuurtTeam = () => {
 
 
   return (
-    <div className="my-4 text-lg text-white max-xsm:text-base">
-      <section className=" w-full max-xsm:ml-0">
-        <div className="mx-4 max-xsm:mx-0">
+    <div className="mt-2 text-lg text-white max-xsm:text-base">
+      <section className="w-full max-xsm:ml-0">
+        <div className="mx-4 max-xsm:mx-0 border-t-2 pt-4">
           Het buurtteam is een plek in de buurt waar u naartoe kunt met uw
           vragen.
           <br />
@@ -65,7 +65,7 @@ const BuurtTeam = () => {
         </div>
 
         <div className="mt-6 mx" id="buurtteam-menu">
-          <div className="w-full rounded-md border-b border-yellow-800 bg-yellow-700 px-4 py-2 text-lg shadow-lg">
+          <div className="w-full rounded-full border-b border-yellow-800 bg-yellow-700 px-4 py-2 text-lg shadow-lg">
             Het buurtteam kan u bijstaan op het gebied van :
           </div>
           <br />
@@ -74,9 +74,9 @@ const BuurtTeam = () => {
               <li
                 key={item.id}
                 onClick={() => handleScroll(item.id)}
-                className="w-[200px] rounded-md bg-white py-1 text-white decoration-yellow-800 hover:underline"
+                className="w-[200px] rounded-full bg-white  text-white decoration-yellow-800"
               >
-                <div className="flex flex-row items-center justify-between px-2">
+                <div className="flex flex-row items-center justify-between px-4 pb-1">
                   
                   <div className=" text-base font-semibold text-yellow-950">
                     {item.label}

@@ -3,10 +3,10 @@ import Image from "next/image";
 import { IoLocationSharp } from "react-icons/io5";
 import { FaChrome } from "react-icons/fa";
 
-const FoodAndDrinks = ({ category }) => {
+const CategorySection = ({ category }) => {
   return (
-    <div className="mx-auto mt-6 max-w-[620px] max-md:max-w-full" id={category.category}>
-          <h2 className="rounded-md bg-white py-1 pl-2 text-xl font-semibold text-yellow-900">
+    <div className="mx-auto mt-6 max-w-[620px] max-lg:max-w-full" id={category.category}>
+          <h2 className="flex justify-center rounded-full bg-white py-2 pl-2 text-xl font-semibold text-yellow-900">
             {category?.category}
           </h2>
           {category?.businesses?.map((business, idx) => (
@@ -40,13 +40,13 @@ const FoodAndDrinks = ({ category }) => {
                 </a>
               </div>
               {business?.img && (
-                <div className="mb-8 mt-2 flex max-h-[200px] max-w-[620px] items-center justify-center overflow-hidden">
+                <div className="mb-8 mt-2 flex max-h-[200px] max-w-[620px] max-lg:max-w-full items-center justify-center overflow-hidden">
                   <Image
                     src={business?.img}
                     alt={business.name}
                     width={620}
                     height={200}
-                    className="h-auto max-h-[200px] max-w-[620px] object-cover"
+                    className="h-auto w-full max-h-auto max-w-[620px] object-cover max-lg:max-w-full"
                   />
                 </div>
               )}
@@ -56,4 +56,4 @@ const FoodAndDrinks = ({ category }) => {
   )
 }
 
-export default FoodAndDrinks
+export default CategorySection

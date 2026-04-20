@@ -30,7 +30,7 @@ const WeerMorgen = ({ data2, sunMoon, tomorrow }) => {
   }, [sunMoon]);
 
   return (
-    <div className="mt-4 rounded-lg border-2 p-2 font-semibold">
+    <div className="mt-4 rounded-3xl border-2 p-2 font-semibold">
       <div className="mb-10 mt-8 flex justify-center text-5xl">Amsterdam</div>
 
       <div className="relative flex flex-col items-center justify-center">

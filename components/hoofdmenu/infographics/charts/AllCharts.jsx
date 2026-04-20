@@ -6,6 +6,7 @@ import { Leeftijdscategorieen } from "../LeeftijdscategorieenChart";
 import { GemiddeldeHuurPrijs } from "../GemiddeldeHuurPrijsChart";
 import { Woonoppervlak } from '../WoonoppervlakChart';
 import { useTranslations } from "next-intl";
+import SectionHeader from '@/components/SectionHeader';
 
 const AllCharts = () => {
 
@@ -13,16 +14,16 @@ const AllCharts = () => {
 
   return (
     <>
-      <div className="flex justify-center border-b-2 text-2xl font-semibold tracking-wide">
-        <span className="px-4 pb-4">{t("titel")}</span>
-      </div>
-      <div className="whitespace-pre-line border-b-2 py-6 pl-4 max-xsm:pl-0">
+      
+        <SectionHeader title={t("titel")} />
+      
+      <div className="whitespace-pre-line border-b-2 py-4 pl-4 max-xsm:pl-0 border-t-2 mt-2">
         {t.raw("desc")}
       </div>
       <div className="grid grid-cols-3 gap-4 max-xl:grid-cols-2 max-md:grid-cols-1">
         <div className="flex flex-col justify-between">
           <div>
-            <div className="mt-8 rounded-md bg-yellow-700 py-2 pl-4 text-lg font-semibold text-white shadow">
+            <div className="mt-8 rounded-full bg-yellow-700 py-2 pl-4 text-lg font-semibold text-white shadow">
               <span className="font-semibold">
                 Inwonersaantallen 2014 - 2024
               </span>
@@ -38,7 +39,7 @@ const AllCharts = () => {
 
         <div className="flex flex-col justify-between">
           <div>
-            <div className="mt-8 rounded-md bg-yellow-700 py-2 pl-4 text-lg font-semibold text-white shadow">
+            <div className="mt-8 rounded-full bg-yellow-700 py-2 pl-4 text-lg font-semibold text-white shadow">
               <span className="font-semibold">
                 Gemiddeld besteedbaar inkomen
               </span>
@@ -55,7 +56,7 @@ const AllCharts = () => {
 
         <div className="flex flex-col justify-between">
           <div>
-            <div className="mt-8 rounded-md bg-yellow-700 py-2 pl-4 text-lg font-semibold text-white shadow">
+            <div className="mt-8 rounded-full bg-yellow-700 py-2 pl-4 text-lg font-semibold text-white shadow">
               <span className="font-semibold">Eenpersoonshuishoudens</span>
             </div>
             <div className="text-md mt-4 px-4">
@@ -70,7 +71,7 @@ const AllCharts = () => {
 
         <div className="flex flex-col justify-between">
           <div>
-            <div className="mt-8 rounded-md bg-yellow-700 py-2 pl-4 text-lg font-semibold text-white shadow">
+            <div className="mt-8 rounded-full bg-yellow-700 py-2 pl-4 text-lg font-semibold text-white shadow">
               <span className="font-semibold">Leeftijdscategorieën</span>
             </div>
             <div className="text-md mt-4 px-4">
@@ -84,7 +85,7 @@ const AllCharts = () => {
 
         <div className="flex flex-col justify-between">
           <div>
-            <div className="mt-8 rounded-md bg-yellow-700 py-2 pl-4 text-lg font-semibold text-white shadow">
+            <div className="mt-8 rounded-full bg-yellow-700 py-2 pl-4 text-lg font-semibold text-white shadow">
               <span className="font-semibold">Gemiddelde huurprijs</span>
             </div>
             <div className="text-md mt-4 px-4">
@@ -99,7 +100,7 @@ const AllCharts = () => {
 
         <div className="flex flex-col justify-between">
           <div>
-            <div className="mt-8 rounded-md bg-yellow-700 py-2 pl-4 text-lg font-semibold text-white shadow">
+            <div className="mt-8 rounded-full bg-yellow-700 py-2 pl-4 text-lg font-semibold text-white shadow">
               <span className="font-semibold">Verdeling woonoppervlak</span>
             </div>
             <div className="text-md mt-4 px-4">

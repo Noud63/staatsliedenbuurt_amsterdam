@@ -6,9 +6,9 @@ import Zoom from "yet-another-react-lightbox/plugins/zoom";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import images from "../../../data/beeldToenEnNu.json";
+import SectionHeader from "@/components/SectionHeader";
 
 const Beeld = () => {
-
   const [open, setOpen] = useState(false);
   const [slides, setSlides] = useState([]);
 
@@ -20,22 +20,23 @@ const Beeld = () => {
     slides.length = 0;
     slides.push(imageObject);
 
-    console.log(imageObject)
+    console.log(imageObject);
   };
 
   return (
     <>
-    <div className="flex justify-center border-b-2 text-2xl font-semibold tracking-wide mt-8 max-sm:text-xl ">
-        <span className="px-4 pb-4">{t("titel")}</span>
-        <span className="max-sm:hidden">{t("1900heden")}</span>
+      <div className="flex flex-row justify-center border-b-2 pb-8 text-4xl font-semibold tracking-[.04em] max-lg:flex-col max-lg:pb-4 max-lg:text-4xl max-lg:tracking-normal max-md:text-3xl max-xm:text-[22px] gap-2 max-lg:gap-0">
+        <div className="flex justify-center">{t("titel")}</div>
+        <div className="flex justify-center max-lg:text-[20px] max-xm:text-sm max-lg:font-normal">{t("1900heden")}</div>
       </div>
+
       {/* <div className="text-lg font-semibold tracking-wide mt-4">
         <div className="flex w-full items-center gap-2 rounded-md bg-yellow-700 border-b border-yellow-800 py-2 pl-4 text-white max-xsm:text-base">
           <span>{t("titel")}</span>
           <span className="max-xsm:hidden">{t("1900heden")}</span>
         </div>
       </div> */}
-      <div className="mt-4 grid grid-cols-[repeat(auto-fill,_minmax(260px,_1fr))] gap-2">
+      <div className="mt-6 grid grid-cols-[repeat(auto-fill,_minmax(260px,_1fr))] gap-2 max-sm:mt-4">
         {sortedImages.map((image, index) => (
           <div
             key={index}
@@ -49,11 +50,11 @@ const Beeld = () => {
                 height={100}
                 width={300}
                 priority="lazy"
-                className="w-full h-full cursor-pointer object-cover px-4 pb-12 pt-4"
+                className="h-full w-full cursor-pointer object-cover px-4 pb-12 pt-4"
                 onClick={() => setOpen(true)}
               />
             </div>
-            <div className="absolute bottom-4 left-4 right-4 px-4 py-2 text-center text-sm text-yellow-800 font-semibold bg-white">
+            <div className="absolute bottom-4 left-4 right-4 bg-white px-4 py-2 text-center text-sm font-semibold text-yellow-800">
               {image.info}
             </div>
           </div>

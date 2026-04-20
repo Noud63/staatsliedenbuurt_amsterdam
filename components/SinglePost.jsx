@@ -61,7 +61,7 @@ const SinglePost = ({ postId, post: initialPost, setPostId }) => {
 
   return (
     <div
-      className={`singlepost ${postId ? "max-xsm:mx-0" : "max-xsm:mx-2"} relative mb-4 flex h-auto flex-col rounded-xl bg-white shadow-md`}
+      className={`singlepost ${postId ? "max-xsm:mx-0" : "max-xsm:mx-2"} relative mb-4 flex h-auto flex-col rounded-2xl bg-white shadow-md`}
     >
       {postId && (
         <div className="h-full w-full rounded-t-lg bg-gradient-to-r from-red-950 via-yellow-700 to-red-950">

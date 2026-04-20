@@ -22,13 +22,12 @@ const Historie = () => {
 
   return (
     <>
-      <div className="w-full px-4 max-xsm:px-2">
-        <div className="flex justify-center border-b-2 text-2xl font-semibold tracking-wide mt-8">
-        <span className="px-4 pb-4 max-xsm:px-0">{t("titel")}</span>
-      </div>
+      <div className="w-full px-4 max-xsm:px-2 mt-8">
+       <div className="flex justify-center border-b-2 text-5xl font-semibold pb-6 tracking-[.15em] max-lg:tracking-normal max-xl:text-4xl max-lg:text-3xl">{t("titel")}</div>
+     
         {/* <TitleBar title={t("titel")} titleWidth={"font-bold max-xsm:text-[16px]"}/> */}
 
-        <div className="mb-4 mt-4 flex w-full items-center justify-between rounded-md border-b border-yellow-900 bg-yellow-700 px-4 py-2 font-semibold text-lg shadow-lg max-xsm:text-base">
+        <div className="mb-4 mt-4 flex w-full items-center justify-between rounded-full border-b border-yellow-900 bg-yellow-700 px-4 py-2 font-semibold text-lg shadow-lg max-xsm:text-base">
           Intro
         </div>
         <p className="mt-4 text-lg text-white max-xsm:text-base">
@@ -36,7 +35,7 @@ const Historie = () => {
         </p>
         <br />
 
-        <div className="mb-4 mt-4 flex w-full items-center justify-between rounded-md border-b border-yellow-900 bg-yellow-700 px-4 font-semibold py-2 text-lg shadow-lg max-xsm:text-base">
+        <div className="mb-4 mt-4 flex w-full items-center justify-between rounded-full border-b border-yellow-900 bg-yellow-700 px-4 font-semibold py-2 text-lg shadow-lg max-xsm:text-base">
           {t("subtitel")}
         </div>
 
@@ -72,7 +71,7 @@ const Historie = () => {
           <p>{t.raw("content_a3").slice(10, t.raw("content_a3").length)}</p>
         </div>
 
-        <div className="mb-4 mt-8 flex w-full items-center justify-between rounded-md border-b border-yellow-900 font-semibold bg-yellow-700 px-4 py-2 text-lg shadow-lg max-xsm:text-base historie:mt-12">
+        <div className="mb-4 mt-8 flex w-full items-center justify-between rounded-full border-b border-yellow-900 font-semibold bg-yellow-700 px-4 py-2 text-lg shadow-lg max-xsm:text-base historie:mt-12">
           Moderne tijd
         </div>
 

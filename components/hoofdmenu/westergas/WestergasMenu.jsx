@@ -9,11 +9,11 @@ const WestergasMenu = ({ categoryNames }) => {
 
   return (
     <>
-      <div className="mx-auto mt-4 grid w-full max-w-[1980px] grid-cols-6 gap-2 max-md:max-w-full max-lg:grid-cols-3 max-sm:grid-cols-1">
+      <div className="mx-auto mt-2 grid w-full max-w-[1980px] grid-cols-6 gap-2 max-md:max-w-full max-lg:grid-cols-3 max-sm:grid-cols-1 border-t-2 pt-4">
         {categoryNames?.map((name, idx) => (
           <div
             key={idx}
-            className="cursor-pointer rounded-md bg-white px-4 py-1 text-center text-lg font-semibold text-yellow-900"
+            className="cursor-pointer rounded-full bg-white px-4 py-2 text-center text-lg font-semibold text-yellow-900 "
             onClick={() => handleScroll(name)}
           >
             {name}
