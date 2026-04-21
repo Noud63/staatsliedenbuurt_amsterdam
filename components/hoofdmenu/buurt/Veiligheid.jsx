@@ -10,7 +10,7 @@ const Veiligheid = () => {
           id="veiligheid"
         />
 
-        <div className="px-4 mt-4 max-xsm:pr-2 max-xsm:pl-0">
+        <div className="px-4 mt-4 max-xsm:pr-2 max-xsm:px-4">
         <p>
           Geweld komt helaas vaak voor.
           <br />

@@ -12,7 +12,6 @@ import "yet-another-react-lightbox/plugins/captions.css";
 import slides from "@/components/Slides";
 import SectionHeader from "@/components/SectionHeader";
 
-
 const WesterGas = () => {
   const [open, setOpen] = useState(false);
 
@@ -26,7 +25,7 @@ const WesterGas = () => {
     <div className="mx-auto mt-8 w-full max-w-[1980px] px-4 text-white max-md:mt-4 max-sm:mt-4 max-xsm:px-2">
       <SectionHeader title="W e s t e r g a s" />
       <WestergasMenu categoryNames={categoryNames} />
-      
+
       <div className="mx-auto mt-4 w-full max-w-[620px] max-lg:max-w-full">
         Voor de meeste bewoners van de Staatsliedenbuurt is de Westergasfabriek
         wel bekend terrein, en weten velen inmiddels hun favoriete plekjes wel
@@ -39,7 +38,7 @@ const WesterGas = () => {
         branden, krijgt energie vandaag een nieuwe betekenis.
         <br />
       </div>
-      <div className="mx-auto mb-8 mt-4 flex flex-col max-h-[200px] w-full max-w-[620px] max-lg:max-w-full">
+      <div className="mx-auto mb-8 mt-4 flex max-h-[200px] w-full max-w-[620px] flex-col max-lg:max-w-full">
         <Image
           src="/images/gashouder.jpg"
           alt="Westergas"
@@ -49,13 +48,13 @@ const WesterGas = () => {
           onClick={() => setOpen(true)}
         />
         <div className="flex">
-          <span className="flex-1 py-1 text-[12px]">
-            Gashouder in 1903
+          <span className="flex-1 py-1 text-[12px]">Gashouder in 1903</span>
+          <span className="flex-1 justify-center py-1 pl-1 text-[12px]">
+            Rave party 2021
           </span>
-          <span className="flex-1 justify-center py-1 text-[12px] pl-1">Rave party 2021</span>
         </div>
       </div>
-      <div className="flex flex-col gap-4 max-w-[620px] mx-auto max-lg:max-w-full">
+      <div className="mx-auto flex max-w-[620px] flex-col gap-4 max-lg:max-w-full">
         <CategorySection category={categories["Eten & Drinken"]} />
         <CategorySection category={categories["Kijk & Luister"]} />
         <CategorySection category={categories["Dans & Muziek"]} />
@@ -71,7 +70,18 @@ const WesterGas = () => {
         plugins={[Zoom, Captions]}
         styles={{
           container: {
-            "--yarl__color_backdrop": "rgba(0, 0, 0, 0.8)",
+            "--yarl__color_backdrop": "rgba(0, 0, 0, 0.85)",
+          },
+          captionsTitle: {
+            color: "#ffac3f",
+            fontSize: "20px",
+            fontWeight: "400",
+          },
+          captionsDescription: {
+            color: "#ffac3f",
+            fontSize: "16px",
+            fontWeight: "400",
+            textAlign: "center",
           },
         }}
       />

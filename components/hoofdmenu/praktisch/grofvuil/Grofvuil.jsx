@@ -7,7 +7,7 @@ import TitleBar from '@/components/TitleBar';
 const Grofvuil = () => {
 
   return (
-    <div className="w-full px-4 max-xsm:px-2">
+    <div className="w-full">
       <div className="mt-8">
         <TitleBar title="Grofvuil" titleWidth={"ml-2 font-bold"}/>
         <div className="pt-4 pb-6 pl-4 max-xsm:pl-2">

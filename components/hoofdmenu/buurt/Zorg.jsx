@@ -5,7 +5,7 @@ const Zorg = () => {
   return (
     <section className="mt-8">
       <TitleBar title="Zorg" titleWidth={"ml-2 font-bold"} id="zorg" />
-      <p className="px-4 mt-4 max-xsm:pr-2 max-xsm:pl-0">
+      <p className="px-4 mt-4 max-xsm:pr-2 max-xsm:px-4">
         <span className="mt-2 font-semibold border-b">Mantelzorg</span>
         <br />
         Zorgt u langdurig voor een naaste met een beperking of ziekte en doet u
@@ -21,7 +21,7 @@ const Zorg = () => {
         Samen met u gaan we op zoek naar manieren om u te ontlasten.
       </p>
 
-      <p className="px-4 mt-4 max-xsm:pr-2 max-xsm:pl-0">
+      <p className="px-4 mt-4 max-xsm:pr-2 max-xsm:px-4">
         <span className="mt-2 font-semibold border-b">
           Parkeerregeling voor mantelzorgers
         </span>

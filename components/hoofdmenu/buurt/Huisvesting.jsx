@@ -9,7 +9,7 @@ const Huisvesting = () => {
           titleWidth={"ml-2 font-bold"}
           id="huisvesting"
         />
-        <div className="px-4 mt-4 max-xsm:pr-2 max-xsm:pl-0">
+        <div className="px-4 mt-4 max-xsm:pr-2 max-xsm:px-4">
           <p className="mb-4">
             Een fijne plek om te wonen is belangrijk voor uw gezondheid en uw
             welzijn.

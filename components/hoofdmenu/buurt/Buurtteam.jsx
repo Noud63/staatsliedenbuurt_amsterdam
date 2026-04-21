@@ -30,7 +30,7 @@ const BuurtTeam = () => {
   return (
     <div className="mt-2 text-lg text-white max-xsm:text-base">
       <section className="w-full max-xsm:ml-0">
-        <div className="mx-4 max-xsm:mx-0 border-t-2 pt-4">
+        <div className="px-4 border-t-2 pt-4">
           Het buurtteam is een plek in de buurt waar u naartoe kunt met uw
           vragen.
           <br />
@@ -48,7 +48,7 @@ const BuurtTeam = () => {
           is.
         </div>
 
-        <div className="mt-4 mx-4 max-xsm:mx-0">
+        <div className="mt-4 px-4 max-xsm:mx-0">
           U vindt ons in Huis van de Buurt Koperen Knoop.
           <br />
           Onze buurtteammedewerkers helpen u graag.
@@ -56,17 +56,17 @@ const BuurtTeam = () => {
           Mail of bel ons voor een afspraak.
           <br />
           <div className="mt-4">
-            Adres : Van Limburg Stirumstraat 119 , 1051 BA
+            Adres : Van Limburg Stirumstraat 119
             <br />
-            E-mail : aanmelden@​buurtteamamsterdamwest​.nl
+            Email : aanmelden@​buurtteamamsterdamwest​.nl
             <br />
             Tel : 020 618 49 52
           </div>
         </div>
 
-        <div className="mt-6 mx" id="buurtteam-menu">
+        <div className="mt-6" id="buurtteam-menu">
           <div className="w-full rounded-full border-b border-yellow-800 bg-yellow-700 px-4 py-2 text-lg shadow-lg">
-            Het buurtteam kan u bijstaan op het gebied van :
+            Het buurtteam helpt u met:
           </div>
           <br />
           <ul className="mx-8 w-full max-w-[200px] cursor-pointer list-disc space-y-2 text-yellow-900">

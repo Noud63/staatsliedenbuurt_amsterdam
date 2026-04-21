@@ -1,18 +1,20 @@
 import React from "react";
-import TitleBar from "@/components/TitleBar";
+
 import { useTranslations } from "next-intl";
+import SectionHeader from "@/components/SectionHeader";
+
 
 const ContactPage = () => {
   const t = useTranslations("contact");
 
   return (
-    <div className="mx-auto mt-4 w-full max-w-[660px] px-4 max-md:max-w-full max-xsm:px-2">
-      <TitleBar title="Contact" titleWidth={"pl-2 font-bold"} />
-      <div className="mt-4 w-full rounded-lg border-2 p-4 text-white">
-        <div>
+    <div className="mx-auto mt-8 w-full px-4 text-white max-xl:max-w-[850px] max-md:mt-4 max-sm:mt-4 max-sm:px-4 max-xsm:px-2 xl:max-w-[1280px]">
+        <SectionHeader title="Cont@ct" />
+      <div className="mt-2 w-full rounded-lg border-t-2 px-4 pt-4 text-white max-xsm:px-2">
+        <div className="whitespace-pre-line leading-7">
           {t("contact")}
           <br />
-          E-Mail : info@staatslieden.nl
+          info@staatsliedenbuurtamsterdam.nl
           <br />
         </div>
        

@@ -9,7 +9,7 @@ const Administratie = () => {
           titleWidth={"ml-2 font-bold"}
           id="administratie"
         />
-        <p className="px-4 mt-4 max-xsm:pr-2 max-xsm:pl-0">
+        <p className="px-4 mt-4 max-xsm:pr-2 max-xsm:px-4">
           Heeft u steun nodig bij uw administratie? Het buurtteam staat voor u
           klaar.
           <br />
@@ -17,7 +17,7 @@ const Administratie = () => {
           goed overzicht krijgt.
           <br />
         </p>
-        <div className="px-4 mt-4 max-xsm:pr-2 max-xsm:pl-0">
+        <div className="px-4 mt-4 max-xsm:pr-2 max-xsm:px-4">
           <span className="mt-2 font-semibold border-b">Uw geldzaken op orde</span>
           <br />
           Het buurtteam kan u ook helpen om een overzicht te maken van uw
@@ -34,11 +34,11 @@ const Administratie = () => {
             <li>En we zetten andere taken die moeten gebeuren op een rij.</li>
           </ul>
         </div>
-        <p className="px-4 mt-4 max-xsm:pr-2 max-xsm:pl-0">
+        <p className="px-4 mt-4 max-xsm:pr-2 max-xsm:px-4">
           Dat lucht op en geeft een goede start. Zo krijgt u stap voor stap weer
           de controle over uw geldzaken.
         </p>
-        <p className="px-4 mt-4 max-xsm:pr-2 max-xsm:pl-0">
+        <p className="px-4 mt-4 max-xsm:pr-2 max-xsm:px-4">
           <span className="mt-2 font-semibold border-b">
             Wat moet u meenemen naar uw afspraak?
           </span>

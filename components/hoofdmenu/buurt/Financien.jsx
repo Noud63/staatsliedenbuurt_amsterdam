@@ -9,7 +9,7 @@ const Financien = () => {
           titleWidth={"ml-2 font-bold"}
           id="financien"
         />
-        <p className="px-4 mt-4 max-xsm:pr-2 max-xsm:pl-0">
+        <p className="px-4 mt-4 max-xsm:pr-2 max-xsm:px-4">
           Iedereen kan met geldproblemen of schulden te maken krijgen.
           <br />
           Het is belangrijk om hier niet mee te blijven zitten. Schakel op tijd
@@ -30,7 +30,7 @@ const Financien = () => {
           buurt kunt vinden.
         </p>
 
-        <p className="px-4 mt-4 max-xsm:pr-2 max-xsm:pl-0">
+        <p className="px-4 mt-4 max-xsm:pr-2 max-xsm:px-4">
           <span className="mt-2 font-semibold border-b">Energiecrisis?</span>
           <br />
           Kunt u alles nog betalen? Energie, boodschappen, alles wordt duurder.
@@ -41,7 +41,7 @@ const Financien = () => {
           <br />
           Wacht niet te lang en maak een afspraak.
         </p>
-        <p className="px-4 mt-4 max-xsm:pr-2 max-xsm:pl-0">
+        <p className="px-4 mt-4 max-xsm:pr-2 max-xsm:px-4">
           <span className="mt-2 font-semibold border-b">
             Te laat met betalen van uw huur?
           </span>

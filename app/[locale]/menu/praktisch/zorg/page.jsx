@@ -4,9 +4,9 @@ import TitleBar from "@/components/TitleBar";
 const ZorgPage = () => {
 
   return (
-    <div className="mt-8">
+    <div className="mt-8 px-4 max-xsm:px-2">
 
-      <TitleBar title="Zorg" />
+      <TitleBar title="Zorg" titleWidth={"ml-2 font-bold"}/>
       
       <div className="py-8 pl-4 max-xsm:pl-2">
         <p>
