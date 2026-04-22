@@ -58,7 +58,7 @@ const WesterGas = () => {
         onClick={() =>
           addSlide([
             { src: "/images/gashouder_1903.jpg", title: "Gashouder in 1903", width: 960, height: 640, description: "Oplevering van de gashouder in 1903" },
-            { src: "/images/gashouder_rave.jpg", title: "Rave party 2021", width: 960, height: 580, description: "Awakenings Rrave party in 2021" },
+            { src: "/images/gashouder_rave.jpg", title: "Rave party 2021", width: 960, height: 580, description: "Awakenings Rave party in 2021" },
           ])
         }
       >
