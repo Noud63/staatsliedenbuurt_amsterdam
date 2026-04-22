@@ -130,14 +130,16 @@ const SinglePost = ({ postId, post: initialPost, setPostId }) => {
           open={open}
           close={() => setOpen(false)}
           plugins={[Zoom, Captions]}
-          zoom={{ scrollToZoom: true, maxZoomPixelRatio: 5 }}
+          zoom={{ 
+            scrollToZoom: true, 
+            maxZoomPixelRatio: 5 }}
           slides={slides}
           carousel={{ finite: slides.length <= 1 }}
           render={{
             buttonPrev: slides.length <= 1 ? () => null : undefined,
             buttonNext: slides.length <= 1 ? () => null : undefined,
           }}
-          styles={{ container: { backgroundColor: "rgb(0,0,0, 0.5)" } }}
+          styles={{ container: { backgroundColor: "rgba(0, 0, 0, 0.85)" } }}
         />
       )}
     </div>

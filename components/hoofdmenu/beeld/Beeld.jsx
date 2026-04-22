@@ -75,8 +75,19 @@ const Beeld = () => {
           }}
           styles={{
             container: {
-              backgroundColor: "rgb(66, 32, 6, 0.8)",
+              backgroundColor: "rgba(0, 0, 0, 0.85)",
             },
+            captionsTitle: {
+            color: "#ffac3f",
+            fontSize: "20px",
+            fontWeight: "400",
+          },
+          captionsDescription: {
+            color: "#ffac3f",
+            fontSize: "16px",
+            fontWeight: "400",
+            textAlign: "center",
+          },
           }}
         />
       </div>

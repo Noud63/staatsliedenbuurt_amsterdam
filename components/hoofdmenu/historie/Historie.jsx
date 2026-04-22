@@ -151,7 +151,7 @@ const Historie = () => {
           }}
           styles={{
             container: {
-              backgroundColor: "rgb(66, 32, 6, 0.8)",
+              backgroundColor: "rgba(0, 0, 0, 0.85)",
             },
           }}
         />

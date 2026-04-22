@@ -9,17 +9,32 @@ import Zoom from "yet-another-react-lightbox/plugins/zoom";
 import "yet-another-react-lightbox/styles.css";
 import Captions from "yet-another-react-lightbox/plugins/captions";
 import "yet-another-react-lightbox/plugins/captions.css";
-import slides from "@/components/Slides";
 import SectionHeader from "@/components/SectionHeader";
+import { createSlides } from "@/components/Slides";
 
 const WesterGas = () => {
   const [open, setOpen] = useState(false);
+  const [slides, setSlides] = useState([]);
 
   const categories = Object.fromEntries(
     westergasfabriek.map((item) => [item.category, item]),
   );
 
   const categoryNames = Object.keys(categories);
+
+  const addSlide = (imageArray) => {
+    const slideWithMetadata = imageArray.map((img) => ({
+      src: img.src,
+      width: img.width,
+      height: img.height,
+      title: img.title, 
+      description: img.description, 
+    }));
+
+    const optimizedSlides = createSlides(slideWithMetadata);
+    setSlides(optimizedSlides);
+    setOpen(true);
+  };
 
   return (
     <div className="mx-auto mt-8 w-full max-w-[1980px] px-4 text-white max-md:mt-4 max-sm:mt-4 max-xsm:px-2">
@@ -38,7 +53,15 @@ const WesterGas = () => {
         branden, krijgt energie vandaag een nieuwe betekenis.
         <br />
       </div>
-      <div className="mx-auto mb-8 mt-4 flex max-h-[200px] w-full max-w-[620px] flex-col max-lg:max-w-full">
+      <div
+        className="mx-auto mb-8 mt-4 flex max-h-[200px] w-full max-w-[620px] flex-col max-lg:max-w-full"
+        onClick={() =>
+          addSlide([
+            { src: "/images/gashouder_1903.jpg", title: "Gashouder in 1903", width: 960, height: 640, description: "Oplevering van de gashouder in 1903" },
+            { src: "/images/gashouder_rave.jpg", title: "Rave party 2021", width: 960, height: 580, description: "Awakenings Rrave party in 2021" },
+          ])
+        }
+      >
         <Image
           src="/images/gashouder.jpg"
           alt="Westergas"
@@ -66,11 +89,20 @@ const WesterGas = () => {
       <Lightbox
         open={open}
         close={() => setOpen(false)}
-        slides={slides}
         plugins={[Zoom, Captions]}
+        zoom={{
+          scrollToZoom: true,
+          maxZoomPixelRatio: 5,
+        }}
+        slides={slides}
+        carousel={{ finite: slides.length <= 1 }}
+        render={{
+          buttonPrev: slides.length <= 1 ? () => null : undefined,
+          buttonNext: slides.length <= 1 ? () => null : undefined,
+        }}
         styles={{
           container: {
-            "--yarl__color_backdrop": "rgba(0, 0, 0, 0.85)",
+            backgroundColor: "rgba(0, 0, 0, 0.85)",
           },
           captionsTitle: {
             color: "#ffac3f",
