@@ -7,7 +7,7 @@ import Description from "./Description";
 import { useScrollVisibility } from "@/hooks/useScrollVisibility";
 import ScrollButton from "@/components/ScrollButton";
 
-const staatslieden = () => {
+const Staatslieden = () => {
   //If you only need the href's keys from the array of objects
   // const hrefs = straatnamen.map((obj) => ({href: obj.href}))
   // console.log("Hrefs:", hrefs)
@@ -76,4 +76,4 @@ const staatslieden = () => {
   );
 };
 
-export default staatslieden;
+export default Staatslieden;
