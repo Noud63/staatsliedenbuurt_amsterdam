@@ -4,21 +4,24 @@ import straatnamen from "@/data/straatnamen.json";
 import Image from "next/image";
 import SectionHeader from "@/components/SectionHeader";
 import Description from "./Description";
+import { useScrollVisibility } from "@/hooks/useScrollVisibility";
+import ScrollButton from "@/components/ScrollButton";
 
 const staatslieden = () => {
   //If you only need the href's keys from the array of objects
   // const hrefs = straatnamen.map((obj) => ({href: obj.href}))
   // console.log("Hrefs:", hrefs)
+   const { showScrollButton, scrollToTop, handleScroll } = useScrollVisibility(1000); //Set scrollY threshold to 1000px
 
   return (
-    <div className="mx-auto mt-8 w-full max-w-[1280px] px-4 text-white max-md:mt-4 max-sm:mt-4 max-sm:px-4 max-xsm:px-2">
+    <div className="mx-auto mt-8 w-full max-w-[1280px] px-4 text-white max-md:mt-4 max-sm:mt-4 max-sm:px-4 max-xsm:px-2 mb-[300px]">
       <SectionHeader title="De Staatslieden" />
 
-      <div className="mb-6 mt-2 border-t-2 pt-4">
+      <div className="mb-6 mt-2 border-t-2 pt-4 text-base">
         De staasliedenbuurt kent 35 straten.
         <br />
         Alle straatnamen zijn vernoemd naar Nederlandse staatslieden uit de 18e
-        en 19e eeuw.
+        en 19e eeuw (een enkele uit de 17e eeuw).
         <br />
         Maar wie waren die hoge heren en wat was hun functie?
         <br />
@@ -29,7 +32,7 @@ const staatslieden = () => {
       </div>
 
       <div className="">
-        <div className="mt-4 grid auto-rows-[420px] grid-cols-[repeat(auto-fill,_minmax(290px,_1fr))] gap-2 max-xxl:auto-rows-[430px] max-xxm:auto-rows-[340px] max-xm:auto-rows-[400px]">
+        <div className="mt-4 grid auto-rows-[420px] grid-cols-[repeat(auto-fill,_minmax(290px,_1fr))] gap-3 max-xxl:auto-rows-[430px] max-xxm:auto-rows-[340px] max-xm:auto-rows-[400px]">
           {straatnamen &&
             straatnamen.map((naam) => (
               <div
@@ -68,6 +71,7 @@ const staatslieden = () => {
             ))}
         </div>
       </div>
+       {showScrollButton && <ScrollButton scrollToTop={scrollToTop} />}
     </div>
   );
 };

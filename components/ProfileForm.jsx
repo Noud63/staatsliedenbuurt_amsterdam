@@ -79,7 +79,7 @@ const ProfileForm = () => {
 
   return (
     <div className="mt-10 flex w-full justify-center">
-      <div className="singlepost mx-6 w-full max-w-[620px] rounded-lg bg-white p-4 text-black max-sm:mx-4 max-xsm:mx-2">
+      <div className="mx-6 w-full max-w-[620px] rounded-xl bg-white p-4 text-black max-sm:mx-4 max-xsm:mx-2">
         <div className="mb-4 w-full border-b border-gray-400 py-2 text-xl font-semibold">
           Jouw Profiel:
         </div>
@@ -116,7 +116,7 @@ const ProfileForm = () => {
                   <IoMdCloseCircleOutline
                     size={20}
                     color="red"
-                    className="cursor-pointer pt-1"
+                    className="cursor-pointer pt-1 "
                     onClick={() => deleteSelectedImage()}
                   />
                 </div>
@@ -136,17 +136,17 @@ const ProfileForm = () => {
                 </div>
               )}
 
-              <div className="mt-4 flex w-full flex-row gap-1 rounded-lg border border-red-800 bg-gradient-to-r from-yellow-900 via-yellow-700 to-yellow-900 p-1">
+              <div className="mt-4 flex w-full flex-row gap-2">
                 <button
                   type="submit"
-                  className="w-full rounded-md border-2 py-2 tracking-wider text-white"
+                  className="w-full rounded-full py-2 border-t border-yellow-600 tracking-wider text-white bg-gradient-to-t from-yellow-950 via-yellow-800 to-yellow-700 p-1"
                 >
                   {loading ? "...even geduld" : "Verstuur"}
                 </button>
                 <Link href="/" className="w-full">
                   <button
                     type="submit"
-                    className="w-full rounded-md border-2 py-2 tracking-wider text-white"
+                    className="w-full rounded-full py-2 border-t border-yellow-600 tracking-wider text-white bg-gradient-to-t from-yellow-950 via-yellow-800 to-yellow-700 p-1"
                   >
                     Terug
                   </button>

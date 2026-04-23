@@ -24,8 +24,6 @@ const Historie = () => {
     <>
       <div className="w-full px-4 max-xsm:px-2 mt-8">
        <div className="flex justify-center border-b-2 text-5xl font-semibold pb-6 tracking-[.15em] max-lg:tracking-normal max-xl:text-4xl max-lg:text-3xl">{t("titel")}</div>
-     
-        {/* <TitleBar title={t("titel")} titleWidth={"font-bold max-xsm:text-[16px]"}/> */}
 
         <div className="mb-4 mt-4 flex w-full items-center justify-between rounded-full border-b border-yellow-900 bg-yellow-700 px-4 py-2 font-semibold text-lg shadow-lg max-xsm:text-base">
           Intro

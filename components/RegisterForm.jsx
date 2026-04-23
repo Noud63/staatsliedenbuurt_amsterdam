@@ -85,8 +85,8 @@ const RegisterForm = () => {
   };
 
   return (
-    <div className="mx-auto mt-4 w-full px-4 max-xsm:px-2">
-      <div className="mx-auto w-full max-w-[620px] rounded-lg bg-white p-6 shadow-md">
+    <div className="mx-auto mt-6 w-full px-4 max-xsm:px-2">
+      <div className="mx-auto w-full max-w-[620px] rounded-2xl bg-white p-6 shadow-md">
         <div className="mb-4 flex justify-center border-b-2 border-dotted border-black pb-4 text-xl font-bold">
           {t("registreer")}
         </div>
