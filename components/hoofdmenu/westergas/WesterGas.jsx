@@ -37,7 +37,7 @@ const WesterGas = () => {
   };
 
   return (
-    <div className="mx-auto mt-8 w-full max-w-[620px]  text-white max-md:mt-4 max-sm:mt-4 max-xsm:px-2">
+    <div className="mx-auto mt-8 w-full max-w-[620px] text-white max-md:mt-4 max-sm:mt-4 max-xsm:px-2">
       <SectionHeader title="W e s t e r g a s" />
       <WestergasMenu categoryNames={categoryNames} />
 
