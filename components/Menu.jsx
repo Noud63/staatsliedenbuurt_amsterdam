@@ -23,7 +23,7 @@ const Menu = () => {
   };
 
   return (
-    <div className="mx-auto mt-8 w-full max-w-[1980px] px-4 max-md:hidden">
+    <div className="mx-auto px-2 mt-8 w-full max-w-[1920px] text-white max-md:hidden">
       <div className="grid grid-cols-3 gap-2 max-sm:hidden xl:grid-cols-6">
         {menuItems &&
           menuItems.map((item, index) => (

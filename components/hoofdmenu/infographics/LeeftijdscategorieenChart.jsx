@@ -74,7 +74,7 @@ export function Leeftijdscategorieen() {
         <CardTitle>Leeftijdscategorieën</CardTitle>
         <CardDescription>2005 - 2024</CardDescription>
       </CardHeader>
-      <CardContent className="px-2 pb-0">
+      <CardContent className=" pb-0  px-0 pt-6">
         <ChartContainer config={chartConfig}>
           
               <BarChart accessibilityLayer data={chartData}>

@@ -63,7 +63,7 @@ export function EenpersoonsHuishoudens() {
         <CardTitle>Eenpersoonshuishoudens in %</CardTitle>
         <CardDescription>2010 - 2024</CardDescription>
       </CardHeader>
-      <CardContent className="-ml-8 pb-0">
+      <CardContent className="-ml-10 pb-0  px-0">
         <ChartContainer config={chartConfig}>
           <div className="h-full w-full">
             <ResponsiveContainer>

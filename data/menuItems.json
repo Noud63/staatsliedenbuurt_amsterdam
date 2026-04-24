@@ -1,29 +1,29 @@
 [
   { "id": 1, "title": ["Social", "Social"], "href": "/" },
-  { "id": 2, "title": ["Historie", "History"], "href": "/menu/historie" },
-  { "id": 3, "title": ["Nieuws", "News"], "href": "/menu/nieuws" },
-  {
-    "id": 4,
-    "title": ["Demografie", "Demografics"],
-    "href": "/menu/demografie"
-  },
-  { "id": 5, "title": ["Beeld", "Images"], "href": "/menu/beeld" },
-  {
-    "id": 6,
-    "title": ["Staatslieden", "Staatslieden"],
-    "href": "/menu/staatslieden"
-  },
-  {
-    "id": 7,
+   {
+    "id": 2,
     "title": ["Praktisch", "Praktical"],
     "href": "/menu/praktisch/grofvuil"
   },
-  { "id": 8, "title": ["Westergas", "Westergas"], "href": "/menu/westergas" },
+  { "id": 3, "title": ["Historie", "History"], "href": "/menu/historie" },
+  { "id": 4, "title": ["Nieuws", "News"], "href": "/menu/nieuws" },
   {
-    "id": 9,
+    "id": 5,
+    "title": ["Demografie", "Demografics"],
+    "href": "/menu/demografie"
+  },
+  { "id": 6, "title": ["Beeld", "Images"], "href": "/menu/beeld" },
+  {
+    "id": 7,
+    "title": ["Staatslieden", "Staatslieden"],
+    "href": "/menu/staatslieden"
+  },
+ {
+    "id": 8,
     "title": ["Buurtteam", "neighborhood team"],
     "href": "/menu/buurt/buurtteam"
   },
+   { "id": 9, "title": ["Westergas", "Westergas"], "href": "/menu/westergas" },
   {
     "id": 10,
     "title": ["Kunst en Cultuur", "Art & Culture"],

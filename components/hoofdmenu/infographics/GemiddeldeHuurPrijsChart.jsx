@@ -58,7 +58,7 @@ export function GemiddeldeHuurPrijs() {
         <CardTitle>Gemiddelde huurprijs in &euro;</CardTitle>
         <CardDescription>2005 - 2023</CardDescription>
       </CardHeader>
-      <CardContent className="-ml-8 pb-0">
+      <CardContent className="-ml-8 pb-0  px-0">
         <ChartContainer config={chartConfig}>
           <div className="h-full w-full">
             <ResponsiveContainer>

@@ -44,14 +44,14 @@ export function InwonersAantallen() {
         <CardTitle>Inwoners aantallen</CardTitle>
         <CardDescription>2014 - 2024</CardDescription>
       </CardHeader>
-      <CardContent className="-ml-8 pb-0">
+      <CardContent className="-ml-6 pb-0  px-0">
         <ChartContainer config={chartConfig}>
           <div className="h-full w-full">
             <ResponsiveContainer>
               <BarChart data={chartData}>
                 <CartesianGrid
                   strokeDasharray="3 3"
-                  stroke="lightgray"
+                  stroke="gray"
                   vertical={false}
                 />
                 <XAxis dataKey="jaar" tickLine={false} axisLine={false} />

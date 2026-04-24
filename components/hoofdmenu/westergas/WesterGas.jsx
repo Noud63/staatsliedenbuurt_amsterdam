@@ -37,11 +37,11 @@ const WesterGas = () => {
   };
 
   return (
-    <div className="mx-auto mt-8 w-full max-w-[620px] text-white max-md:mt-4 max-sm:mt-4 max-xsm:px-2">
+    <div className="mx-auto mt-8 w-full max-w-[620px] text-white max-xl:px-4 max-md:mt-4 max-sm:mt-4 max-xsm:px-2">
       <SectionHeader title="W e s t e r g a s" />
       <WestergasMenu categoryNames={categoryNames} />
 
-      <div className="mx-auto mt-4 w-full max-w-[620px] max-lg:max-w-full">
+      <div className="mx-auto mt-4 w-full max-w-[620px]">
         Voor de meeste bewoners van de Staatsliedenbuurt is de Westergasfabriek
         wel bekend terrein, en weten velen inmiddels hun favoriete plekjes wel
         te vinden.
@@ -67,7 +67,7 @@ const WesterGas = () => {
           alt="Westergas"
           width={620}
           height={200}
-          className="h-auto max-h-[200px] w-[620px] cursor-pointer object-cover max-lg:w-full"
+          className="max-h-[200px] w-[620px] cursor-pointer object-cover max-lg:w-full"
           onClick={() => setOpen(true)}
         />
         <div className="flex">

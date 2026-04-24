@@ -5,7 +5,7 @@ import { FaChrome } from "react-icons/fa";
 
 const CategorySection = ({ category }) => {
   return (
-    <div className="mx-auto mt-6 max-w-[620px] max-lg:max-w-full" id={category.category}>
+    <div className="mx-auto mt-6 max-w-[620px]" id={category.category}>
           <h2 className="flex justify-center rounded-full bg-white py-2 pl-2 text-xl font-semibold text-yellow-900">
             {category?.category}
           </h2>

@@ -20,7 +20,7 @@ const AllCharts = () => {
       <div className="whitespace-pre-line border-b-2 py-4 pl-4 max-xsm:pl-0 border-t-2 mt-2">
         {t.raw("desc")}
       </div>
-      <div className="grid grid-cols-3 gap-4 max-xl:grid-cols-2 max-md:grid-cols-1">
+      <div className="grid grid-cols-2 gap-4 max-md:grid-cols-1">
         <div className="flex flex-col justify-between">
           <div>
             <div className="mt-8 rounded-full bg-yellow-700 py-2 pl-4 text-lg font-semibold text-white shadow">

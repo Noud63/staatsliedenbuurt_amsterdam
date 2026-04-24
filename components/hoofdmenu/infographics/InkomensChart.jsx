@@ -66,7 +66,7 @@ export function Inkomensverschillen() {
         <CardTitle>Gemiddeld besteedbaar inkomen in &euro;</CardTitle>
         <CardDescription>2002 - 2021</CardDescription>
       </CardHeader>
-      <CardContent className="-ml-8 pb-0">
+      <CardContent className="-ml-6 pb-0  px-0">
         <ChartContainer config={chartConfig}>
           <div className="h-full w-full">
             <ResponsiveContainer>

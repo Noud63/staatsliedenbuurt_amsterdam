@@ -14,7 +14,7 @@ const LeesDitEerst = () => {
 
   return (
     <div className="mx-4">
-      <div className="mx-auto mt-[20px] w-full max-w-[620px] flex-col rounded-lg border-2 p-4">
+      <div className="mx-auto mt-[20px] w-full max-w-[620px] flex-col rounded-2xl border-2 p-4">
         <div className="mb-4 flex items-center justify-between border-b pb-4 text-xl font-semibold text-white">
           <span>{t("titel_3")}</span>
           <Link href={`/${locale}`}>

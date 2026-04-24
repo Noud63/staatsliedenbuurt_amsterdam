@@ -73,7 +73,7 @@ export function Woonoppervlak() {
         <CardTitle>Verdeling woonoppervlak in m<sup>2</sup></CardTitle>
         <CardDescription>2011 - 2024</CardDescription>
       </CardHeader>
-      <CardContent className="px-2 pb-0">
+      <CardContent className="-ml-1 pb-0  px-0 pt-3">
         <ChartContainer config={chartConfig}>
           <BarChart accessibilityLayer data={chartData}>
             <CartesianGrid
