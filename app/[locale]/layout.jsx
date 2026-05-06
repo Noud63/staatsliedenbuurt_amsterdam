@@ -24,12 +24,12 @@ export default async function RootLayout({ children, params }) {
   notFound();
 }
 
-  const messages = (await import(`../../messages/${locale}.json`)).default;
+  // const messages = (await import(`../../messages/${locale}.json`)).default;
 
   return (
     <html lang={locale}>
       <body className="bodybackground relative bg-gradient-to-r from-red-950 via-yellow-700 to-red-950">
-        <NextIntlClientProvider locale={locale} messages={messages}>
+        <NextIntlClientProvider >
           <AuthProvider>
             <Navbar />
             <div className="max-md:flex md:hidden">
