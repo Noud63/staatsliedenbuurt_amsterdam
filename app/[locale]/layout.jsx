@@ -12,10 +12,41 @@ import { hasLocale } from "next-intl";
 import "yet-another-react-lightbox/styles.css";
 import "yet-another-react-lightbox/plugins/captions.css";
 
-export const metadata = {
-  title: "Your Site",
-  description: "Description",
-};
+export async function generateMetadata({ params }) {
+  const { locale } = await params;
+
+  const siteUrl =
+    process.env.NEXT_PUBLIC_DOMAIN || "http://localhost:3000";
+
+  return {
+    metadataBase: new URL(siteUrl),
+
+    title: "Staatsliedenbuurt Amsterdam",
+    description: "Alles over de Staatsliedenbuurt Amsterdam",
+
+    alternates: {
+      canonical: `/${locale}`,
+      languages: {
+        nl: "/nl",
+        en: "/en",
+      },
+    },
+
+    openGraph: {
+      title: "Staatsliedenbuurt Amsterdam",
+      description: "All about the  Staatsliedenbuurt Amsterdam",
+      url: `/${locale}`,
+      images: [
+        {
+          url: new URL("/images/og-image.jpg", siteUrl).toString(),
+          width: 1200,
+          height: 630,
+        },
+      ],
+      type: "website",
+    },
+  };
+}
 
 // Replace hasLocale with a custom implementation
 // const isValidLocale = (locales, locale) => locales.includes(locale);
@@ -29,12 +60,12 @@ export default async function RootLayout({ children, params }) {
     notFound();
   }
 
-  // const messages = (await import(`../../messages/${locale}.json`)).default;
+  const messages = (await import(`../../messages/${locale}.json`)).default;
 
   return (
     <html lang={locale}>
       <body className="bodybackground relative bg-gradient-to-r from-red-950 via-yellow-700 to-red-950">
-        <NextIntlClientProvider >
+        <NextIntlClientProvider locale={locale} messages={messages}>
           <AuthProvider>
             <Navbar />
             <div className="max-md:flex md:hidden">
