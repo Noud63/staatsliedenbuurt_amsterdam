@@ -17,8 +17,6 @@ import "yet-another-react-lightbox/plugins/captions.css";
 
 export default async function RootLayout({ children, params }) {
   const { locale } = await params;
-
-  // console.log(routing.locales, locale)
   
   if (!hasLocale(routing.locales, locale)) {
     notFound();
