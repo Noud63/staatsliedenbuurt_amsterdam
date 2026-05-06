@@ -12,42 +12,6 @@ import { hasLocale } from "next-intl";
 import "yet-another-react-lightbox/styles.css";
 import "yet-another-react-lightbox/plugins/captions.css";
 
-export async function generateMetadata({ params }) {
-  const { locale } = params;
-
-  const siteUrl =
-    process.env.NEXT_PUBLIC_DOMAIN || "http://localhost:3000";
-
-  return {
-    metadataBase: new URL(siteUrl),
-
-    title: "Staatsliedenbuurt Amsterdam",
-    description: "Alles over de Staatsliedenbuurt Amsterdam",
-
-    alternates: {
-      canonical: `/${locale}`,
-      languages: {
-        nl: "/nl",
-        en: "/en",
-      },
-    },
-
-    openGraph: {
-      title: "Staatsliedenbuurt Amsterdam",
-      description: "All about the  Staatsliedenbuurt Amsterdam",
-      url: `/${locale}`,
-      images: [
-        {
-          url: new URL("/images/og-image.jpg", siteUrl).toString(),
-          width: 1200,
-          height: 630,
-        },
-      ],
-      type: "website",
-    },
-  };
-}
-
 // Replace hasLocale with a custom implementation
 // const isValidLocale = (locales, locale) => locales.includes(locale);
 
