@@ -16,13 +16,13 @@ import "yet-another-react-lightbox/plugins/captions.css";
 // const isValidLocale = (locales, locale) => locales.includes(locale);
 
 export default async function RootLayout({ children, params }) {
-  const { locale } = params;
+  const { locale } = await params;
 
   // console.log(routing.locales, locale)
   
- if (!locale || !hasLocale(routing.locales, locale)) {
-  notFound();
-}
+  if (!hasLocale(routing.locales, locale)) {
+    notFound();
+  }
 
   // const messages = (await import(`../../messages/${locale}.json`)).default;
 
