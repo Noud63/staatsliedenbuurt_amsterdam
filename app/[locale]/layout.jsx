@@ -13,7 +13,7 @@ import "yet-another-react-lightbox/styles.css";
 import "yet-another-react-lightbox/plugins/captions.css";
 
 export async function generateMetadata({ params }) {
-  const { locale } = await params;
+  const { locale } = params;
 
   const siteUrl =
     process.env.NEXT_PUBLIC_DOMAIN || "http://localhost:3000";
@@ -52,13 +52,13 @@ export async function generateMetadata({ params }) {
 // const isValidLocale = (locales, locale) => locales.includes(locale);
 
 export default async function RootLayout({ children, params }) {
-  const { locale } = await params;
+  const { locale } = params;
 
   // console.log(routing.locales, locale)
   
-  if (!hasLocale(routing.locales, locale)) {
-    notFound();
-  }
+ if (!locale || !hasLocale(routing.locales, locale)) {
+  notFound();
+}
 
   const messages = (await import(`../../messages/${locale}.json`)).default;
 
