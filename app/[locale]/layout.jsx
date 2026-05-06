@@ -12,7 +12,10 @@ import { hasLocale } from "next-intl";
 import "yet-another-react-lightbox/styles.css";
 import "yet-another-react-lightbox/plugins/captions.css";
 
-
+export const metadata = {
+  title: "Your Site",
+  description: "Description",
+};
 
 // Replace hasLocale with a custom implementation
 // const isValidLocale = (locales, locale) => locales.includes(locale);
