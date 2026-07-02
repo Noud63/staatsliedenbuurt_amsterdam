@@ -48,10 +48,10 @@
     "img": "/images/staatslieden/donkercurtius.jpg"
   },
  {
-    "naam": ["van der Duijnstraat","D. van der Duijn"],
+    "naam": ["van der Duijnstraat","A.F.J.A. graaf van der Duijn"],
     "href": "https://www.google.nl/maps?q=52.385262,4.876697",
-    "desc": "D. van der Duijn van Maasdam (1769–1830) was een Nederlands staatsman en een van de drie ‘Driemanschap’ die de macht overdroeg aan Willem I in 1813.",
-    "img": ""
+    "desc": "Adam François Jules Armand graaf van der Duyn van Maasdam (1771-1848) was een Nederlands officier, kamerheer en politicus. Samen met Gijsbert Karel van Hogendorp vormde hij eind 1813 het Voorlopig Bewind, dat de basis legde voor het moderne Koninkrijk der Nederlanden. ",
+    "img": "/images/staatslieden/vanderduyn.jpg"
   },
   {
     "naam": ["Fannius Scholtenstraat", "J.D. Fannius Scholten"],
@@ -74,8 +74,8 @@
   {
     "naam": ["van Hallstraat", "Floris Adriaan van Hall"],
     "href": "https://www.google.nl/maps/place/52%C2%B022'53.3%22N+4%C2%B052'16.1%22E/@52.381466,4.8685751,17z/data=!3m1!4b1!4m4!3m3!8m2!3d52.381466!4d4.87115?entry=ttu&g_ep=EgoyMDI1MTExMC4wIKXMDSoASAFQAw%3D%3D",
-    "desc": "Floris Adriaan van Hall (1791–1866) was minister, diplomaat en tweemaal minister-president van Nederland.",
-    "img": ""
+    "desc": "Floris Adriaan van Hall (1791–1866) was een Amsterdamse advocaat en een invloedrijke negentiende-eeuwse politicus. Van Hall was onder meer minister van Justitie, minister van Financiën en tweemaal voorzitter van de ministerraad (de functie die destijds vergelijkbaar was met die van minister-president).",
+    "img": "/images/staatslieden/vanhall.jpg"
   },
   {
     "naam": ["van Hogendorpplein", "Gijsbert Karel van Hogendorp"],
@@ -168,10 +168,10 @@
     "img": "/images/staatslieden/nassau.jpg"
   },
   {
-    "naam": ["van Rappardstraat", "J.A. van Rappard"],
+    "naam": ["van Rappardstraat", "W.L.F.C. van Rappard"],
     "href": "https://www.google.nl/maps/place/52%C2%B022'43.3%22N+4%C2%B052'12.6%22E/@52.3788062,4.8695605,19z/data=!4m4!3m3!8m2!3d52.378681!4d4.870172?entry=ttu&g_ep=EgoyMDI1MTExMC4wIKXMDSoASAFQAw%3D%3D",
-    "desc": "J.A. van Rappard (1791–1869) was bestuurder en lid van de Raad van State, betrokken bij de hervorming van het bestuur van het Koninkrijk.",
-    "img": ""
+    "desc": "W.L.F.C. van Rappard (1798–1862), behoorde in 1840 tot de gematigde conservatieven die bij de koning voorzichtig aandrongen op een beperkte grondwetsherziening. Begin 1848 was hij minister van Financiën in het laatste kabinet van het oude bewind.",
+    "img": "/images/staatslieden/vanrappard.jpg"
   },
   {
     "naam": ["van Reenenstraat", "G.C.J. van Reenen"],
