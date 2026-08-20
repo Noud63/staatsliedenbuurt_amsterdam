@@ -31,7 +31,11 @@ const allowedHostnames = [
   "mindtrip.ai",
   "www.milkshakefestival.com",
   "esjaw2wge86.exactdn.com",
-  "archief.amsterdam"
+  "archief.amsterdam",
+  "uitmag.nl",
+  "vmn-tweewieler.imgix.net",
+  "images.squarespace-cdn.com",
+  "images.trvl-media.com"
 ];
 
 /** @type {import('next').NextConfig} */

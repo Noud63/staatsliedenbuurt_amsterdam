@@ -169,20 +169,22 @@
         "name": "Qicq",
         "about": "Bij QicQ kun je terecht voor dé topmerken elektrische fietsen, speed pedelecs, en bakfietsen. Of je nu langskomt of belt, we nemen uitgebreid de tijd voor je. Wil je eerst een week een e bike testen? Ook dat kan. Woon je niet in de buurt? Geen probleem wij hebben een haal- en brengservice, ook voor testfietsen.",
         "website": "https://www.qicq.nl/",
-        "route": "https://goo.gl/maps/k7Qbbxfs6qN2"
+        "route": "https://goo.gl/maps/k7Qbbxfs6qN2",
+         "img": "https://vmn-tweewieler.imgix.net/uploads/2023/11/qicq-5.jpg?auto=compress%2Cformat&q=50&w=600"
       },
       {
         "name": "The Citydressers",
         "about": "We are Jet and Kim, two Creative Directors with a background in the cultural event industry. We work and live in Amsterdam and have been creating concepts and organising events together for more than 30 years.",
         "website": "https://www.thecitydressers.com/",
-        "route": "https://maps.app.goo.gl/qPFzwU7mVcn5HELx5"
+        "route": "https://maps.app.goo.gl/qPFzwU7mVcn5HELx5",
+        "img": "https://images.squarespace-cdn.com/content/v1/60de1573f226ad50dabc0f5c/7d70ac7a-004f-485d-bfe9-6c63921b7cdc/DSC_1803+kopie+3.jpg"
       },
       {
         "name": "Sunday Market",
         "about": "De Westergas - voormalig cultuurpark Westergasfabriek - is al sinds 2008 de 'home' of Sunday Market. Door de combinatie van de historische fabrieksgebouwen en het groen van het Westerpark is het perfecte decor voor de Sunday Market. Op deze plek kunnen wij de ontmoetingsplaats zijn die we willen zijn. Elke eerste zondag van de maand bouwen we er ons feestje. Kom er genieten van al het moois dat de ontwerpers en creatievelingen je aanbieden, genieten van de live muziek op het open podium, laat je prikkelen door de bijzondere toneelstukken van het markttheater en geniet van een hapje en drankje op een van de vele gezellige terrasjes.",
         "website": "https://sundaymarket.nl/",
         "route": "https://www.google.com/maps?q=52.385788,4.870149",
-        "img": "https://mindtrip.ai/attractions/2a66/74cc/c5cc/465b/924a/64a0/1059/cb8e"
+        "img": "https://uitmag.nl/wp-content/uploads/2019/02/04.03.18-WGF-Zondag-Markt-2188-1250x834-1024x683.jpg"
       }
     ]
   },
@@ -224,7 +226,8 @@
         "name": "Conscious Hotel",
         "about": "We zijn ons bewust van de keuzes die we maken en duurzaamheid staat centraal bij alles wat we doen. Onze stijlvolle hotels en restaurants zijn een bijzondere ervaring, met elk hun eigen unieke stijl en verhaal. We zijn al meer dan 10 jaar groen, lang voordat het cool was, waardoor we pioniers zijn op het gebied van milieuvriendelijk gastvrijheid. Onze Tripadvisor-gasten beoordeelden ons zelfs als een van de beste hotels ter wereld en we zijn er trots op dat dit ons de Travelers’ Choice Award voor 2022 heeft opgeleverd.",
         "website": "https://www.conscioushotels.com/",
-        "route": "https://goo.gl/maps/rACvu8hRzCk"
+        "route": "https://goo.gl/maps/rACvu8hRzCk",
+        "img": "https://images.trvl-media.com/lodging/23000000/22330000/22328900/22328826/97bb3e9a.jpg?impolicy=resizecrop&rw=575&rh=575&ra=fill"
       },
       {
         "name": "De Wester",
