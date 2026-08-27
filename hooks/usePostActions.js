@@ -44,6 +44,7 @@ export function usePostActions() {
   const likePost = async (post) => {
     const postId = getPostId(post);
 
+    //data comes from SWR’s cache. It is passed automatically by mutate to the updater function.
     mutatePostCaches(postId, post.userId, (data) =>
       updatePostsInCache(data, (p) =>
         p._id === postId

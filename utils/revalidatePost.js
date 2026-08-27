@@ -7,6 +7,8 @@ import {
 
 // Revalidate all post-related caches including paginated (useSWRInfinite) keys
 export const revalidatePostCaches = async (postId, userId) => {
+
+      console.log("Feedcachekey:", FEED_CACHE_KEY);
   await Promise.all([
     // Revalidate paginated feed (exact serialized infinite key)
     mutate(FEED_CACHE_KEY),

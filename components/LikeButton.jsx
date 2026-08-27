@@ -20,7 +20,7 @@ const LikeButton = ({post}) => {
           className="mr-2 cursor-pointer"
         />
       </button>
-      <div className="flex h-[26px] w-[26px] items-center justify-center rounded-full bg-green-600 text-sm font-semibold text-white">
+      <div className="flex h-[30px] w-[30px] items-center justify-center rounded-full bg-green-600 text-sm font-semibold text-white">
         {post.likesCount}
       </div>
     </div>

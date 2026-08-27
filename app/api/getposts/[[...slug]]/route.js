@@ -26,6 +26,8 @@ export async function GET(request, { params }) {
     const limit = parseInt(searchParams.get("limit")) || 3;
     const cursor = searchParams.get("cursor");
 
+    console.log("Cursor:", cursor);
+
     // Fetch posts filtered by userId if provided
     const query = userId ? { userId: userId } : {};
 

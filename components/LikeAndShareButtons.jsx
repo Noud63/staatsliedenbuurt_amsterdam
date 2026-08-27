@@ -6,6 +6,7 @@ import { TbShare3 } from "react-icons/tb";
 import { WhatsappShareButton } from "react-share";
 import { useSession } from "next-auth/react";
 import toast from "react-hot-toast";
+import Image from 'next/image';
 
 
 const LikeAndShareButtons = ({post}) => {
@@ -37,10 +38,10 @@ const LikeAndShareButtons = ({post}) => {
       <div className="relative flex h-full cursor-pointer items-center group">
         {session ? (
           <WhatsappShareButton url={sharedPost}>
-            <FaWhatsapp color="gray" size={30} className="cursor-pointer" />
+            <Image src="/icons/whatsapp_icon.png" alt="WhatsApp" width={30} height={30} />
           </WhatsappShareButton>
         ) : (
-          <FaWhatsapp color="gray" size={30} className="" />
+          <Image src="/icons/whatsapp-icon.png" alt="WhatsApp" width={30} height={30} className="cursor-pointer" />
         )}
         <span className="absolute -top-8 left-3 -translate-x-1/2 scale-0 transform whitespace-nowrap rounded border-b border-gray-300 bg-gray-800 px-3 py-1 text-sm text-white opacity-0 shadow-md transition-all group-hover:scale-100 group-hover:opacity-100">
          Share on WhatsApp
@@ -48,7 +49,7 @@ const LikeAndShareButtons = ({post}) => {
       </div>
       <div className="group relative">
         <TbShare3
-          color="gray"
+          color="#16a34a"
           size={30}
           className="cursor-pointer"
           onClick={handleCopyLink}

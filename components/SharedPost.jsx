@@ -12,9 +12,9 @@ const SharedPost = ({sharedPost}) => {
 const locale = useLocale();
 
   return (
-    <div className="mx-auto flex w-full max-w-[670px] flex-grow flex-col rounded-lg py-4">
+    <div className="mx-auto flex w-full max-w-[670px] flex-grow flex-col py-4">
         
-      <div className="singlepost relative mx-6 mb-4 flex h-auto flex-col rounded-lg bg-white shadow-md max-sm:mx-4 max-xsm:mx-2">
+      <div className="singlepost relative mx-6 mb-4 flex h-auto flex-col rounded-2xl bg-white shadow-md max-sm:mx-4 max-xsm:mx-2">
 
         <div className="flex w-full items-center justify-between border-b border-gray-400 p-4 pb-2 max-xxsm:pl-2">
           <div className="flex flex-1">
@@ -48,7 +48,7 @@ const locale = useLocale();
           )}
         </div>
 
-        <div className="flex w-full flex-col bg-white text-gray-500">
+        <div className="flex w-full flex-col text-gray-500">
           <div className="flex items-center justify-around gap-2 p-4 text-base font-semibold">
             <div className="">Like this post?</div>
             <div className="">

@@ -94,7 +94,7 @@ const RegisterForm = () => {
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
             <label className="text-md mb-2 block font-bold" htmlFor="name">
-              Naam:
+              {t("naam")}
             </label>
             <input
               className="focus:shadow-outline w-full appearance-none rounded border px-3 py-2 leading-tight shadow focus:outline-none"
@@ -108,7 +108,7 @@ const RegisterForm = () => {
           </div>
           <div className="mb-4">
             <label className="text-md mb-2 block font-bold" htmlFor="username">
-              Gebruikersnaam:
+              {t("gebruikersnaam")}
             </label>
             <input
               className="focus:shadow-outline w-full appearance-none rounded border px-3 py-2 leading-tight shadow focus:outline-none"
@@ -122,7 +122,7 @@ const RegisterForm = () => {
           </div>
           <div className="mb-4">
             <label className="text-md mb-2 block font-bold" htmlFor="email">
-              Email:
+              {t("email")}
             </label>
             <input
               className="focus:shadow-outline w-full appearance-none rounded border px-3 py-2 leading-tight shadow focus:outline-none"
@@ -137,7 +137,7 @@ const RegisterForm = () => {
           </div>
           <div className="mb-4">
             <label className="text-md mb-2 block font-bold" htmlFor="password">
-              Wachtwoord:
+              {t("wachtwoord")}
             </label>
             <input
               className="focus:shadow-outline w-full appearance-none rounded border px-3 py-2 leading-tight shadow focus:outline-none"
