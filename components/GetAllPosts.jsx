@@ -5,6 +5,7 @@ import Image from "next/image";
 import usePostsFetcher from "@/hooks/usePostsFeed";
 
 const GetAllPosts = ({ initialData }) => {
+  
   const {
     posts,
     error,
@@ -41,7 +42,7 @@ const GetAllPosts = ({ initialData }) => {
 
   return (
     <div className="flex w-full justify-center px-4 max-xsm:px-0">
-      <div className="w-full max-w-[620px] flex-grow flex-col rounded-lg py-4">
+      <div className="w-full max-w-[630px] flex-grow flex-col rounded-lg py-4">
         {posts.map((post) => (
           <div key={post._id}>
             <SinglePost post={post} />

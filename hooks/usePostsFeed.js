@@ -11,6 +11,9 @@ const usePostsFetcher = (initialData) => {
       revalidateFirstPage: true,
     });
 
+
+    //useSWRInfinite returns an array of arrays, where each inner array represents a page of data. 
+    //We flatten this structure to get a single array of posts.
   const posts = data ? data.flat() : [];
   const isLoadingMore =
     isLoading || (size > 0 && data && typeof data[size - 1] === "undefined");

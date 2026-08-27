@@ -31,7 +31,7 @@ export default async function RootLayout({ children, params }) {
           <AuthProvider>
             <Navbar />
             <div className="max-md:flex md:hidden">
-              <div className="mx-auto w-full max-w-[620px] max-md:max-w-full max-md:px-4 max-xsm:px-2">
+              <div className="mx-auto w-full max-w-[630px] max-md:max-w-full max-md:px-4 max-xsm:px-2">
                 <LoginRegisterLogout />
               </div>
             </div>

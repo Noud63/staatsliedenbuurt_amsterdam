@@ -13,8 +13,8 @@ const LeesDit = () => {
   const locale = useLocale() // 'nl' or 'en'
 
   return (
-    <div className="mx-4 mt-4 max-xsm:mx-2 max-md:mx-4">
-      <div className="mx-auto flex w-full max-w-[620px] rounded-full border-2 border-white px-4 py-3 ">
+    <div className="mt-4 max-xsm:mx-2 max-md:mx-4">
+      <div className="mx-auto flex w-full max-w-[630px] rounded-full border-2 border-white px-4 py-3">
         <div className="flex flex-row items-center gap-2 text-lg text-white max-sm:text-base">
           <span className="">{t("titel_1")}</span>
           <Image
