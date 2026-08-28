@@ -37,17 +37,26 @@ export async function postWithComments(post, currentUserId, userMap, likedPosts)
     from: "users",
     localField: "userId",
     foreignField: "_id",
+    pipeline: [
+      {
+        $project: {
+          name: 1,
+          username: 1,
+          avatar: 1,
+        },
+      },
+    ],
     as: "author",
   },
 },
 {
-  $addFields: {
-    author: { $arrayElemAt: ["$author", 0] },
-    avatar: { $ifNull: [{ $arrayElemAt: ["$author.avatar", 0] }, null] },
-    username: { $ifNull: [{ $arrayElemAt: ["$author.username", 0] }, null] },
-    name: { $ifNull: [{ $arrayElemAt: ["$author.name", 0] }, null] },
+  $set: {
+    avatar: { $arrayElemAt: ["$author.avatar", 0] },
+    username: { $arrayElemAt: ["$author.username", 0] },
+    name: { $arrayElemAt: ["$author.name", 0] },
   },
 },
+{ $unset: "author" },
     {
       $lookup: {
         from: "commentlikes",
@@ -68,6 +77,8 @@ export async function postWithComments(post, currentUserId, userMap, likedPosts)
 
   const postAuthor = userMap[post.userId.toString()];
   const postLiked = likedPosts.has(post._id.toString())
+
+  // console.log("Comments:", JSON.stringify(comments, null, 2));
 
   return {
     ...post,

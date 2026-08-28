@@ -1,5 +1,4 @@
 //Data flow clicking post likeButton
-
 //Step 1:
 const apiDomain = process.env.NEXT_PUBLIC_API_DOMAIN || null;
 
@@ -23,18 +22,15 @@ async function fetchPosts(userId) {
     console.log(error);
   }
 }
+
 //Step 2:
 import { fetchPosts } from "@/utils/postsRequest";
 
 export default async function Home() {
   const initialData = await fetchPosts();
   return (
-    <>
-      <LeesDit />
-      <AddPost />
-      <GetAllPosts initialData={initialData} />
-    </>
-  );
+    <GetAllPosts initialData={initialData} />
+  )
 }
 
 //Step 3:
@@ -66,25 +62,35 @@ const LikeButton = ({ post }) => {
 //Step 5:
 // usePostActions hook to handle all optimistic updates for posts and comments
 const likePost = async (post) => {
-  const postId = getPostId(post);
+    const postId = getPostId(post);
 
-  //data comes from SWR’s cache. It is passed automatically by mutate to the updater function.
-  mutatePostCaches(postId, post.userId, (data) =>
-    updatePostsInCache(data, (p) =>
-      p._id === postId
-        ? {
-            ...p,
-            likesCount: p.likesCount + (p.likedByUser ? -1 : 1),
-            likedByUser: !p.likedByUser,
-          }
-        : p,
-    ),
-  );
+    //data comes from SWR’s cache. It is passed automatically by mutate to the updater function.
+    await mutatePostCaches(postId, post.userId, (data) =>
+      updatePostsInCache(data, (p) =>
+        p._id === postId
+          ? {
+              ...p,
+              likesCount: p.likesCount + (p.likedByUser ? -1 : 1),
+              likedByUser: !p.likedByUser,
+            }
+          : p,
+      ),
+    );
 
-  await fetch(POSTS_ENDPOINTS.like(postId), {
-    method: "POST",
-  });
-};
+    try {
+      const response = await fetch(POSTS_ENDPOINTS.like(postId), {
+        method: "POST",
+      });
+
+      if (!response.ok) {
+        throw new Error(`Failed to like post: ${response.status}`);
+      }
+    } catch (error) {
+      // The API request is outside SWR's mutate promise, so restore server truth.
+      console.error("Failed to like post:", error);
+      await revalidatePostCaches(postId, post.userId);
+    }
+  };
 
 //Step 6:
 import { getFeedKey, fetcher, PAGE_SIZE } from "@/lib/posts";

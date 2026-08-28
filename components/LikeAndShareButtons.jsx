@@ -41,7 +41,7 @@ const LikeAndShareButtons = ({post}) => {
             <Image src="/icons/whatsapp_icon.png" alt="WhatsApp" width={30} height={30} />
           </WhatsappShareButton>
         ) : (
-          <Image src="/icons/whatsapp-icon.png" alt="WhatsApp" width={30} height={30} className="cursor-pointer" />
+          <Image src="/icons/whatsapp_icon.png" alt="WhatsApp" width={30} height={30} className="cursor-pointer" />
         )}
         <span className="absolute -top-8 left-3 -translate-x-1/2 scale-0 transform whitespace-nowrap rounded border-b border-gray-300 bg-gray-800 px-3 py-1 text-sm text-white opacity-0 shadow-md transition-all group-hover:scale-100 group-hover:opacity-100">
          Share on WhatsApp
