@@ -8,7 +8,7 @@ const LikeButton = ({post}) => {
   const { data: session } = useSession();
 
    // Get centralized actions from hook
-  let { likePost } = usePostActions(post);
+  let { likePost } = usePostActions();
 
   return (
     <div className="flex items-center justify-center">

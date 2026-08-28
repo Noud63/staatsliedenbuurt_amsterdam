@@ -1,11 +1,12 @@
 "use client";
+import { useEffect } from "react";
 import SinglePost from "./SinglePost";
 import Spinner from "./Spinner";
 import Image from "next/image";
 import usePostsFetcher from "@/hooks/usePostsFeed";
+import { useInView } from "react-intersection-observer";
 
 const GetAllPosts = ({ initialData }) => {
-  
   const {
     posts,
     error,
@@ -15,6 +16,17 @@ const GetAllPosts = ({ initialData }) => {
     size,
     setSize,
   } = usePostsFetcher(initialData);
+
+  const { ref, inView } = useInView({
+    threshold: 0,
+    rootMargin: "300px",
+  });
+
+  useEffect(() => {
+    if (inView && !isLoadingMore && !isReachingEnd) {
+      setSize((currentSize) => currentSize + 1);
+    }
+  }, [inView, isLoadingMore, isReachingEnd, setSize]);
 
   if (error)
     return (
@@ -50,18 +62,14 @@ const GetAllPosts = ({ initialData }) => {
         ))}
 
         {!isReachingEnd ? (
-          <div className="flex justify-center py-4">
-            <button
-              onClick={() => setSize(size + 1)}
-              disabled={isLoadingMore}
-              className="rounded-lg border-2 w-[150px] py-3 text-white disabled:border-0"
-            >
-              {isLoadingMore ? <Spinner loading={isLoadingMore} height={40} width={40} /> : "Meer berichten"}
-            </button>
+          <div ref={ref} className="flex min-h-16 justify-center py-4">
+            {isLoadingMore && <Spinner loading height={40} width={40} />}
           </div>
-        ) :  (<div className="flex m-auto justify-center py-4 rounded-lg border-2 w-[180px] text-white disabled:border-0 mt-12">
-             Geen berichten meer  
-            </div>)}
+        ) : (
+          <div className="m-auto mt-12 flex w-[180px] justify-center rounded-lg border-2 py-2 text-white">
+            Geen berichten meer
+          </div>
+        )}
       </div>
     </div>
   );

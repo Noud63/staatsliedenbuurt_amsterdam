@@ -15,11 +15,14 @@ const MUTATE_OPTS = { revalidate: false, rollbackOnError: true };
 //Mutate all caches that contain the post (feed, posts by user id, single post) with the same optimistic update function
 export const mutatePostCaches = (postId, userId, updater) => {
   // 1. Feed (exact serialized infinite key)
-  mutate(FEED_CACHE_KEY, updater, MUTATE_OPTS);
+  const mutations = [mutate(FEED_CACHE_KEY, updater, MUTATE_OPTS)];
   // 2. byUser paginated cache (exact serialized infinite key)
-  if (userId) mutate(getByUserCacheKey(userId), updater, MUTATE_OPTS);
+  if (userId)
+    mutations.push(mutate(getByUserCacheKey(userId), updater, MUTATE_OPTS));
   // 3. Single post page
-  mutate(POSTS_ENDPOINTS.single(postId), updater, MUTATE_OPTS);
+  mutations.push(mutate(POSTS_ENDPOINTS.single(postId), updater, MUTATE_OPTS));
+
+  return Promise.all(mutations);
 };
 
 export const mutateNotificationsCaches = (updater) => {
@@ -45,7 +48,7 @@ export function usePostActions() {
     const postId = getPostId(post);
 
     //data comes from SWR’s cache. It is passed automatically by mutate to the updater function.
-    mutatePostCaches(postId, post.userId, (data) =>
+    await mutatePostCaches(postId, post.userId, (data) =>
       updatePostsInCache(data, (p) =>
         p._id === postId
           ? {
@@ -57,9 +60,19 @@ export function usePostActions() {
       ),
     );
 
-    await fetch(POSTS_ENDPOINTS.like(postId), {
-      method: "POST",
-    });
+    try {
+      const response = await fetch(POSTS_ENDPOINTS.like(postId), {
+        method: "POST",
+      });
+
+      if (!response.ok) {
+        throw new Error(`Failed to like post: ${response.status}`);
+      }
+    } catch (error) {
+      // The API request is outside SWR's mutate promise, so restore server truth.
+      console.error("Failed to like post:", error);
+      await revalidatePostCaches(postId, post.userId);
+    }
   };
 
   // ---------------------------------------------------------------------

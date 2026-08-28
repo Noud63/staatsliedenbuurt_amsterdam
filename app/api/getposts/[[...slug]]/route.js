@@ -24,16 +24,16 @@ export async function GET(request, { params }) {
     // Pagination params
     const { searchParams } = new URL(request.url);
     const limit = parseInt(searchParams.get("limit")) || 3;
-    const cursor = searchParams.get("cursor");
+    const page = searchParams.get("page"); // cursor for pagination (last post ID from previous page)
 
-    console.log("Cursor:", cursor);
+    console.log("Page:", page);
 
     // Fetch posts filtered by userId if provided
     const query = userId ? { userId: userId } : {};
 
     // Cursor-based pagination: fetch posts older than the cursor
-    if (cursor) {
-      query._id = { $lt: new mongoose.Types.ObjectId(cursor) };
+    if (page) {
+      query._id = { $lt: new mongoose.Types.ObjectId(page) };
     }
 
     const posts = await Post.find(query)
