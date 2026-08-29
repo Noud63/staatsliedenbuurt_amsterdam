@@ -12,7 +12,7 @@ const usePostsFetcher = (initialData) => {
     });
 
   console.log("Size:", size);
-  console.log("Data:", data);
+  // console.log("Data:", data);
     //useSWRInfinite returns an array of arrays, where each inner array represents a page of data. 
     //We flatten this structure to get a single array of posts.
   const posts = data ? data.flat() : [];

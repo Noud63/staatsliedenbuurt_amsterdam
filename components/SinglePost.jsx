@@ -119,6 +119,7 @@ const SinglePost = ({ postId, post: initialPost, setPostId }) => {
       )}
 
       <LikeandShareBar post={post} onLike={() => likePost(post)} />
+        
       <PostComment
         post={post}
         onLikeComment={(commentId) => likeComment(commentId, post)}

@@ -113,13 +113,13 @@ const EditPostForm = ({ setShowEditForm, post }) => {
         method: "DELETE",
       });
 
-      const data = await res.json();
-      if (res.status === 200) {
-        console.log(data.message);
-        setShowEditForm(false);
-        //Revalidate cache
-        await revalidatePostCaches(postId, post.userId);
-      }
+      if (!res.ok) {
+      await revalidatePostCaches(postId, post.userId);
+      return;
+    } 
+    // const data = await res.json();
+      setShowEditForm(false);
+    await revalidatePostCaches(postId, post.userId);
     } catch (error) {
       console.log(error);
     }

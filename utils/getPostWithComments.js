@@ -3,7 +3,12 @@ import Comment from "@/models/comment";
 import PostLike from "@/models/postLikes";
 import Avatar from "@/models/avatar";
 
-export async function postWithComments(post, currentUserId, userMap, likedPosts) {
+export async function postWithComments(
+  post,
+  currentUserId,
+  userMap,
+  likedPosts,
+) {
   if (!post) return null;
 
   // Fetch comments with aggregation pipeline
@@ -33,30 +38,30 @@ export async function postWithComments(post, currentUserId, userMap, likedPosts)
       },
     },
     {
-  $lookup: {
-    from: "users",
-    localField: "userId",
-    foreignField: "_id",
-    pipeline: [
-      {
-        $project: {
-          name: 1,
-          username: 1,
-          avatar: 1,
-        },
+      $lookup: {
+        from: "users",
+        localField: "userId",
+        foreignField: "_id",
+        pipeline: [
+          {
+            $project: {
+              name: 1,
+              username: 1,
+              avatar: 1,
+            },
+          },
+        ],
+        as: "author",
       },
-    ],
-    as: "author",
-  },
-},
-{
-  $set: {
-    avatar: { $arrayElemAt: ["$author.avatar", 0] },
-    username: { $arrayElemAt: ["$author.username", 0] },
-    name: { $arrayElemAt: ["$author.name", 0] },
-  },
-},
-{ $unset: "author" },
+    },
+    {
+      $set: {
+        avatar: { $arrayElemAt: ["$author.avatar", 0] },
+        username: { $arrayElemAt: ["$author.username", 0] },
+        name: { $arrayElemAt: ["$author.name", 0] },
+      },
+    },
+    { $unset: "author" },
     {
       $lookup: {
         from: "commentlikes",
@@ -76,16 +81,16 @@ export async function postWithComments(post, currentUserId, userMap, likedPosts)
   ]);
 
   const postAuthor = userMap[post.userId.toString()];
-  const postLiked = likedPosts.has(post._id.toString())
+  const postLiked = likedPosts.has(post._id.toString());
 
-  // console.log("Comments:", JSON.stringify(comments, null, 2));
+  console.log("Comments:", JSON.stringify(comments, null, 2));
 
   return {
     ...post,
-  name: postAuthor?.name ?? null,
-  username: postAuthor?.username ?? null,
-  avatar: postAuthor?.avatar ?? null,
-  comments: comments.length > 0 ? comments : [],
-  likedByUser: postLiked,
+    name: postAuthor?.name ?? null,
+    username: postAuthor?.username ?? null,
+    avatar: postAuthor?.avatar ?? null,
+    comments: comments.length > 0 ? comments : [],
+    likedByUser: postLiked,
   };
 }

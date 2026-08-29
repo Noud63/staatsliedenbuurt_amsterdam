@@ -24,7 +24,7 @@ const SideBarNotificationList = ({
     fetcher,
   );
 
-   const notifications = useMemo(() => {
+  const notifications = useMemo(() => {
     return data?.notifications || [];
   }, [data]);
 
@@ -44,7 +44,6 @@ const SideBarNotificationList = ({
   // Close when clicking outside sidebar
   useEffect(() => {
     function handleClickOutside(event) {
-      // console.log("Clicked outside sidebar:", event.target);
       if (
         sidebarRef.current &&
         !sidebarRef.current.contains(event.target) // true, same as sidebarRef.current.contains(event.target) === false
@@ -85,21 +84,24 @@ const SideBarNotificationList = ({
         method: "DELETE",
       });
 
-      if (!response.ok) throw new Error("Failed to delete notifications");
+      if (!response.ok) {
+        mutate("/api/getNotifications", previous, false);
+        return;
+      }
 
       // Revalidate to ensure server truth
       mutate("/api/getNotifications");
 
       setShowPanel(false);
     } catch (error) {
-      console.error("Error deleting notifications:", error);
+      mutate("/api/getNotifications", previous, false);
+    console.error("Error deleting notifications:", error);
     }
   };
 
   return (
     <div
-      className={`sidebar_scroll ${showPanel ? "translate-x-0" : "translate-x-full"} singlepost fixed bottom-0 right-0 top-0 z-[10] 
-      flex h-dvh max-h-dvh w-full max-w-[340px] flex-col overflow-y-auto bg-gradient-to-r from-yellow-800 to-red-950 pb-16 pl-3 shadow-xl backdrop-blur-sm transition duration-300 ease-in`}
+      className={`sidebar_scroll ${showPanel ? "translate-x-0" : "translate-x-full"} singlepost fixed bottom-0 right-0 top-0 z-[10] flex h-dvh max-h-dvh w-full max-w-[340px] flex-col overflow-y-auto bg-gradient-to-r from-yellow-800 to-red-950 pb-16 pl-3 shadow-xl backdrop-blur-sm transition duration-300 ease-in`}
       ref={sidebarRef}
     >
       <div className="mt-4 flex w-full justify-around border-b border-white">

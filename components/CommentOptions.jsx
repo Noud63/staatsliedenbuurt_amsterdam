@@ -9,7 +9,6 @@ import Image from 'next/image';
 const CommentOptions = ({
   comment,
   userId,
-  deleteComment,
   setShowOptions,
   setShowEditComment,
   showEditComment,

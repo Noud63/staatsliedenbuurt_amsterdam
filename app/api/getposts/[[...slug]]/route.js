@@ -26,12 +26,12 @@ export async function GET(request, { params }) {
     const limit = parseInt(searchParams.get("limit")) || 3;
     const page = searchParams.get("page"); // page for pagination (last post ID from previous page)
 
-    console.log("Page:", page);
+    // console.log("Page:", page);
 
     // Fetch posts filtered by userId if provided
     const query = userId ? { userId: userId } : {};
 
-    console.log("Query:", query);
+    // console.log("Query:", query);
 
     // Page-based pagination: fetch posts older than the page (last post ID from previous page)
     // Check if page id is less than the last post id in the database, if so, fetch posts older than that id
@@ -47,7 +47,7 @@ export async function GET(request, { params }) {
     //...new Set() removes duplicates, then convert back to array
     const userIds = [...new Set(posts.map((p) => p.userId.toString()))];
 
-    console.log("User IDs:", userIds);
+    // console.log("User IDs:", userIds);
 
     const users = await User.find({ _id: { $in: userIds } })
       .select("name username avatar")
@@ -56,7 +56,7 @@ export async function GET(request, { params }) {
     const userMap = Object.fromEntries(
       users.map((user) => [user._id.toString(), user]),
     );
-    console.log("User Map:", userMap);
+    // console.log("User Map:", userMap);
 
     //Fetch all posts likes
     const postIds = posts.map((p) => p._id);
@@ -68,7 +68,8 @@ export async function GET(request, { params }) {
 
     const likedPosts = new Set(likes.map((l) => l.postId.toString()));
 
-    console.log("Liked Posts:", likedPosts);
+    // console.log("Liked Posts:", likedPosts);
+    console.log("Likes:", likes);
 
     const postsWithComments = await Promise.all(
       posts.map((post) =>
