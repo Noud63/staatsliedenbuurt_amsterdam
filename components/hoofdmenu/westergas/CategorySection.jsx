@@ -36,7 +36,7 @@ const CategorySection = ({ category }) => {
           {business?.img && (
             <div className="mb-8 mt-2 flex max-h-[200px] max-w-[620px] items-center justify-center overflow-hidden max-lg:max-w-full">
               <Image
-                src={business?.img}
+                src={`/westergas/${business?.img}`}
                 alt={business.name}
                 width={620}
                 height={200}

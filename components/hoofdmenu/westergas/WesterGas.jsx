@@ -20,6 +20,8 @@ const WesterGas = () => {
     westergasfabriek.map((item) => [item.category, item]),
   );
 
+  console.log("Categories:", categories);
+
   const categoryNames = Object.keys(categories);
 
   const addSlide = (imageArray) => {
