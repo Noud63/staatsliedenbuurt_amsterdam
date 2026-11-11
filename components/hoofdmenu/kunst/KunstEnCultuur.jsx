@@ -4,7 +4,7 @@ import SectionHeader from "@/components/SectionHeader";
 
 const KunstEnCultuur = () => {
   return (
-    <div className="mx-auto mt-8 w-full max-w-[1280px] px-4 text-white max-md:mt-4 max-sm:mt-4 max-xsm:px-2 max-2xl:max-w-[1000px]">
+    <div className="mx-auto mt-8 w-full max-w-[1280px] px-4 text-white max-md:mt-4 max-sm:mt-4 max-xsm:px-2 max-2xl:max-w-[960px]">
       <SectionHeader title="Kunst & Cultuur" />
       <div className="mt-2 border-t-2">
         <div className="mx-auto mt-4 flex w-full max-w-[1280px] flex-col gap-2 text-lg max-xsm:text-base">
