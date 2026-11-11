@@ -49,6 +49,42 @@ const KunstEnCultuur = () => {
             speelt tussen kunstenaars, bewoners en hun leefomgeving.
           </p>
         </div>
+        <div>
+          <h2 className="mt-8 flex justify-center rounded-full bg-white py-2 pl-2 text-xl font-semibold text-yellow-900">
+            Kunsttraject & Etalages
+          </h2>
+          <ul className="list-inside list-disc">
+            <li className="mt-4">
+              <span className="font-semibold text-white">
+                Kunsttraject Amsterdam:
+              </span>{" "}
+              In verschillende straten van de buurt vind je glazen etalages die
+              fungeren als expositieruimte.
+            </li>
+            <li className="mt-4">
+              <span className="font-semibold text-white">
+                Stoep (door kunstenaarscollectief POUBELLE):
+              </span>{" "}
+              In verschillende straten van de buurt vind je glazen etalages die
+              fungeren als expositieruimte.
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h2 className="mt-8 flex justify-center rounded-full bg-white py-2 pl-2 text-xl font-semibold text-yellow-900">
+            Kunstgaleries
+          </h2>
+        </div>
+        <div>
+          <h2 className="mt-8 flex justify-center rounded-full bg-white py-2 pl-2 text-xl font-semibold text-yellow-900">
+            Kunst in de Openbare Ruimte
+          </h2>
+        </div>
+        <div>
+          <h2 className="mt-8 flex justify-center rounded-full bg-white py-2 pl-2 text-xl font-semibold text-yellow-900">
+            Routes en Initiatieven
+          </h2>
+        </div>
       </div>
     </div>
   );
