@@ -5,7 +5,7 @@ import { FaChrome } from "react-icons/fa";
 
 const CategorySection = ({ category }) => {
   return (
-    <div className="mx-auto mt-6 max-w-[620px]" id={category.category}>
+    <div className="mx-auto max-w-[620px] mt-8" id={category.category}>
       <h2 className="flex justify-center rounded-full bg-white py-2 pl-2 text-xl font-semibold text-yellow-900">
         {category?.category}
       </h2>
@@ -13,19 +13,20 @@ const CategorySection = ({ category }) => {
         <div key={idx} className="mt-4">
           <h3 className="border-b text-lg font-semibold">{business.name}</h3>
           <div className="mt-2">{business?.about}</div>
+          {!business.closed ? <div>
           <div className="mt-2 flex cursor-pointer items-center gap-2">
-            <FaChrome />{" "}
-            {business?.website ? (
-              <a
+             <FaChrome />{" "}
+              {business?.website ? (
+                <a
                 href={business?.website}
                 target="_blank"
                 rel="noopener noreferrer"
-              >
+                >
                 {business?.website}
-              </a>
-            ) : (
+               </a>
+              ) : (
               <span>{business?.website}</span>
-            )}
+              )}
           </div>
           <div className="mb-4 flex cursor-pointer items-center gap-2">
             <IoLocationSharp />{" "}
@@ -33,8 +34,9 @@ const CategorySection = ({ category }) => {
               Hier ligt {business.name}
             </a>
           </div>
+          </div> : ""}
           {business?.img && (
-            <div className="mb-8 mt-2 flex max-h-[200px] max-w-[620px] items-center justify-center overflow-hidden max-lg:max-w-full">
+            <div className="mb-4 mt-2 flex max-h-[200px] max-w-[620px] items-center justify-center overflow-hidden max-lg:max-w-full">
               <Image
                 src={`/westergas/${business?.img}`}
                 alt={business.name}

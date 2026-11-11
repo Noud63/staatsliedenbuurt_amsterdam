@@ -1,14 +1,57 @@
-import React from 'react'
-import TitleBar from '@/components/TitleBar'
-import SectionHeader from '@/components/SectionHeader'
+import React from "react";
+import TitleBar from "@/components/TitleBar";
+import SectionHeader from "@/components/SectionHeader";
 
 const KunstEnCultuur = () => {
   return (
-     <div className="mx-auto mt-8 w-full max-w-[620px] text-white max-xl:px-4 max-md:mt-4 max-sm:mt-4 max-xsm:px-2">
+    <div className="mx-auto mt-8 w-full max-w-[1280px] text-white max-xl:px-4 max-md:mt-4 max-sm:mt-4 max-xsm:px-2">
       <SectionHeader title="Kunst & Cultuur" />
-      <div className="border-t-2 mt-2"></div>
+      <div className="mt-2 border-t-2">
+        <div className="mx-auto mt-4 flex w-full max-w-[1280px] flex-col gap-2 text-lg max-xsm:text-base">
+          <p>
+            Kunst en cultuur zijn de ziel van een samenleving. Ze weerspiegelen
+            onze waarden, tradities en creativiteit. Van schilderijen en
+            beeldhouwwerken tot muziek, theater en literatuur, kunst en cultuur
+            bieden ons een venster naar andere tijden, plaatsen en
+            perspectieven.
+          </p>
+          <p>
+            De Staatsliedenbuurt heeft een eigenzinnig en levendig kunstklimaat.
+            Verspreid door de buurt vind je kunstwerken in de openbare ruimte,
+            bijzondere initiatieven, ateliers en plekken waar kunstenaars hun
+            werk presenteren. Kunst is hier niet alleen te vinden achter de
+            muren van een galerie, maar maakt ook deel uit van het dagelijkse
+            straatbeeld.
+          </p>
+          <p>
+            De buurt kent bovendien een lange geschiedenis als werkplek voor
+            kunstenaars. Een belangrijke rol daarin speelt het ateliergebouw aan
+            de Tweede Nassaustraat 8, waar sinds 1969 kunstenaars gevestigd
+            zijn. Vanuit deze kunstenaarsgemeenschap ontstonden initiatieven om
+            beeldende kunst toegankelijker te maken voor een breder publiek. Een
+            daarvan is Stichting Kunsttraject, opgericht in 1988. Met
+            tentoonstellingen in etalages, kunstroutes en uiteenlopende
+            kunstprojecten brengt Kunsttraject kunst letterlijk naar de straten
+            van de buurt.{" "}
+          </p>
+          <p>
+            Van schilderkunst en fotografie tot sculpturen, muurschilderingen en
+            andere vormen van beeldende kunst: de Staatsliedenbuurt biedt een
+            gevarieerd beeld van hedendaagse kunst en artistieke expressie. Soms
+            zichtbaar en herkenbaar, soms onverwacht verscholen op een gevel, in
+            een straat of achter een etalageruit.
+          </p>
+          <p>
+            Deze combinatie van een actieve kunstenaarsgemeenschap,
+            kunstinitiatieven en kunst in de openbare ruimte geeft de
+            Staatsliedenbuurt een eigen culturele identiteit. Een identiteit die
+            voortdurend in beweging is en waarin kunst een verbindende rol
+            speelt tussen kunstenaars, bewoners en hun leefomgeving.
+          </p>
+        </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default KunstEnCultuur
+export default KunstEnCultuur;

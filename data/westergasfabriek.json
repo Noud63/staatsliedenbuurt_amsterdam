@@ -121,9 +121,10 @@
       },
       {
         "name": "Museum Villa",
+        "closed": "permanently closed",
         "about": "Villa is een particulier museum en draait volledig op eigen kracht — we krijgen geen subsidie. Juist die onafhankelijke positie geeft ons de ruimte om onze eigen koers te varen. Om dit platform voor kunst en kunstenaars te bouwen. Om Villa een succes te laten zijn. Omdat Villa van top tot teen gebouwd is met kunstenaars, ontvangen zij een reguliere vergoeding en delen zij mee in het financiële succes van het museum. Steun van mensen en bedrijven die, net als wij, kunst een warm hart toedragen, is onmisbaar voor wat we doen.",
-        "website": "https://www.museumvilla.com/en/",
-        "route": "https://www.google.com/maps?q=52.3861269,4.8727214",
+        "website": "",
+        "route": "",
         "img": "villa.jpg"
       }
     ]
