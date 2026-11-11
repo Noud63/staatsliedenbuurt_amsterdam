@@ -31,7 +31,7 @@ const WeerMorgen = ({ data2, sunMoon, tomorrow }) => {
 
   return (
     <div className="mt-4 rounded-3xl border-2 p-2 font-semibold">
-      <div className="mb-10 mt-8 flex justify-center text-5xl">Amsterdam</div>
+      <div className="mb-10 mt-8 flex justify-center text-5xl max-xsm:mb-4 max-xsm:mt-5">Amsterdam</div>
 
       <div className="relative flex flex-col items-center justify-center">
         {data2.icon && (
@@ -48,7 +48,7 @@ const WeerMorgen = ({ data2, sunMoon, tomorrow }) => {
         </div>
       </div>
 
-      <div className="mt-10 flex flex-row items-center justify-center">
+      <div className="mt-10 flex flex-row items-center justify-center max-xsm:mt-6">
         <span className="bg-gradient-to-b from-yellow-600 to-yellow-800 bg-clip-text text-6xl font-semibold text-transparent [text-shadow:_0_18px_7px_rgb(161_98_7_/_70%)] max-lg:to-yellow-900">
           {" "}
           {Math.round(`${data2.temp}`)}
@@ -56,7 +56,7 @@ const WeerMorgen = ({ data2, sunMoon, tomorrow }) => {
         </span>
       </div>
 
-      <div className="mt-12 grid w-full grid-cols-3 grid-rows-2 bg-white text-yellow-900">
+      <div className="mt-12 grid w-full grid-cols-3 grid-rows-2 bg-white text-yellow-900 max-xsm:mt-10">
         <div className="flex items-center justify-center bg-yellow-800 py-2 text-white max-lg:bg-[#662909]">
           MaxTemp
         </div>

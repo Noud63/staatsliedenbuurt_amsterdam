@@ -28,7 +28,7 @@ const WeerVandaag = ({ data1, sunMoon }) => {
 
   return (
     <div className="mt-4 rounded-3xl border-2 p-2">
-      <div className="mb-10 mt-8 flex justify-center text-5xl font-semibold">
+      <div className="mb-10 mt-8 flex justify-center text-5xl font-semibold max-xsm:mb-4 max-xsm:mt-5">
         Amsterdam
       </div>
 
@@ -47,7 +47,7 @@ const WeerVandaag = ({ data1, sunMoon }) => {
         </div>
       </div>
 
-      <div className="mt-10 flex flex-row items-center justify-center">
+      <div className="mt-10 flex flex-row items-center justify-center max-xsm:mt-6">
         <span className="bg-gradient-to-b from-yellow-600 to-yellow-800 bg-clip-text text-6xl font-semibold text-transparent [text-shadow:_0_18px_7px_rgb(161_98_7_/_70%)] max-lg:to-yellow-900">
           {" "}
           {Math.round(`${data1.temp}`)}
@@ -55,7 +55,7 @@ const WeerVandaag = ({ data1, sunMoon }) => {
         </span>
       </div>
 
-      <div className="mt-12 grid w-full grid-cols-3 grid-rows-2 bg-white font-semibold text-yellow-900">
+      <div className="mt-12 grid w-full grid-cols-3 grid-rows-2 bg-white font-semibold text-yellow-900 max-xsm:mt-10">
         <div className="flex items-center justify-center bg-yellow-800 py-2 text-white max-lg:bg-[#662909]">
           MaxTemp
         </div>

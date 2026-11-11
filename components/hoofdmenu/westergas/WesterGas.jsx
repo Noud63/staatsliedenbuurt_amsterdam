@@ -56,7 +56,7 @@ const WesterGas = () => {
         <br />
       </div>
       <div
-        className="mx-auto mb-8 mt-4 flex max-h-[200px] w-full max-w-[620px] flex-col max-lg:max-w-full"
+        className="mx-auto mb-4 mt-4 flex max-h-[200px] w-full max-w-[620px] flex-col max-lg:max-w-full max-xsm:mb-0"
         onClick={() =>
           addSlide([
             { src: "/images/gashouder_1903.jpg", title: "Gashouder in 1903", width: 960, height: 640, description: "Oplevering van de gashouder in 1903" },

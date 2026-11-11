@@ -40,7 +40,7 @@ const CategorySection = ({ category }) => {
                 alt={business.name}
                 width={620}
                 height={200}
-                className="max-h-auto h-auto w-full max-w-[620px] object-cover max-lg:max-w-full"
+                className="max-h-auto h-auto w-full max-w-[620px] object-cover max-lg:max-w-full max-xsm:max-h-[125px] overflow-hidden"
               />
             </div>
           )}
