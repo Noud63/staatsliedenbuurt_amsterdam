@@ -1,14 +1,23 @@
-<h1>Staatsliedenbuurt</h1>
+# Staatsliedenbuurt News Scraper
 
-Nextjs 15 app router, NextAuth, SWR, next-intl (Internationalization (i18n)),Tailwind and MongoDB.</br></br>
+This project implements news scraping functionality for Staatsliedenbuurt-related content, with a focus on legal compliance with AT5.nl terms of service.
 
+## Implementation Details
 
-<div><img width="1919" height="1080" alt="Image" src="https://github.com/user-attachments/assets/6b01ebeb-5379-4bfe-9212-2368eb561765" /></div></br></br>
+### AT5.nl Scraping Approach
+The implementation uses the official AT5.nl RSS feed (`https://rss.at5.nl/rss`) instead of direct web scraping to comply with AT5.nl's disclaimer that prohibits content copying but permits RSS feed usage.
 
-![Image](https://github.com/user-attachments/assets/1fa0d40e-1e97-4a32-94b7-4917f789605f)</br></br>
+### Key Features
+- Keyword filtering for "staatsliedenbuurt" and related terms
+- Support for Dutch date formats ("vandaag", "gisteren", "14 apr. 2024", etc.)
+- Deduplication of news items
+- Backward compatibility with existing scraper structure
 
-![Image](https://github.com/user-attachments/assets/0b835cd0-354b-4d38-a732-3ed6ded687ea)</br></br>
+### Files
+- `at5-rss-integration.js`: Main RSS integration class
+- `scraper.js`: Updated scraper that uses RSS approach
+- `test-rss-integration.js`: Test verification
+- `test-at5-scraping.js`: Analysis of existing implementation
 
-![Image](https://github.com/user-attachments/assets/cc03206d-5994-483f-a4d5-8190c39f04c4)</br></br>
-
-![Image](https://github.com/user-attachments/assets/10bbe5ad-7e47-4570-abff-5078db6794c7)</br></br>
+## Usage
+The `StaatsliedenbuurtScraper` class automatically uses the RSS approach when fetching AT5.nl news content.
