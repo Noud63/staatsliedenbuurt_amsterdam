@@ -1,10 +1,9 @@
 import React from 'react'
+import RSSComponent from '@/components/hoofdmenu/nieuws/RSSComponent'
 
 const NieuwsPage = () => {
   return (
-    <div>
-      
-    </div>
+    <RSSComponent />
   )
 }
 

@@ -35,7 +35,8 @@ const allowedHostnames = [
   "uitmag.nl",
   "vmn-tweewieler.imgix.net",
   "images.squarespace-cdn.com",
-  "images.trvl-media.com"
+  "images.trvl-media.com",
+  "media.at5.nl"
 ];
 
 /** @type {import('next').NextConfig} */

@@ -52,10 +52,10 @@ export const POST = async (request) => {
         sender: userId,
         postId: postId,
       });
-      console.log(
-        "Comment owner Note:",
-        JSON.stringify("Note:", note, null, 2),
-      );
+      // console.log(
+      //   "Comment owner Note:",
+      //   JSON.stringify("Note:", note, null, 2),
+      // );
     } else if (
       parentId === null &&
       (post && post.userId.toString()) !== userId

@@ -25,7 +25,7 @@ const Beeld = () => {
 
   return (
     <>
-      <div className="flex flex-row justify-center border-b-2 pb-8 text-4xl font-semibold tracking-[.04em] max-lg:flex-col max-lg:pb-4 max-lg:text-4xl max-lg:tracking-normal max-md:text-3xl max-xm:text-[22px] gap-2 max-lg:gap-0">
+      <div className="flex flex-row justify-center border-b-2 pb-8 text-4xl font-bold max-lg:flex-col max-lg:pb-4 max-lg:text-4xl max-lg:tracking-normal max-md:text-3xl max-xm:text-[22px] gap-2 max-lg:gap-0">
         <div className="flex justify-center">{t("titel")}</div>
         <div className="flex justify-center max-lg:text-[20px] max-xm:text-sm max-lg:font-normal">{t("1900heden")}</div>
       </div>

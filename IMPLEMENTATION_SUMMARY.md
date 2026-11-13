@@ -17,7 +17,11 @@ Implemented complete AT5.nl news scraping functionality using RSS feed approach 
 - Updated `scrapeAT5News` method to use RSS instead of direct scraping
 - Preserved existing date parsing and deduplication logic
 
-### 3. Testing Files
+### 3. React Components with Word Limit Feature
+- `RSSComponent.jsx`: Displays news articles with 200-word limit and "Lees meer" functionality. Now fetches data from the /api/getrss endpoint instead of directly calling the filtering function.
+- `RSSSearchComponent.jsx`: Allows custom keyword search with same word limit feature
+
+### 4. Testing Files
 - `test-rss-integration.js`: Verifies RSS integration works with existing scraper structure
 - `test-at5-scraping.js`: Analyzes and validates existing scraping implementation
 - `final-comprehensive-test.js`: Complete end-to-end testing of the implementation
@@ -33,9 +37,10 @@ Implemented complete AT5.nl news scraping functionality using RSS feed approach 
 - Deduplication of news items
 - Error handling and fallback mechanisms
 - Backward compatibility with existing code
+- Article description word limit (200 words) with "Lees meer"/"Lees minder" functionality
 
 ## Usage
-The implementation is ready for use in the application. The `StaatsliedenbuurtScraper` class now automatically uses the RSS approach when fetching AT5.nl news.
+The implementation is ready for use in the application. The `StaatsliedenbuurtScraper` class now automatically uses the RSS approach when fetching AT5.nl news. The RSSComponent.jsx component fetches data from the /api/getrss endpoint which handles all RSS fetching and filtering server-side.
 
 ## Test Results
 - Successfully fetches 25 items from the AT5.nl RSS feed

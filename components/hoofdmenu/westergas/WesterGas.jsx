@@ -40,7 +40,7 @@ const WesterGas = () => {
 
   return (
     <div className="mx-auto mt-8 w-full max-w-[620px] text-white max-xl:px-4 max-md:mt-4 max-sm:mt-4 max-xsm:px-2">
-      <SectionHeader title="W e s t e r g a s" />
+      <SectionHeader title="Westergas" />
       <WestergasMenu categoryNames={categoryNames} />
 
       <div className="mx-auto mt-4 w-full max-w-[620px]">

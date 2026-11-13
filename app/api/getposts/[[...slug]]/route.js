@@ -69,7 +69,7 @@ export async function GET(request, { params }) {
     const likedPosts = new Set(likes.map((l) => l.postId.toString()));
 
     // console.log("Liked Posts:", likedPosts);
-    console.log("Likes:", likes);
+    // console.log("Likes:", likes);
 
     const postsWithComments = await Promise.all(
       posts.map((post) =>

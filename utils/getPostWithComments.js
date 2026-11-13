@@ -83,7 +83,7 @@ export async function postWithComments(
   const postAuthor = userMap[post.userId.toString()];
   const postLiked = likedPosts.has(post._id.toString());
 
-  console.log("Comments:", JSON.stringify(comments, null, 2));
+  // console.log("Comments:", JSON.stringify(comments, null, 2));
 
   return {
     ...post,
