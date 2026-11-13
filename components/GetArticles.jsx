@@ -35,8 +35,8 @@ const GetArticles = ({ keyWord }) => {
     if (!text) return "";
 
     return text
-      .replace(/<\/?(p|h2|a|span)\b[^>]*>/gi, "")
-      .replace(/&nbsp;|&euml;/gi, " ")
+      .replace(/<\/?(p|h2|a|span|br)\b[^>]*>/gi, "")
+      .replace(/&nbsp;|&euml;|&iuml;/gi, " ")
       .replace(/&egrave;/gi, "è")
       .trim();
   };
@@ -51,6 +51,7 @@ const GetArticles = ({ keyWord }) => {
 
     return words.slice(0, wordLimit).join(" ") + "...";
   };
+  
 
   // Function to toggle article expansion
   const toggleArticleExpansion = (index) => {
@@ -62,6 +63,7 @@ const GetArticles = ({ keyWord }) => {
     }
     setExpandedArticles(newExpanded);
   };
+
 
   if (loading)
     return (

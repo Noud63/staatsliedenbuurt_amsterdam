@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import GetArticles from "@/components/GetArticles";
+
 export default function RSSComponent() {
   const [keyWord, setKeyWord] = useState("west");
 
