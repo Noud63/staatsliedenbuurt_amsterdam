@@ -36,7 +36,7 @@ export default function RSSComponent() {
   if (error) return <div>Error: {error}</div>;
 
   // Function to truncate text to 200 words
-  const truncateText = (text, wordLimit = 200) => {
+  const truncateText = (text, wordLimit = 80) => {
     if (!text) return '';
 
     // Remove HTML tags and extra whitespace
@@ -76,7 +76,7 @@ export default function RSSComponent() {
             {articles.map((article, index) => {
               const isExpanded = expandedArticles.has(index);
               const fullDescription = article.description?.[0] || '';
-              const truncatedDescription = truncateText(fullDescription, 200);
+              const truncatedDescription = truncateText(fullDescription, 50);
 
               return (
                 <li
@@ -130,7 +130,7 @@ export default function RSSComponent() {
                       className="mt-2 max-w-full h-auto"
                     />
                   )}
-                  <div className="text-sm text-yellow-800 mt-2">Bron: AT5</div>
+                  <div className="text-sm text-yellow-800 mt-2"><a href={article.link} target="_blank" rel="noopener noreferrer">Bron: AT5</a></div>
                 </li>
               );
             })}
