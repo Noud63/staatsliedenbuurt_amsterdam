@@ -13,7 +13,7 @@ export default function RSSComponent() {
           </h1>
         </div>
         <div className="w-full mb-4 flex flex-row gap-2 font-semibold text-yellow-900 max-xsm:flex-col">
-          <div className="flex-1">
+          <div className="w-[33%] max-xsm:w-full">
             <button
               className="w-full items-center justify-center rounded-full bg-white px-4 py-2 max-xsm:w-full"
               onClick={() => setKeyWord("staatsliedenbuurt")}
