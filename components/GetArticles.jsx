@@ -18,9 +18,10 @@ const GetArticles = ({ keyWord }) => {
           `/api/getrss?keyword=${encodeURIComponent(keyWord)}`
         );
 
-        if (!response.headers.get("content-type")?.includes("application/json")) {
+        const contentType = response.headers.get("content-type") || "missing";
+        if (!contentType.toLowerCase().includes("application/json")) {
           throw new Error(
-            `RSS API returned an unexpected response (${response.status} ${response.statusText}).`
+            `RSS API returned a non-JSON response (HTTP ${response.status}, content-type: ${contentType}, URL: ${response.url}).`
           );
         }
 
