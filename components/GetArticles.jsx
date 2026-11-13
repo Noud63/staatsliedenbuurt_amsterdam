@@ -12,11 +12,21 @@ const GetArticles = ({ keyWord }) => {
     const fetchArticles = async () => {
       try {
         setLoading(true);
+        setError(null);
         // Fetch articles from API route
-        const response = await fetch(`/api/getrss?keyword=${keyWord}`);
+        const response = await fetch(
+          `/api/getrss?keyword=${encodeURIComponent(keyWord)}`
+        );
+
+        if (!response.headers.get("content-type")?.includes("application/json")) {
+          throw new Error(
+            `RSS API returned an unexpected response (${response.status} ${response.statusText}).`
+          );
+        }
+
         const data = await response.json();
 
-        if (!data.success) {
+        if (!response.ok || !data.success) {
           throw new Error(data.error || "Failed to fetch articles");
         }
 
