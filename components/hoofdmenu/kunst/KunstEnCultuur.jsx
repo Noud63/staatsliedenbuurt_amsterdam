@@ -1,5 +1,5 @@
-"use client"
-import React,{useState} from "react";
+"use client";
+import React, { useState } from "react";
 import Image from "next/image";
 import SectionHeader from "@/components/SectionHeader";
 import Lightbox from "yet-another-react-lightbox";
@@ -9,9 +9,8 @@ import Captions from "yet-another-react-lightbox/plugins/captions";
 import "yet-another-react-lightbox/plugins/captions.css";
 import { createSlides } from "@/components/Slides";
 const KunstEnCultuur = () => {
-
- const [open, setOpen] = useState(false);
-    const [slides, setSlides] = useState([]);
+  const [open, setOpen] = useState(false);
+  const [slides, setSlides] = useState([]);
 
   const addSlide = (imageObject) => {
     slides.length = 0;
@@ -96,20 +95,21 @@ const KunstEnCultuur = () => {
             </li>
           </ul>
         </div>
-        <div className="flex mt-4 cursor-pointer"
-         onClick={() =>
-              addSlide({
-                src: "/images/kunsttraject/kunsttraject_map.jpg",
-                title: "Kunsttraject",
-              })
-            }
+        <div
+          className="mt-4 flex cursor-pointer"
+          onClick={() =>
+            addSlide({
+              src: "/images/kunsttraject/kunsttraject_map.jpg",
+              title: "Kunsttraject",
+            })
+          }
         >
           <Image
             src="/images/kunsttraject/kunsttraject_map.jpg"
             width={400}
             height={445}
             alt="kunsttraject"
-            className="w-[400px] h-auto object-cover"
+            className="h-auto w-[400px] object-cover"
             onClick={() => setOpen(true)}
           />
         </div>
@@ -119,17 +119,33 @@ const KunstEnCultuur = () => {
             Kunstgaleries
           </h2>
           <div className="mt-4 text-lg">
-            In de Staatsliedenbuurt in Amsterdam vind je traditionele, afgesloten galeries in mindere mate.<br />
+            In de Staatsliedenbuurt in Amsterdam vind je traditionele,
+            afgesloten galeries in mindere mate.
+            <br />
             Het zijn er slechts twee:
-            <ul className="list-inside list-disc mt-4">
-              <li>
-                The Millen House, Fannius Scholtenstraat 89
+            <ul className="mt-4 list-inside list-disc">
+              <li className="">
+                <a
+                  href="https://themillenhouse.com/"
+                  alt="the millen house"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  The Millen House, Fannius Scholtenstr 89
+                </a>
               </li>
               <li>
-                Mo-Artgallery, Haarlemmerweg 153HS
+                <a
+                  href="https://www.mo-artgallery.com/"
+                  alt="mo-artgallery"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
+                  {" "}
+                  Mo-Artgallery, Haarlemmerweg 153HS
+                </a>
               </li>
             </ul>
-
           </div>
         </div>
         <div>
@@ -148,9 +164,10 @@ const KunstEnCultuur = () => {
           open={open}
           close={() => setOpen(false)}
           plugins={[Zoom, Captions]}
-          zoom={{ 
-            scrollToZoom: true, 
-            maxZoomPixelRatio: 5 }}
+          zoom={{
+            scrollToZoom: true,
+            maxZoomPixelRatio: 5,
+          }}
           slides={slides}
           carousel={{ finite: slides.length <= 1 }}
           // render={{
