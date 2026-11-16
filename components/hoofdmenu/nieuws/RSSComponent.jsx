@@ -4,6 +4,7 @@ import GetArticles from "@/components/GetArticles";
 
 export default function RSSComponent() {
   const [keyWord, setKeyWord] = useState("west");
+  const [expandedArticles, setExpandedArticles] = useState(new Set());
 
   return (
     <div className="mt-8 min-h-screen">
@@ -17,7 +18,7 @@ export default function RSSComponent() {
           <div className="w-[33%] max-xsm:w-full">
             <button
               className="w-full items-center justify-center rounded-full bg-white px-4 py-2 max-xsm:w-full"
-              onClick={() => setKeyWord("staatsliedenbuurt")}
+              onClick={() => {setKeyWord("staatsliedenbuurt"); setExpandedArticles(new Set())}}
             >
               Staatsliedenbuurt
             </button>
@@ -25,19 +26,19 @@ export default function RSSComponent() {
           <div className="flex-1 flex flex-row gap-2">
             <button
               className="w-full flex items-center justify-center rounded-full bg-white px-4 py-2 max-xsm:w-full"
-              onClick={() => setKeyWord("west")}
+              onClick={() => {setKeyWord("west"); setExpandedArticles(new Set())}}
             >
               West
             </button>
             <button
               className="w-full flex items-center justify-center rounded-full bg-white px-4 py-2 max-xsm:w-full"
-              onClick={() => setKeyWord("amsterdam")}
+              onClick={() => {setKeyWord("amsterdam");  setExpandedArticles(new Set())}}
             >
               Amsterdam
             </button>
           </div>
         </div>
-        <GetArticles keyWord={keyWord} />
+        <GetArticles keyWord={keyWord} expandedArticles={expandedArticles} setExpandedArticles={setExpandedArticles}/>
       </div>
     </div>
   );

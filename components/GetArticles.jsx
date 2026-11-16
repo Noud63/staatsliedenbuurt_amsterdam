@@ -2,11 +2,11 @@ import React, { useState, useEffect } from "react";
 import Spinner from "./Spinner";
 import Image from "next/image";
 
-const GetArticles = ({ keyWord }) => {
+const GetArticles = ({ keyWord, expandedArticles, setExpandedArticles }) => {
   const [articles, setArticles] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [expandedArticles, setExpandedArticles] = useState(new Set());
+  
 
   useEffect(() => {
     const fetchArticles = async () => {
@@ -36,7 +36,7 @@ const GetArticles = ({ keyWord }) => {
 
     return text
       .replace(/<\/?(p|h2|a|span|br)\b[^>]*>/gi, "")
-      .replace(/&nbsp;|&euml;|&iuml;/gi, " ")
+      .replace(/&nbsp;|&euml;|&iuml;|&lsquo;|&ldquo;|&rsquo;/gi, " ")
       .replace(/&egrave;/gi, "è")
       .trim();
   };
