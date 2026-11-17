@@ -1,6 +1,23 @@
 # Staatsliedenbuurt Amsterdam
 
+A Next.js application dedicated to De Staatsliedenbuurt, a neighbourhood in the western part of Amsterdam.
+
+## Key Components
+
+- NextJS 15
+- React 19
+- NextAuth 5
+- Next-intl
+- SWR
+- Tailwind 3
+- MongoDB
+- Cloudinary
+
+## Screenshots
+
 <img width="1920" height="1080" alt="sl_1" src="https://github.com/user-attachments/assets/e41290f6-64d4-447a-bfad-51a5242b117d" /><br /><br />
+
+<img width="1920" height="1080" alt="sl_5" src="https://github.com/user-attachments/assets/9c2512d6-e5dd-43e0-8b55-72ad156edcb1" /><br /><br />
 
 <img width="1600" height="903" alt="sl_duo" src="https://github.com/user-attachments/assets/4d55d55c-fbe6-41e5-8443-91d42e6f759c" /><br /><br />
 
