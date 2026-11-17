@@ -157,6 +157,67 @@ const KunstEnCultuur = () => {
           <h2 className="mt-8 flex justify-center rounded-full bg-white py-2 pl-2 text-xl font-semibold text-yellow-900">
             Routes en Initiatieven
           </h2>
+          <div className="text-lg">
+            <h3 className="mb-4 mt-4 text-xl font-semibold">
+              Kunstwandeling:{" "}
+              <span className="font-normal">
+                Westerpark en Staatsliedenbuurt
+              </span>
+            </h3>
+            <p className="mb-2 font-semibold">
+              Rondwandeling ca. 2,5 uur langs 28 locaties. Met bijna 35 kleine
+              en grote openbare kunstwerken. Naar keuze kan de route worden
+              gehalveerd of in tweeën gelopen; zie daarvoor de stippellijn op de
+              kaart.
+            </p>
+            <p>
+              De wandeling start op de Haarlemmerweg ter hoogte van de brug bij
+              het begin van De Wittenkade, aan de voet van ‘de roze toren’. De
+              route gaat via het standbeeld van Domela Nieuwenhuis uit 1931 en
+              de ‘Groeistam’ van Michiel Schierbeek uit 1986 het ‘oude’
+              Westerpark in. Als integraal onderdeel van renovatie en
+              uitbreiding zijn hier eigentijdse kunstwerken geplaatst. Na het
+              ‘nieuwe’ Westerpark van de Amerikaanse architect Kathryn
+              Gustafson, in 2003 voltooid met een sculptuur van Herman Makkink,
+              loopt de route naar het Gedenkteken Gerard Reve van kunstenaar
+              Margriet Kemper en fotografe Rineke Dijkstra (2006). Vanuit de
+              ‘milieuwijk’ gaat het vervolgens naar de ‘Abri & Peperbus’ van
+              Frank Halmans (1996) en andere kunstwerken uit de tijd van de
+              stadsvernieuwing in de Staatsliedenbuurt. Zoals ook de ‘Knoop’ van
+              Jan van der Vaart uit 1980. En met een slinger door de buurt komt
+              de wandeling terug op het beginpunt bij de Haarlemmerweg en het
+              Nassauplein.
+            </p>
+            <p className="mb-4 mt-4">
+              Hier vindt je de plattegrond met alle kunstwerken op de route:
+              <a
+                href="https://stadsdeelwest.kunstwacht.nl/css/frontend/stadsdeelwest/route2.pdf"
+                rel="noopener noreferrer"
+                alt=""
+                className="underline"
+              >
+                <span className="pl-2">kunstroute.pdf</span>
+              </a>
+            </p>
+            <div
+              className="mt-4 flex cursor-pointer"
+              onClick={() =>
+                addSlide({
+                  src: "/images/kunsttraject/kunstroute_map.jpg",
+                  title: "Kunstroute",
+                })
+              }
+            >
+              <Image
+                src="/images/kunsttraject/kunstroute_map.jpg"
+                width={400}
+                height={445}
+                alt="kunsttroute"
+                className="h-auto w-[400px] object-cover"
+                onClick={() => setOpen(true)}
+              />
+            </div>
+          </div>
         </div>
       </div>
       {slides.length > 0 && (
