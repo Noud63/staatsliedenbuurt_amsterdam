@@ -73,19 +73,19 @@ const KunstEnCultuur = () => {
                 Kunsttraject Amsterdam:
               </span>{" "}
               Stichting Kunsttraject is een kunstenaarsinitiatief in Amsterdam,
-              stadsdeel West. Kunsttraject verzorgt tentoonstellingen in
-              etalages in de Staatsliedenbuurt en in de Zeeheldenbuurt.
-              Daarnaast organiseert Kunsttraject projecten op het gebied van
-              beeldende kunst, voornamelijk in stadsdeel West.
+              stadsdeel West.
+              <br />
+              Kunsttraject verzorgt tentoonstellingen in etalages in de
+              Staatsliedenbuurt en in de Zeeheldenbuurt. Daarnaast organiseert
+              Kunsttraject projecten op het gebied van beeldende kunst,
+              voornamelijk in stadsdeel West.
             </li>
             <li className="mt-4">
-              <span className="font-semibold text-white">
-                Stoep (door kunstenaarscollectief POUBELLE):
-                <span className="font-normal text-white">
-                  {" "}
-                  ’Stoep - De kunst ligt op straat’ is een kunstproject van
-                  POUBELLE in de etalages van Kunsttraject.
-                </span>
+              <span className="font-semibold text-white">Stoep: </span>
+              <span className="font-normal text-white">
+                {" "}
+                ’Stoep - De kunst ligt op straat’ is een kunstproject van
+                POUBELLE in de etalages van Kunsttraject.
               </span>
               <br />
               POUBELLE is een kunstenaarscollectief (bestaande uit een steeds
@@ -131,8 +131,16 @@ const KunstEnCultuur = () => {
                   rel="noopener noreferrer"
                   target="_blank"
                 >
-                  The Millen House, Fannius Scholtenstr 89
+                  <span className="underline">The Millen House</span>
+                  <br />
+                  <span className="ml-6">Fannius Scholtenstr 89</span>
                 </a>
+                <p className="my-4">
+                  The Millen House, founded in 2022 by architect and curator
+                  Niek Schoenmakers, is a gallery and project space dedicated to
+                  uniting 20th-century and contemporary art, design, and
+                  architecture.
+                </p>
               </li>
               <li>
                 <a
@@ -142,8 +150,16 @@ const KunstEnCultuur = () => {
                   target="_blank"
                 >
                   {" "}
-                  Mo-Artgallery, Haarlemmerweg 153HS
+                  <span className="underline">Mo-Artgallery</span>
+                  <br />
+                  <span className="ml-6">Haarlemmerweg 153HS</span>
                 </a>
+                <p className="mt-4">
+                  Mo-Artgallery is dé kunstbestemming voor gesigneerde en
+                  genummerde kunstenaarsedities, hedendaagse kunstedities,
+                  hedendaagse kunstfotografie, multiples, kunstedities en
+                  gelimiteerde kunstprints.
+                </p>
               </li>
             </ul>
           </div>
@@ -152,10 +168,18 @@ const KunstEnCultuur = () => {
           <h2 className="mt-8 flex justify-center rounded-full bg-white py-2 pl-2 text-xl font-semibold text-yellow-900">
             Kunst in de Openbare Ruimte
           </h2>
+          <p className="mt-4 text-lg">
+            Staatsliedenbuurt in Amsterdam-West heeft een rijke traditie op het
+            gebied van kunst in de openbare ruimte, met een mix van permanente
+            beelden, tijdelijke installaties en creatieve initiatieven in de
+            buurt. Er bestaat een te volgen kunstroute door de Staatsliedenbuurt
+            langs tal van kunstwerken in de openbare ruimte. Kijk hieronder bij
+            Routes & Initiatieven voor meer informatie.
+          </p>
         </div>
         <div>
           <h2 className="mt-8 flex justify-center rounded-full bg-white py-2 pl-2 text-xl font-semibold text-yellow-900">
-            Routes en Initiatieven
+            Routes & Initiatieven
           </h2>
           <div className="text-lg">
             <h3 className="mb-4 mt-4 text-xl font-semibold">
@@ -164,7 +188,7 @@ const KunstEnCultuur = () => {
                 Westerpark en Staatsliedenbuurt
               </span>
             </h3>
-            <p className="mb-2 font-semibold">
+            <p className="mb-4 font-semibold">
               Rondwandeling ca. 2,5 uur langs 28 locaties. Met bijna 35 kleine
               en grote openbare kunstwerken. Naar keuze kan de route worden
               gehalveerd of in tweeën gelopen; zie daarvoor de stippellijn op de
