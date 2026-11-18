@@ -35,7 +35,7 @@ const GetArticles = ({ keyWord, expandedArticles, setExpandedArticles }) => {
     if (!text) return "";
 
     return text
-      .replace(/<\/?(p|h2|a|span|br|<em>)\b[^>]*>/gi, "")
+      .replace(/<\/?(p|h2|a|span|br|em|strong)\b[^>]*>/gi, "")
       .replace(/&nbsp;/gi, " ")
       .replace(/&egrave;/gi, "è")
       .replace(/&rsquo;/gi, "’")
@@ -44,6 +44,7 @@ const GetArticles = ({ keyWord, expandedArticles, setExpandedArticles }) => {
       .replace(/&iuml;/gi, "ï")
       .replace(/&ldquo;/gi, "“")
       .replace(/&oacute;/gi, "ó")
+      .replace(/&eacute;/gi, "é")
       .trim();
   };
 
