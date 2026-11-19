@@ -1,21 +1,83 @@
 "use client";
-import React, { useState } from "react";
-import Image from "next/image";
+import React from "react";
 import SectionHeader from "@/components/SectionHeader";
-import Lightbox from "yet-another-react-lightbox";
-import Zoom from "yet-another-react-lightbox/plugins/zoom";
 import "yet-another-react-lightbox/styles.css";
-import Captions from "yet-another-react-lightbox/plugins/captions";
 import "yet-another-react-lightbox/plugins/captions.css";
 import { createSlides } from "@/components/Slides";
-const KunstEnCultuur = () => {
-  const [open, setOpen] = useState(false);
-  const [slides, setSlides] = useState([]);
+import LightBoxComponent from "@/components/LightBoxComponent";
 
-  const addSlide = (imageObject) => {
-    slides.length = 0;
-    slides.push(imageObject);
-  };
+const KunstEnCultuur = () => {
+
+  const images = [
+    {
+      buitenkunst: [
+        {
+          src: "/images/vendelendewolf.jpg",
+          alt: "No, Vendel en DeWolf",
+          info: "'No' (1997)",
+          jaar: 1997,
+          title: "No",
+          description: "'No' (1997), Vendel en DeWolf",
+        },
+        {
+          src: "/images/noelharding.jpg",
+          alt: "oze lijn, waterbak en arm' (1992), Noel Harding",
+          info: "'Roze lijn, waterbak en arm' (1992)",
+          jaar: 1992,
+          title: "'Roze lijn, waterbak en arm'",
+          description: "'Roze lijn, waterbak en arm' (1992), Noel Harding",
+        },
+        {
+          src: "/images/matthijsvandenbosch.jpg",
+          alt: "matthijsvandenbosch",
+          info: " Mini show (2024)",
+          jaar: 2024,
+          title: "Matthijs van den Bosch",
+          description: "Matthijs van den Bosch, schilderijen (2024)",
+        },
+        {
+          src: "/images/tonzwerver.jpg",
+          alt: "Ton Zwerver",
+          info: "Ton Zwerver (Stoep)",
+          jaar: 2026,
+          title: "Ton Zwerver",
+          description: "Ton Zwerver, Stoep",
+        },
+      ],
+    },
+    {
+      kunsttraject: [
+        {
+          src: "/images/kunsttraject/kunsttraject_map.jpg",
+          alt: "Kunsttraject",
+          info: "Kunsttraject",
+          jaar: 2026,
+          title: "Kunsttraject",
+          description: "Kunsttraject Staatsliedenbuurt",
+        },
+        {
+          src: "/images/kunsttraject/stoep.jpg",
+          alt: "Stoep",
+          info: "Stoep, de kunst ligt op straat.",
+          jaar: 2026,
+          title: "Stoep, de kunst ligt op straat",
+          description: "Stoep, de kunst ligt op straat",
+        },
+      ],
+    },
+    {
+      routes: [
+        {
+          src: "/images/kunsttraject/kunstroute_map.jpg",
+          alt: "Kunstwandeling",
+          info: "Kunstwandeling routekaart",
+          jaar: 2026,
+          title: "Kunstwandeling routekaart",
+          description: "Kunstwandeling routekaart",
+        },
+      ],
+    },
+  ];
 
   return (
     <div className="mx-auto mt-8 w-full max-w-[1280px] px-4 text-white max-2xl:max-w-[960px] max-md:mt-4 max-sm:mt-4 max-xsm:px-2">
@@ -95,23 +157,9 @@ const KunstEnCultuur = () => {
             </li>
           </ul>
         </div>
-        <div
-          className="mt-4 flex cursor-pointer"
-          onClick={() =>
-            addSlide({
-              src: "/images/kunsttraject/kunsttraject_map.jpg",
-              title: "Kunsttraject",
-            })
-          }
-        >
-          <Image
-            src="/images/kunsttraject/kunsttraject_map.jpg"
-            width={400}
-            height={445}
-            alt="kunsttraject"
-            className="h-auto w-[400px] object-cover"
-            onClick={() => setOpen(true)}
-          />
+
+        <div className="max-sm: mt-6 grid grid-cols-[repeat(auto-fill,_minmax(300px,_1fr))] gap-2 max-sm:mt-4">
+          <LightBoxComponent images={images[1].kunsttraject} />
         </div>
 
         <div>
@@ -131,7 +179,9 @@ const KunstEnCultuur = () => {
                   rel="noopener noreferrer"
                   target="_blank"
                 >
-                  <span className="underline">The Millen House</span>
+                  <span className="border-b font-semibold">
+                    The Millen House
+                  </span>
                   <br />
                   <span className="ml-6">Fannius Scholtenstr 89</span>
                 </a>
@@ -150,7 +200,7 @@ const KunstEnCultuur = () => {
                   target="_blank"
                 >
                   {" "}
-                  <span className="underline">Mo-Artgallery</span>
+                  <span className="border-b font-semibold">Mo-Artgallery</span>
                   <br />
                   <span className="ml-6">Haarlemmerweg 153HS</span>
                 </a>
@@ -176,6 +226,40 @@ const KunstEnCultuur = () => {
             langs tal van kunstwerken in de openbare ruimte. Kijk hieronder bij
             Routes & Initiatieven voor meer informatie.
           </p>
+          <p className="mt-4">
+            <span className="mb-2 inline-block border-b text-xl font-semibold">
+              Hieronder enkele voorbeelden van kunst in de openbare ruimte.
+            </span>
+            <br />
+            "No", gerealiseerd in 1997 door het duo Vendel & de Wolf.
+            <br />
+            Het werk is te bewonderen aan het Waterspiegelplein (poortgebouw,
+            blok 5).
+          </p>
+          <p className="mt-4">
+            "Roze lijn, waterbak en arm", gerealiseerd in 1997 door Noel
+            Harding.
+            <br />
+            Het werk is te bewonderen aan het Nassauplein op het dak van het
+            roze flatgebouw.
+          </p>
+          <p className="mt-4">
+            Mini-expositie ‘Scènes uit Marokko’ van Matthijs van den Bosch.
+            <br />
+            Het werk was te bewonderen in de onderdoorgang aan de van Limburg
+            Stirumstraat/J.M. Kemperstraat.
+            <br />
+            Op deze locatie vinden wisselende mini-exposities plaats.
+          </p>
+          <p className="mt-4">
+            To Zwerver realiseerde een werk in samenwerking met KunstTraject.
+            <br />
+            Dit werk was te zien in een van de etelages van Stichting
+            KunstTraject.
+          </p>
+          <div className="mt-6 grid grid-cols-[repeat(auto-fill,_minmax(300px,_1fr))] gap-2 max-sm:mt-4">
+            <LightBoxComponent images={images[0].buitenkunst} />
+          </div>
         </div>
         <div>
           <h2 className="mt-8 flex justify-center rounded-full bg-white py-2 pl-2 text-xl font-semibold text-yellow-900">
@@ -223,45 +307,12 @@ const KunstEnCultuur = () => {
                 <span className="pl-2">kunstroute.pdf</span>
               </a>
             </p>
-            <div
-              className="mt-4 flex cursor-pointer"
-              onClick={() =>
-                addSlide({
-                  src: "/images/kunsttraject/kunstroute_map.jpg",
-                  title: "Kunstroute",
-                })
-              }
-            >
-              <Image
-                src="/images/kunsttraject/kunstroute_map.jpg"
-                width={400}
-                height={445}
-                alt="kunsttroute"
-                className="h-auto w-[400px] object-cover"
-                onClick={() => setOpen(true)}
-              />
+            <div className="mt-6 grid grid-cols-[repeat(auto-fill,_minmax(300px,_1fr))] gap-2 max-sm:mt-4">
+              <LightBoxComponent images={images[2].routes} />
             </div>
           </div>
         </div>
       </div>
-      {slides.length > 0 && (
-        <Lightbox
-          open={open}
-          close={() => setOpen(false)}
-          plugins={[Zoom, Captions]}
-          zoom={{
-            scrollToZoom: true,
-            maxZoomPixelRatio: 5,
-          }}
-          slides={slides}
-          carousel={{ finite: slides.length <= 1 }}
-          // render={{
-          //   buttonPrev: slides.length <= 1 ? () => null : undefined,
-          //   buttonNext: slides.length <= 1 ? () => null : undefined,
-          // }}
-          styles={{ container: { backgroundColor: "rgba(0, 0, 0, 0.85)" } }}
-        />
-      )}
     </div>
   );
 };

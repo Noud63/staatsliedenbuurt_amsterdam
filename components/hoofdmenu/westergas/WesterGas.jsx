@@ -62,8 +62,8 @@ const WesterGas = () => {
             { src: "/images/gashouder_1903.jpg", title: "Gashouder in 1903", width: 960, height: 640, description: "Oplevering van de gashouder in 1903" },
             { src: "/images/gashouder_rave.jpg", title: "Rave party 2021", width: 960, height: 580, description: "Awakenings Rave party in 2021" },
           ])
-        }
-      >
+         }
+         >
         <Image
           src="/images/gashouder.jpg"
           alt="Westergas"
@@ -71,8 +71,8 @@ const WesterGas = () => {
           height={200}
           className="max-h-[200px] w-[620px] cursor-pointer object-cover max-lg:w-full"
           onClick={() => setOpen(true)}
-        />
-        <div className="flex">
+         />
+         <div className="flex">
           <span className="flex-1 py-1 text-[12px]">Gashouder in 1903</span>
           <span className="flex-1 justify-center py-1 pl-1 text-[12px]">
             Rave party 2021
