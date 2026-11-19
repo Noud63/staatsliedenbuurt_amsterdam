@@ -58,7 +58,7 @@ const KunstEnCultuur = () => {
         {
           src: "/images/kunsttraject/stoep.jpg",
           alt: "Stoep",
-          info: "Stoep, de kunst ligt op straat.",
+          info: "Stoep",
           jaar: 2026,
           title: "Stoep, de kunst ligt op straat",
           description: "Stoep, de kunst ligt op straat",
@@ -158,8 +158,8 @@ const KunstEnCultuur = () => {
           </ul>
         </div>
 
-        <div className="max-sm: mt-6 grid grid-cols-[repeat(auto-fill,_minmax(300px,_1fr))] gap-2 max-sm:mt-4">
-          <LightBoxComponent images={images[1].kunsttraject} />
+        <div className="max-sm: mt-6 grid grid-cols-[repeat(auto-fill,_minmax(260px,_1fr))] gap-2 max-sm:mt-4">
+          <LightBoxComponent images={images[1].kunsttraject} height="auto"/>
         </div>
 
         <div>
@@ -228,7 +228,7 @@ const KunstEnCultuur = () => {
           </p>
           <p className="mt-4">
             <span className="mb-2 inline-block border-b text-xl font-semibold">
-              Hieronder enkele voorbeelden van kunst in de openbare ruimte.
+              Hier enkele voorbeelden van kunst in de openbare ruimte.
             </span>
             <br />
             "No", gerealiseerd in 1997 door het duo Vendel & de Wolf.
@@ -252,12 +252,12 @@ const KunstEnCultuur = () => {
             Op deze locatie vinden wisselende mini-exposities plaats.
           </p>
           <p className="mt-4">
-            To Zwerver realiseerde een werk in samenwerking met KunstTraject.
+            Ton Zwerver realiseerde een werk in samenwerking met KunstTraject.
             <br />
             Dit werk was te zien in een van de etelages van Stichting
             KunstTraject.
           </p>
-          <div className="mt-6 grid grid-cols-[repeat(auto-fill,_minmax(300px,_1fr))] gap-2 max-sm:mt-4">
+          <div className="mt-6 grid grid-cols-[repeat(auto-fill,_minmax(250px,_1fr))] gap-2 max-sm:mt-4">
             <LightBoxComponent images={images[0].buitenkunst} />
           </div>
         </div>
@@ -307,7 +307,7 @@ const KunstEnCultuur = () => {
                 <span className="pl-2">kunstroute.pdf</span>
               </a>
             </p>
-            <div className="mt-6 grid grid-cols-[repeat(auto-fill,_minmax(300px,_1fr))] gap-2 max-sm:mt-4">
+            <div className="mt-6 grid grid-cols-[repeat(auto-fill,_minmax(260px,_1fr))] gap-2 max-sm:mt-4">
               <LightBoxComponent images={images[2].routes} />
             </div>
           </div>

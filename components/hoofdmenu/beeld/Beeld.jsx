@@ -18,7 +18,7 @@ const Beeld = () => {
         </div>
       </div>
       <div className="mt-6 grid grid-cols-[repeat(auto-fill,_minmax(260px,_1fr))] gap-2 max-sm:mt-4">
-        <LightBoxComponent images={sortedImages} />
+        <LightBoxComponent images={sortedImages} height="260px"/>
       </div>
     </>
   );

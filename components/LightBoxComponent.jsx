@@ -4,7 +4,7 @@ import Captions from "yet-another-react-lightbox/plugins/captions";
 import Zoom from "yet-another-react-lightbox/plugins/zoom";
 import Image from "next/image";
 
-const LightBoxComponent = ({images}) => {
+const LightBoxComponent = ({images, height="260px"}) => {
   const [open, setOpen] = useState(false);
   const [slides, setSlides] = useState([]);
 
@@ -19,7 +19,8 @@ const LightBoxComponent = ({images}) => {
       {images.map((image, index) => (
         <div
           key={index}
-          className="relative  border border-white"
+          className="relative border border-white"
+          style={{height}}
           onClick={() => addSlide(image)}
           >
           <div className="relative h-full w-full">
