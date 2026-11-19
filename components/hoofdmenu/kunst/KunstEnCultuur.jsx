@@ -231,13 +231,13 @@ const KunstEnCultuur = () => {
               Hier enkele voorbeelden van kunst in de openbare ruimte.
             </span>
             <br />
-            {'"No",'} gerealiseerd in 1997 door het duo Vendel & de Wolf.
+            "No",gerealiseerd in 1997 door het duo Vendel & de Wolf.
             <br />
             Het werk is te bewonderen aan het Waterspiegelplein (poortgebouw,
             blok 5).
           </p>
           <p className="mt-4">
-            {'"Roze lijn, waterbak en arm",'} gerealiseerd in 1997 door Noel
+            "Roze lijn, waterbak en arm", gerealiseerd in 1997 door Noel
             Harding.
             <br />
             Het werk is te bewonderen aan het Nassauplein op het dak van het
