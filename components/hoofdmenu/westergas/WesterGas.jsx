@@ -11,6 +11,26 @@ import Captions from "yet-another-react-lightbox/plugins/captions";
 import "yet-another-react-lightbox/plugins/captions.css";
 import SectionHeader from "@/components/SectionHeader";
 import { createSlides } from "@/components/Slides";
+import LightBoxComponent from "@/components/LightBoxComponent";
+
+const gashouder = [
+  {
+    src: "/images/gashouder_1903.jpg",
+    alt: "Gashouder 1903",
+    info: "Gashouder 1903",
+    jaar: 1903,
+    title: "Gashouder in 1903",
+    description: "Oplevering van de gashouder in 1903",
+  },
+  {
+    src: "/images/gashouder_rave.jpg",
+    alt: "Rave party 2021",
+    info: "Rave party 2021",
+    jaar: 1903,
+    title: "Rave party 2021",
+    description: "Awakenings Rave party in 2021",
+  },
+];
 
 const WesterGas = () => {
   const [open, setOpen] = useState(false);
@@ -20,8 +40,6 @@ const WesterGas = () => {
     westergasfabriek.map((item) => [item.category, item]),
   );
 
-  console.log("Categories:", categories);
-
   const categoryNames = Object.keys(categories);
 
   const addSlide = (imageArray) => {
@@ -29,8 +47,8 @@ const WesterGas = () => {
       src: img.src,
       width: img.width,
       height: img.height,
-      title: img.title, 
-      description: img.description, 
+      title: img.title,
+      description: img.description,
     }));
 
     const optimizedSlides = createSlides(slideWithMetadata);
@@ -55,30 +73,10 @@ const WesterGas = () => {
         branden, krijgt energie vandaag een nieuwe betekenis.
         <br />
       </div>
-      <div
-        className="mx-auto mb-4 mt-4 flex max-h-[200px] w-full max-w-[620px] flex-col max-lg:max-w-full max-xsm:mb-0"
-        onClick={() =>
-          addSlide([
-            { src: "/images/gashouder_1903.jpg", title: "Gashouder in 1903", width: 960, height: 640, description: "Oplevering van de gashouder in 1903" },
-            { src: "/images/gashouder_rave.jpg", title: "Rave party 2021", width: 960, height: 580, description: "Awakenings Rave party in 2021" },
-          ])
-         }
-         >
-        <Image
-          src="/images/gashouder.jpg"
-          alt="Westergas"
-          width={620}
-          height={200}
-          className="max-h-[200px] w-[620px] cursor-pointer object-cover max-lg:w-full"
-          onClick={() => setOpen(true)}
-         />
-         <div className="flex">
-          <span className="flex-1 py-1 text-[12px]">Gashouder in 1903</span>
-          <span className="flex-1 justify-center py-1 pl-1 text-[12px]">
-            Rave party 2021
-          </span>
-        </div>
+      <div className="max-sm: mt-6 grid grid-cols-[repeat(auto-fill,_minmax(300px,_1fr))] gap-2 max-sm:mt-4">
+        <LightBoxComponent images={gashouder} height="auto" />
       </div>
+
       <div className="mx-auto flex max-w-[620px] flex-col gap-4 max-lg:max-w-full">
         <CategorySection category={categories["Eten & Drinken"]} />
         <CategorySection category={categories["Kijk & Luister"]} />

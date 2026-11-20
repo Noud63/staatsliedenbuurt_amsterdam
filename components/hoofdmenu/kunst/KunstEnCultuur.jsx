@@ -5,79 +5,11 @@ import "yet-another-react-lightbox/styles.css";
 import "yet-another-react-lightbox/plugins/captions.css";
 import { createSlides } from "@/components/Slides";
 import LightBoxComponent from "@/components/LightBoxComponent";
+import kunstencultuur from "../../../data/kunstencultuur.json"
 
 const KunstEnCultuur = () => {
 
-  const images = [
-    {
-      buitenkunst: [
-        {
-          src: "/images/vendelendewolf.jpg",
-          alt: "No, Vendel en DeWolf",
-          info: "'No' (1997)",
-          jaar: 1997,
-          title: "No",
-          description: "'No' (1997), Vendel en DeWolf",
-        },
-        {
-          src: "/images/noelharding.jpg",
-          alt: "Roze lijn, waterbak en arm' (1992), Noel Harding",
-          info: "'Roze lijn, waterbak en arm' (1992)",
-          jaar: 1992,
-          title: "'Roze lijn, waterbak en arm'",
-          description: "'Roze lijn, waterbak en arm' (1992), Noel Harding",
-        },
-        {
-          src: "/images/matthijsvandenbosch.jpg",
-          alt: "matthijsvandenbosch",
-          info: " Mini show (2024)",
-          jaar: 2024,
-          title: "Matthijs van den Bosch",
-          description: "Matthijs van den Bosch, schilderijen (2024)",
-        },
-        {
-          src: "/images/tonzwerver.jpg",
-          alt: "Ton Zwerver",
-          info: "Ton Zwerver (Stoep)",
-          jaar: 2026,
-          title: "Ton Zwerver",
-          description: "Ton Zwerver, Stoep",
-        },
-      ],
-    },
-    {
-      kunsttraject: [
-        {
-          src: "/images/kunsttraject/kunsttraject_map.jpg",
-          alt: "Kunsttraject",
-          info: "Kunsttraject",
-          jaar: 2026,
-          title: "Kunsttraject",
-          description: "Kunsttraject Staatsliedenbuurt",
-        },
-        {
-          src: "/images/kunsttraject/stoep.jpg",
-          alt: "Stoep",
-          info: "Stoep",
-          jaar: 2026,
-          title: "Stoep, de kunst ligt op straat",
-          description: "Stoep, de kunst ligt op straat",
-        },
-      ],
-    },
-    {
-      routes: [
-        {
-          src: "/images/kunsttraject/kunstroute_map.jpg",
-          alt: "Kunstwandeling",
-          info: "Kunstwandeling routekaart",
-          jaar: 2026,
-          title: "Kunstwandeling routekaart",
-          description: "Kunstwandeling routekaart",
-        },
-      ],
-    },
-  ];
+console.log("K", kunstencultuur[0])
 
   return (
     <div className="mx-auto mt-8 w-full max-w-[1280px] px-4 text-white max-2xl:max-w-[960px] max-md:mt-4 max-sm:mt-4 max-xsm:px-2">
@@ -159,7 +91,7 @@ const KunstEnCultuur = () => {
         </div>
 
         <div className="max-sm: mt-6 grid grid-cols-[repeat(auto-fill,_minmax(260px,_1fr))] gap-2 max-sm:mt-4">
-          <LightBoxComponent images={images[1].kunsttraject} height="auto"/>
+          <LightBoxComponent images={kunstencultuur[1].kunsttraject} height="auto"/>
         </div>
 
         <div>
@@ -258,7 +190,7 @@ const KunstEnCultuur = () => {
             KunstTraject.
           </p>
           <div className="mt-6 grid grid-cols-[repeat(auto-fill,_minmax(250px,_1fr))] gap-2 max-sm:mt-4">
-            <LightBoxComponent images={images[0].buitenkunst} />
+            <LightBoxComponent images={kunstencultuur[0].buitenkunst} height="auto" />
           </div>
         </div>
         <div>
@@ -308,7 +240,7 @@ const KunstEnCultuur = () => {
               </a>
             </p>
             <div className="mt-6 grid grid-cols-[repeat(auto-fill,_minmax(260px,_1fr))] gap-2 max-sm:mt-4">
-              <LightBoxComponent images={images[2].routes} />
+              <LightBoxComponent images={kunstencultuur[2].routes} />
             </div>
           </div>
         </div>

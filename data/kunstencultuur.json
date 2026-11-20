@@ -1,0 +1,70 @@
+[
+    {
+        "buitenkunst": [
+            {
+                "src": "/images/vendelendewolf.jpg",
+                "alt": "No, Vendel en DeWolf",
+                "info": "Vendel en de Wolf",
+                "jaar": 1997,
+                "title": "No",
+                "description": "'No' (1997), Vendel en DeWolf"
+            },
+            {
+                "src": "/images/noelharding.jpg",
+                "alt": "Noel Harding",
+                "info": "Noel Harding",
+                "jaar": 1992,
+                "title": "'Roze lijn, waterbak en arm'",
+                "description": "'Roze lijn, waterbak en arm' (1992), Noel Harding"
+            },
+            {
+                "src": "/images/matthijsvandenbosch.jpg",
+                "alt": "matthijsvandenbosch",
+                "info": "Matthijs van den Bosch",
+                "jaar": 2024,
+                "title": "Matthijs van den Bosch",
+                "description": "Matthijs van den Bosch, schilderijen (2024)"
+            },
+            {
+                "src": "/images/tonzwerver.jpg",
+                "alt": "Ton Zwerver",
+                "info": "Ton Zwerver",
+                "jaar": 2026,
+                "title": "Ton Zwerver",
+                "description": "Ton Zwerver, Stoep"
+            }
+        ]
+    },
+    {
+        "kunsttraject": [
+            {
+                "src": "/images/kunsttraject/kunsttraject_map.jpg",
+                "alt": "Kunsttraject",
+                "info": "Kunsttraject",
+                "jaar": 2026,
+                "title": "Kunsttraject",
+                "description": "Kunsttraject Staatsliedenbuurt"
+            },
+            {
+                "src": "/images/kunsttraject/stoep.jpg",
+                "alt": "Stoep",
+                "info": "Stoep",
+                "jaar": 2026,
+                "title": "Stoep, de kunst ligt op straat",
+                "description": "Stoep, de kunst ligt op straat"
+            }
+        ]
+    },
+    {
+        "routes": [
+            {
+                "src": "/images/kunsttraject/kunstroute_map.jpg",
+                "alt": "Kunstwandeling",
+                "info": "Kunstwandeling routekaart",
+                "jaar": 2026,
+                "title": "Kunstwandeling routekaart",
+                "description": "Kunstwandeling routekaart"
+            }
+        ]
+    }
+]

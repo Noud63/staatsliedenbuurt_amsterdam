@@ -3,10 +3,14 @@ import Lightbox from "yet-another-react-lightbox";
 import Captions from "yet-another-react-lightbox/plugins/captions";
 import Zoom from "yet-another-react-lightbox/plugins/zoom";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 const LightBoxComponent = ({images, height="260px"}) => {
   const [open, setOpen] = useState(false);
   const [slides, setSlides] = useState([]);
+
+  const pathName = usePathname()
+  const path = pathName.slice(9)
 
   const addSlide = (imageObject) => {
     slides.length = 0;
@@ -19,7 +23,7 @@ const LightBoxComponent = ({images, height="260px"}) => {
       {images.map((image, index) => (
         <div
           key={index}
-          className="relative border border-white"
+          className={`relative ${path === "westergas" ? "border-0" : "border border-white"} pb-12 pt-4 px-4`}
           style={{height}}
           onClick={() => addSlide(image)}
           >
@@ -30,13 +34,14 @@ const LightBoxComponent = ({images, height="260px"}) => {
               height={100}
               width={300}
               priority="lazy"
-              className="h-full w-full cursor-pointer object-cover px-4 pb-12 pt-4"
+              className={`h-full w-full cursor-pointer object-cover`}
               onClick={() => setOpen(true)}
             />
-          </div>
-          <div className="absolute bottom-4 left-4 right-4 bg-white px-4 py-2 text-center text-sm font-semibold text-yellow-800">
+            <div className={`absolute -bottom-8 w-full bg-white py-2 text-center text-sm font-semibold text-yellow-800`}>
             {image.info}
           </div>
+          </div>
+          
         </div>
       ))}
       <Lightbox
