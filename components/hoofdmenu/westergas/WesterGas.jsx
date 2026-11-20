@@ -73,7 +73,7 @@ const WesterGas = () => {
         branden, krijgt energie vandaag een nieuwe betekenis.
         <br />
       </div>
-      <div className="max-sm: mt-6 grid grid-cols-[repeat(auto-fill,_minmax(300px,_1fr))] gap-2 max-sm:mt-4">
+      <div className="max-sm: mt-4 grid grid-cols-[repeat(auto-fill,_minmax(300px,_1fr))] gap-4">
         <LightBoxComponent images={gashouder} height="auto" />
       </div>
 

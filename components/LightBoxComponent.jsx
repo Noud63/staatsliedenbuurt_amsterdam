@@ -23,7 +23,7 @@ const LightBoxComponent = ({images, height="260px"}) => {
       {images.map((image, index) => (
         <div
           key={index}
-          className={`relative ${path === "westergas" ? "border-0" : "border border-white"} pb-12 pt-4 px-4`}
+          className={`relative ${path === "westergas" ? "border-0 px-0" : "border border-white px-4"} pb-12 pt-4`}
           style={{height}}
           onClick={() => addSlide(image)}
           >

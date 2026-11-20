@@ -31,7 +31,7 @@ const WeerMorgen = ({ data2, sunMoon, tomorrow }) => {
 
   return (
     <div className="mt-4 rounded-3xl border-2 p-2 font-semibold">
-      <div className="mb-10 mt-8 flex justify-center text-5xl max-xsm:mb-4 max-xsm:mt-5">Amsterdam</div>
+      <div className="mb-4 mt-6 flex justify-center text-5xl max-xsm:mb-4 max-xsm:mt-5">Amsterdam</div>
 
       <div className="relative flex flex-col items-center justify-center">
         {data2.icon && (

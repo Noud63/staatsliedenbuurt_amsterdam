@@ -28,7 +28,7 @@ const WeerVandaag = ({ data1, sunMoon }) => {
 
   return (
     <div className="mt-4 rounded-3xl border-2 p-2">
-      <div className="mb-10 mt-8 flex justify-center text-5xl font-semibold max-xsm:mb-4 max-xsm:mt-5">
+      <div className="mb-4 mt-6 flex justify-center text-5xl font-semibold max-xsm:mb-4 max-xsm:mt-5">
         Amsterdam
       </div>
 
